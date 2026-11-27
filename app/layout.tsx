@@ -5,7 +5,7 @@ import "./discovery.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Hẹn Sài Gòn · Sổ hẹn của hai đứa",
+  title: "Happy Meal · Sổ ăn uống và lịch hẹn",
   description: "Lưu quán, chọn món và để dành những cuộc hẹn ở Sài Gòn cho hai đứa mình.",
   icons: {
     icon: "/favicon.svg",

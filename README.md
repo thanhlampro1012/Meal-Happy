@@ -1,4 +1,6 @@
-# Meal Happy — Hẹn Sài Gòn
+# Happy Meal — Ăn ngon và hẹn vui
+
+Có **PWA** (Thêm vào Màn hình chính), icon Happy Meal và tab **Đồng bộ** (Google Auth + Firestore, cần cấu hình Firebase thuộc tài khoản của chủ ứng dụng). Xem [firebase/SETUP.md](firebase/SETUP.md) để kết nối. Mã nguồn giữ tên repo Meal-Happy để URL web cũ vẫn hoạt động; dữ liệu cục bộ dùng khóa cũ để không mất lịch sử.
 
 Sổ địa điểm, món muốn thử, món yêu thích và lịch hẹn riêng tư cho hai người tại TP.HCM. Giao diện tiếng Việt, dùng trên điện thoại và máy tính, có chế độ sáng và tối.
 
