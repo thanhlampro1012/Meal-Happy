@@ -24,6 +24,13 @@ h2{letter-spacing:-.5px;line-height:1.35;margin:0 0 16px}h3{margin:0 0 6px;line-
 @media(max-width:540px){.topRight{gap:5px}.topRight .btn{padding:8px 7px;font-size:11px}.topin{gap:6px}}
 
 .cuisine-title{font-weight:800;margin:15px 0 8px;letter-spacing:-.3px;color:var(--ink)}
+
+.compareBar{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--accentlight);border:1px solid var(--border);border-radius:15px;padding:11px 14px;margin:0 0 16px;flex-wrap:wrap}
+.compareBar>div{display:flex;gap:7px;flex-wrap:wrap}
+.comparisonGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.comparisonCard{border:1px solid var(--border);border-radius:13px;padding:13px;display:flex;flex-direction:column;gap:5px}
+.comparisonCard>b{font-size:14px}.comparisonCard p{margin:3px 0}
+@media(max-width:540px){.comparisonGrid{grid-template-columns:1fr}}
 </style></head><body>
 <header class="top"><div class="wrap"><div class="topin"><div class="logo"><span>♥</span>Happy Meal</div><div class="topRight"><button class="btn small sync-top-button" id="syncTopButton">☁ Đồng bộ</button><button class="btn small" id="themeToggle" title="Chế độ tối">🌙 Tối</button><button class="btn small" id="backupBtn">⬇ Sao lưu</button></div></div><nav class="nav" aria-label="Điều hướng ứng dụng" id="tabs"></nav></div></header>
 <main class="wrap"><div class="hero"><div><div class="eyebrow">Ăn vui mỗi ngày · Chỉ 5 khu vực</div><h1>Hôm nay mình ăn gì,<br>đi đâu cùng nhau? 💚</h1><p>Tìm món hợp túi tiền, để dành quán ngon và lên lịch hẹn của hai đứa.</p></div><div class="heroDeco">🍜🍵</div></div><div id="stats" class="stats"></div><div id="app"></div><footer class="foot">Happy Meal · Tập trung Quận 1, Quận 3, Quận 5, Gò Vấp và Tân Bình theo địa giới cũ. Dữ liệu địa chỉ và giá là tham khảo, hãy kiểm tra Google Maps trước khi đi. Dữ liệu riêng tư chỉ lưu trên trình duyệt này; xuất JSON để sao lưu. Không đồng bộ với bản Sites.</footer></main>
@@ -44,6 +51,7 @@ const ALL_POPULAR=['com-tam','bun','pho','com','banh-mi','che','banh-flan','kem'
 
 const empty=()=>({customPlaces:[],saved:[],favorites:[],plans:[],notes:{},theme:"system"});
 let data=empty(),catalog=[],tab="explore",filters={q:"",area:"",kind:"",cuisine:"",budget:"",people:1},pageSize=24,selectedPlace="",isSpinning=false,spins=0;
+const compareIds=new Set();
 const $=s=>document.querySelector(s);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money=n=>Number(n||0).toLocaleString("vi-VN")+" ₫";
@@ -54,6 +62,25 @@ const find=id=>all().find(x=>x.id===id);
 const mapUrl=p=>p.mapUrl||"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.name+" "+p.address);
 const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(data));window.HappyMealCloud?.changed?.();return true}catch(e){toast("Trình duyệt không lưu được dữ liệu. Hãy xuất bản sao lưu JSON.");return false}};
 const toast=s=>{let a=$("#toastHost");a.innerHTML='<div class="toast">'+esc(s)+'</div>';clearTimeout(toast.timer);toast.timer=setTimeout(()=>a.innerHTML="",3600)};
+
+function compareBar(){
+ const selected=[...compareIds].map(find).filter(Boolean);
+ if(!selected.length)return '';
+ return '<div class="compareBar"><span><b>⚖ '+selected.length+'/3 quán</b> đang so sánh</span><div>'+
+ '<button class="btn primary small" data-action="showComparison" '+(selected.length<2?'disabled':'')+'>Xem so sánh</button> '+
+ '<button class="btn small" data-action="clearComparison">Bỏ chọn</button></div></div>';
+}
+function comparison(){
+ const selected=[...compareIds].map(find).filter(Boolean);
+ if(selected.length<2)return toast("Chọn ít nhất 2 quán để so sánh.");
+ showModal('So sánh '+selected.length+' địa điểm','<p class="muted">So sánh món, địa chỉ và mức chi dự trù; giá thực tế có thể thay đổi.</p>'+
+ '<div class="comparisonGrid">'+selected.map(p=>'<div class="comparisonCard"><b>'+esc(p.name)+'</b><span class="sub">📍 '+esc(p.area)+'</span>'+
+ '<p class="sub">'+esc(p.address)+'</p><p><b>Món:</b> '+esc((p.dishes||[]).slice(0,5).join(' · '))+'</p>'+
+ '<p class="price">'+(p.budgetMax?money(p.budgetMin)+' – '+money(p.budgetMax)+'/người':'Chưa có giá')+'</p>'+
+ '<p><a target="_blank" rel="noopener noreferrer" href="'+esc(mapUrl(p))+'">Google Maps</a></p></div>').join('')+'</div>'+
+ '<p class="center"><button class="btn primary" data-action="compareToPlan">＋ Tạo lịch hẹn từ các quán này</button></p>');
+}
+
 const kinds={food:"Ăn uống",coffee:"Cà phê",dessert:"Tráng miệng",drinks:"Đồ uống"};
 const kindEmoji={food:"🍜",coffee:"☕",dessert:"🍧",drinks:"🧋"};
 
@@ -88,10 +115,10 @@ function explore(saved=false){let list=all().filter(p=>(saved||AREAS.includes(p.
  '<label class="field"><span>Loại địa điểm</span><select class="input" id="kind">'+option([["","Tất cả"],...Object.entries(kinds)],filters.kind)+'</select></label>'+
  '<label class="field"><span>Ngân sách tối đa</span><select class="input" id="budget">'+option([["","Mọi mức"],...budgetOptions.map(n=>[n,money(n)])],filters.budget)+'</select></label></div>'+
  '<div class="sectionHead"><span class="muted">'+list.length+' địa điểm phù hợp · Mức chi dự trù</span><div><button class="btn small" id="people" title="Đổi số người">👫 '+filters.people+' người</button> <button class="btn small" id="resetFilters">Xóa lọc</button></div></div>'+
- '<div class="cuisine-title">'+esc(title)+'</div><div class="chips"><button class="chip '+(!filters.cuisine?'on':'')+'" data-cuisine="">'+(filters.kind==="dessert"?"Mọi món ngọt":filters.kind==="drinks"?"Mọi đồ uống":"Mọi món")+'</button>'+cuisines.map(id=>'<button class="chip '+(filters.cuisine===id?'on':'')+'" data-cuisine="'+id+'">'+esc(CUISINES[id])+'</button>').join("")+'</div>'+
+ '<div class="cuisine-title">'+esc(title)+'</div><div class="chips"><button class="chip '+(!filters.cuisine?'on':'')+'" data-cuisine="">'+(filters.kind==="dessert"?"Mọi món ngọt":filters.kind==="drinks"?"Mọi đồ uống":"Mọi món")+'</button>'+cuisines.map(id=>'<button class="chip '+(filters.cuisine===id?'on':'')+'" data-cuisine="'+id+'">'+esc(CUISINES[id])+'</button>').join("")+'</div>'+compareBar()+
  (list.length?'<div class="catalog">'+list.slice(0,pageSize).map(placeCard).join("")+'</div>'+(pageSize<list.length?'<p class="center"><button class="btn tonal" id="more">Xem thêm địa điểm ('+(list.length-pageSize)+' còn lại)</button></p>':""):'<div class="empty">Chưa có quán phù hợp. Thử bỏ bớt điều kiện hoặc thêm quán bạn thích.</div>');
 }
-function placeCard(p){const isSaved=data.saved.includes(p.id);return '<article class="place">'+venueImage(p)+'<div class="placeBody"><div class="placeName">'+esc(p.name)+'</div><div class="sub">📍 '+esc(p.address)+'</div><div class="tags">'+(p.cuisineTags||[]).slice(0,3).map(x=>'<span class="tag">'+esc(CUISINES[x]||x)+'</span>').join("")+'</div><div class="sub">'+esc((p.dishes||[]).slice(0,3).join(" · "))+'</div><div class="price">'+(p.budgetMax?money(p.budgetMin)+" – "+money(p.budgetMax)+" / người":"Chưa có giá")+'</div><div class="placeActions"><button class="btn small tonal" data-action="details" data-id="'+esc(p.id)+'">Chi tiết</button><button class="btn small" data-action="save" data-id="'+esc(p.id)+'">'+(isSaved?'✓ Đã lưu':'♡ Lưu quán')+'</button><button class="btn small" data-action="planadd" data-id="'+esc(p.id)+'">＋ Lịch hẹn</button></div></div></article>'}
+function placeCard(p){const isSaved=data.saved.includes(p.id);return '<article class="place">'+venueImage(p)+'<div class="placeBody"><div class="placeName">'+esc(p.name)+'</div><div class="sub">📍 '+esc(p.address)+'</div><div class="tags">'+(p.cuisineTags||[]).slice(0,3).map(x=>'<span class="tag">'+esc(CUISINES[x]||x)+'</span>').join("")+'</div><div class="sub">'+esc((p.dishes||[]).slice(0,3).join(" · "))+'</div><div class="price">'+(p.budgetMax?money(p.budgetMin)+" – "+money(p.budgetMax)+" / người":"Chưa có giá")+'</div><div class="placeActions"><button class="btn small tonal" data-action="details" data-id="'+esc(p.id)+'">Chi tiết</button><button class="btn small" data-action="save" data-id="'+esc(p.id)+'">'+(isSaved?'✓ Đã lưu':'♡ Lưu quán')+'</button><button class="btn small" aria-pressed="'+compareIds.has(p.id)+'" data-action="compare" data-id="'+esc(p.id)+'">'+(compareIds.has(p.id)?'✓ So sánh':'⚖ So sánh')+'</button><button class="btn small" data-action="planadd" data-id="'+esc(p.id)+'">＋ Lịch hẹn</button></div></div></article>'}
 function favorites(){return '<div class="sectionHead"><h2>Món mình thích 💗</h2><button class="btn primary" data-action="newfavorite">＋ Thêm món</button></div><p class="muted">Thêm món hay ăn, kể cả món tự nấu. Bật “Tham gia quay” để đưa vào vòng quay.</p><div class="card">'+(data.favorites.length?data.favorites.map(f=>'<div class="itemRow"><div><b>'+esc(f.title)+'</b><small>'+esc(f.category||"Món chính")+' · '+esc(find(f.placeId)?.name||"Không gắn quán")+(f.often?' · Hay ăn':'')+'</small><div class="sub">'+esc(f.note||"")+'</div></div><div class="itemActions"><label class="sub"><input type="checkbox" data-enabled="'+esc(f.id)+'" '+(f.enabled?'checked':'')+'> Quay</label><button class="btn small" data-action="editfavorite" data-id="'+esc(f.id)+'">Sửa</button><button class="btn small" data-action="removefavorite" data-id="'+esc(f.id)+'">Xóa</button></div></div>').join(""):'<p class="muted">Chưa có món yêu thích. Hãy thêm món đầu tiên!</p>')+'</div>'}
 function wheel(){const active=data.favorites.filter(f=>f.enabled),res=data.lastWinner?data.favorites.find(f=>f.id===data.lastWinner):null;
  return '<div class="two"><div class="card center"><h2>Hôm nay ăn món gì? 🎡</h2><p class="muted">'+active.length+' món đang tham gia quay</p><div class="wheel" id="wheelDisk" style="transform:rotate('+spins+'deg)"><div class="wheelCenter">🍴</div></div><button class="btn primary" id="spin" '+(!active.length?'disabled':'')+'>🎲 Quay chọn món</button><div id="wheelResult" class="card" style="margin-top:16px">'+(res?'Kết quả gần nhất: <b>'+esc(res.title)+'</b>':'Bấm quay để chọn ngẫu nhiên mỗi lần. Mỗi món có cơ hội như nhau.')+'</div></div><div class="card"><h3>Danh sách tham gia</h3><p class="muted">Bật hoặc tắt món ở đây. Tránh lặp món bằng cách bỏ chọn sau khi đã ăn.</p>'+active.map(f=>'<div class="itemRow"><span>🍱 '+esc(f.title)+'</span><button class="btn small" data-action="disable" data-id="'+esc(f.id)+'">Bỏ</button></div>').join("")+(active.length?'':'<p>Chưa có món bật tham gia. Vào Món yêu thích để thêm món.</p>')+'<p><button class="btn tonal" data-action="switchtab" data-id="favorites">Quản lý món yêu thích</button></p></div></div>';
@@ -126,7 +153,7 @@ function placeForm(p){showModal(p?'Sửa quán tự thêm':'Thêm quán của b�
 function favoriteForm(f){showModal(f?'Sửa món yêu thích':'Thêm món yêu thích','<form id="favForm" class="formgrid"><label class="field"><span>Tên món *</span><input name="title" class="input" required maxlength="180" value="'+esc(f?.title||"")+'"></label><label class="field"><span>Phân loại</span><select class="input" name="category">'+option(["Món chính","Ăn vặt","Đồ uống","Tráng miệng","Khác"].map(x=>[x,x]),f?.category||"Món chính")+'</select></label><label class="field wide"><span>Quán (không bắt buộc)</span><select class="input" name="placeId">'+option([["","Không gắn quán"],...all().map(p=>[p.id,p.name+" — "+p.area])],f?.placeId||"")+'</select></label><label class="field wide"><span>Ghi chú</span><textarea class="input" name="note" maxlength="3000">'+esc(f?.note||"")+'</textarea></label><label><input name="often" type="checkbox" '+(f?.often?'checked':'')+'> Hay ăn</label><label><input name="enabled" type="checkbox" '+(!f||f.enabled?'checked':'')+'> Tham gia vòng quay</label><div class="wide"><button class="btn primary" type="submit">Lưu món</button></div></form>');
  $("#favForm").onsubmit=e=>{e.preventDefault();const a=new FormData(e.target),title=String(a.get("title")).trim();if(data.favorites.some(x=>x.id!==f?.id&&norm(x.title)===norm(title))){toast("Món đã có trong danh sách");return}const item={id:f?.id||uid(),title,category:String(a.get("category")),placeId:String(a.get("placeId")),note:String(a.get("note")||""),often:!!a.get("often"),enabled:!!a.get("enabled")};data.favorites=f?data.favorites.map(x=>x.id===f.id?item:x):[item,...data.favorites];persist();closeModal();render();toast("Đã lưu món yêu thích")};
 }
-function planForm(p,addPlace){const stops=p?.stops?.map(x=>({...x}))||[];if(addPlace&&stops.length<5&&!stops.some(x=>x.placeId===addPlace))stops.push({placeId:addPlace,time:"18:00"});showModal(p?'Chỉnh lịch hẹn':'Lên lịch hẹn','<form id="planForm"><div class="formgrid"><label class="field"><span>Tên lịch hẹn</span><input class="input" name="title" maxlength="120" required value="'+esc(p?.title||"Một tối của hai đứa")+'"></label><label class="field"><span>Ngày đi</span><input class="input" type="date" name="date" required value="'+esc(p?.date||new Date().toLocaleDateString("en-CA"))+'"></label><label class="field"><span>Giờ bắt đầu</span><input class="input" type="time" name="time" value="'+esc(p?.time||"18:00")+'"></label></div><div id="stopsEditor" class="card"></div><p><button type="button" class="btn tonal" id="addStop">＋ Thêm điểm dừng</button></p><button type="submit" class="btn primary">Lưu lịch hẹn</button></form>');
+function planForm(p,addPlace,chosen=[]){const stops=p?.stops?.map(x=>({...x}))||chosen.map((placeId,i)=>({placeId,time:String(18+Math.floor(i*55/60)).padStart(2,"0")+":"+String(i*55%60).padStart(2,"0")}));if(addPlace&&stops.length<5&&!stops.some(x=>x.placeId===addPlace))stops.push({placeId:addPlace,time:"18:00"});showModal(p?'Chỉnh lịch hẹn':'Lên lịch hẹn','<form id="planForm"><div class="formgrid"><label class="field"><span>Tên lịch hẹn</span><input class="input" name="title" maxlength="120" required value="'+esc(p?.title||"Một tối của hai đứa")+'"></label><label class="field"><span>Ngày đi</span><input class="input" type="date" name="date" required value="'+esc(p?.date||new Date().toLocaleDateString("en-CA"))+'"></label><label class="field"><span>Giờ bắt đầu</span><input class="input" type="time" name="time" value="'+esc(p?.time||"18:00")+'"></label></div><div id="stopsEditor" class="card"></div><p><button type="button" class="btn tonal" id="addStop">＋ Thêm điểm dừng</button></p><button type="submit" class="btn primary">Lưu lịch hẹn</button></form>');
  function drawStops(){const options=all().map(x=>[x.id,x.name+' — '+x.area]);$("#stopsEditor").innerHTML='<h3>Các điểm dừng (tối đa 5)</h3>'+stops.map((s,i)=>'<div class="itemRow"><div style="flex:1"><label class="field"><span>Điểm '+(i+1)+'</span><select class="input" data-stop="'+i+'">'+option(options,s.placeId)+'</select></label><input class="input" type="time" data-time="'+i+'" value="'+esc(s.time||"18:00")+'"></div><button type="button" class="btn small" data-remove="'+i+'">Xóa</button></div>').join("")}
  drawStops();$("#addStop").onclick=()=>{if(stops.length>=5)return toast("Tối đa 5 điểm dừng");if(!all().length)return toast("Chưa có địa điểm");stops.push({placeId:all()[0].id,time:"18:00"});drawStops()};
  $("#stopsEditor").onchange=e=>{const t=e.target;if(t.matches("[data-stop]"))stops[+t.dataset.stop].placeId=t.value;if(t.matches("[data-time]"))stops[+t.dataset.time].time=t.value};
@@ -152,6 +179,14 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)r
  case "cloudRetry":window.HappyMealCloud?.retry?.();break;
  case "cloudUseCloud":if(confirm("Dùng dữ liệu trên Google sẽ thay bản hiện tại của thiết bị. Trình duyệt sẽ tải sao lưu trước khi thay. Tiếp tục?")){exportBackup();window.HappyMealCloud?.useCloud?.()}break;
  case "cloudUseDevice":if(confirm("Ghi đè bản Google bằng dữ liệu trên thiết bị này? Nếu một thiết bị khác vừa thay đổi, dữ liệu trên đó có thể bị thay. Tiếp tục?")){exportBackup();window.HappyMealCloud?.useDevice?.()}break;
+ case "compare":
+  if(compareIds.has(id))compareIds.delete(id);
+  else if(compareIds.size>=3)toast("Bạn chỉ so sánh tối đa ba quán. Hãy bỏ chọn một quán trước.");
+  else compareIds.add(id);
+  render();break;
+ case "showComparison":comparison();break;
+ case "clearComparison":compareIds.clear();render();break;
+ case "compareToPlan":{const chosen=[...compareIds].filter(x=>!!find(x));closeModal();planForm(null,null,chosen);break}
  case "details":detail(id);break;case "newplace":placeForm();break;
  case "save":data.saved=data.saved.includes(id)?data.saved.filter(x=>x!==id):[...data.saved,id];persist();render();break;
  case "planadd":planForm(null,id);break;case "newfavorite":favoriteForm();break;
