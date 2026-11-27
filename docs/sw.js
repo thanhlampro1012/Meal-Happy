@@ -13,5 +13,5 @@ self.addEventListener('fetch',event=>{
  if(req.mode==='navigate'){
    event.respondWith(fetch(req).then(r=>{if(r.ok){const copy=r.clone();void caches.open(CACHE).then(c=>c.put('./index.html',copy));}return r;}).catch(()=>caches.match('./index.html')));return;
  }
- event.respondWith(caches.match(req).then(hit=>hit||fetch(req).then(r=>{if(r.ok){const copy=r.clone();void caches.open(CACHE).then(c=>c.put(req,copy));}return r;})));
+ event.respondWith(fetch(req).then(r=>{if(r.ok){const copy=r.clone();void caches.open(CACHE).then(c=>c.put(req,copy));}return r;}).catch(()=>caches.match(req)));
 });

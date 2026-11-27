@@ -19,6 +19,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate app icons for iOS and Android
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv /tmp/happymeal-pwa-venv
+          /tmp/happymeal-pwa-venv/bin/python -m pip install --quiet 'cairosvg==2.8.2'
+          mkdir -p docs/icons
+          /tmp/happymeal-pwa-venv/bin/python - <<'PY'
+          import cairosvg
+          for size, name in [(180,'apple-touch-icon.png'),(192,'icon-192.png'),(512,'icon-512.png')]:
+              cairosvg.svg2png(url='docs/icon.svg',write_to='docs/icons/'+name,
+                  output_width=size,output_height=size)
+          PY
       - name: Validate static app and catalog
         shell: bash
         run: |
@@ -44,6 +57,27 @@ jobs:
           if(photos!==6)throw Error('Expected six sourced photos, got '+photos);
           console.log('Validated:',data.places.length,'venues in five districts;',photos,'photo files; app JavaScript syntax OK.');
           NODE
+      - name: Validate cloud-sync code and PWA assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check docs/firebase-sync.js
+          node --input-type=module <<'NODE'
+          import {readFileSync,statSync} from 'node:fs';
+          const html=readFileSync('docs/index.html','utf8');
+          if(!html.includes('Happy Meal')||html.includes('>Meal Happy<'))throw Error('Brand rename missing');
+          const manifest=JSON.parse(readFileSync('docs/site.webmanifest','utf8'));
+          if(manifest.short_name!=='Happy Meal'||manifest.display!=='standalone')throw Error('Invalid PWA identity');
+          for(const [name,size] of [['apple-touch-icon.png',180],['icon-192.png',192],['icon-512.png',512]]){
+            const f='docs/icons/'+name;
+            const data=readFileSync(f);
+            if(data.length<1500||data.readUInt32BE(16)!==size||data.readUInt32BE(20)!==size)throw Error('Broken icon '+f);
+          }
+          if(!html.includes('firebase-sync.js')||!html.includes('firebaseSetup'))throw Error('Missing cloud sign-in UI');
+          const rules=readFileSync('firebase/firestore.rules','utf8');
+          if(!rules.includes('request.auth.uid == uid')||rules.includes('allow read, write: if true'))throw Error('Unsafe rules');
+          console.log('Happy Meal: PWA, icon sizes, Firebase sync syntax and rules verified');
+          NODE
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -66,17 +100,24 @@ jobs:
           for i in 1 2 3 4 5 6; do
             if curl -fsSL --max-time 20 "$SITE_URL" -o /tmp/meal-happy-home.html \
               && curl -fsSL --max-time 20 "${SITE_URL}catalog.json" -o /tmp/meal-happy-catalog.json \
-              && curl -fsSL --max-time 20 "${SITE_URL}venues/pizza-4ps-ben-thanh.jpg" -o /tmp/meal-happy-photo.jpg; then
+              && curl -fsSL --max-time 20 "${SITE_URL}venues/pizza-4ps-ben-thanh.jpg" -o /tmp/meal-happy-photo.jpg \
+              && curl -fsSL --max-time 20 "${SITE_URL}site.webmanifest" -o /tmp/happy-meal-manifest.json \
+              && curl -fsSL --max-time 20 "${SITE_URL}icons/apple-touch-icon.png" -o /tmp/happy-meal-apple.png \
+              && curl -fsSL --max-time 20 "${SITE_URL}firebase-sync.js" -o /tmp/happy-meal-sync.js; then
               break
             fi
             if [ "$i" -eq 6 ]; then echo "Live Pages assets were not reachable" >&2; exit 1; fi
             sleep 5
           done
-          grep -q "Meal Happy" /tmp/meal-happy-home.html
+          grep -q "Happy Meal" /tmp/meal-happy-home.html
           node --input-type=module <<'NODE'
           import {readFileSync, statSync} from 'node:fs';
           const data=JSON.parse(readFileSync('/tmp/meal-happy-catalog.json','utf8'));
           if(data.places.length!==139)throw Error('Live site has wrong catalog size: '+data.places.length);
           if(statSync('/tmp/meal-happy-photo.jpg').size<1024)throw Error('Live image missing');
-          console.log('Live GitHub Pages smoke test passed: 139 venues, HTML and photo returned successfully.');
+          const icon=readFileSync('/tmp/happy-meal-apple.png');
+          if(icon.readUInt32BE(16)!==180)throw Error('Live apple icon wrong size');
+          if(!readFileSync('/tmp/happy-meal-sync.js','utf8').includes('HappyMealCloud'))throw Error('Cloud module unavailable');
+          if(JSON.parse(readFileSync('/tmp/happy-meal-manifest.json','utf8')).short_name!=='Happy Meal')throw Error('Live PWA manifest wrong');
+          console.log('Live GitHub Pages smoke test passed: Happy Meal, 139 venues, PWA icon, manifest and Firebase module.');
           NODE
