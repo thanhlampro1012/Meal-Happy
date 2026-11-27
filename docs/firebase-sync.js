@@ -49,7 +49,9 @@ function view(){
     localChanges:!!needsWrite,revision:rev};
 }
 function baseKey(){return SYNC_BASE + user?.uid;}
+function sessionMatches(seq, uid){return seq===generation && user?.uid===uid;}
 function markSynced(book){
+  if(!user)return;
   baseline=clone(book);
   try {localStorage.setItem(baseKey(),JSON.stringify(baseline)); localStorage.setItem(LAST_USER,user.uid);}
   catch { /* Low storage cannot break sync for the current tab. */ }
@@ -76,7 +78,10 @@ function friendlyError(e){
   if(code.includes('permission-denied')) return 'Firestore từ chối truy cập. Hãy bật đúng quy tắc firestore.rules theo UID.';
   if(code.includes('popup-closed-by-user')||code.includes('cancelled-popup-request')) return 'Đăng nhập chưa hoàn tất.';
   if(code.includes('network')||code.includes('unavailable')) return 'Mất kết nối. Dữ liệu vẫn được giữ trên thiết bị này.';
-  if(code.includes('quota-exceeded')) return 'Đã chạm giới hạn Firebase. Dữ liệu vẫn được giữ trên thiết bị.';
+  if(code.includes('quota-exceeded')||code.includes('resource-exhausted')) return 'Dữ liệu hoặc lượt sử dụng vượt giới hạn Firebase. Hãy xuất sao lưu; bản cục bộ vẫn được giữ.';
+  if(code.includes('invalid-api-key')||code.includes('invalid-app-credential')) return 'Cấu hình API key Firebase chưa đúng. Kiểm tra Project settings → Your apps.';
+  if(code.includes('failed-precondition')) return 'Firestore chưa được khởi tạo hoặc không thể dùng giao dịch. Kiểm tra Firestore Database.';
+  if(code.includes('auth/domain-not-allowlisted')) return 'Hãy thêm thanhlampro1012.github.io vào Firebase Authentication → Authorized domains.';
   return 'Lỗi đồng bộ: '+code.slice(0,180);
 }
 async function boot(c) {
@@ -100,8 +105,8 @@ async function startAccount(account){
   docRef=fs.doc(db,'users',user.uid,'appData','notebook');
   show('loading','Đang đối chiếu dữ liệu thiết bị với tài khoản '+accountName()+'…');
   try {
-    const snap=await fs.getDoc(docRef);
-    if(seq!==generation)return;
+    const snap=await fs.getDocFromServer(docRef);
+    if(!sessionMatches(seq,account.uid))return;
     const remote=snap.exists()?snap.data():null;
     rev=Number.isSafeInteger(remote?.revision)?remote.revision:0;
     const book=remote?.notebook && typeof remote.notebook==='object'?remote.notebook:null;
@@ -110,6 +115,12 @@ async function startAccount(account){
     try {previous=JSON.parse(localStorage.getItem(baseKey())||'null');}catch{}
     const previousUid=localStorage.getItem(LAST_USER);
     if(book){
+      // Never silently switch between two Google identities on a shared browser.
+      if(previousUid && previousUid!==account.uid && hasContent(local) && !same(local,book)){
+        conflict={remote:clone(book),revision:rev};
+        show('conflict','Thiết bị chứa dữ liệu của một tài khoản Google khác. Hãy sao lưu rồi chọn phiên bản muốn sử dụng.');
+        return;
+      }
       if(!hasContent(local)||same(local,book)){
         setLocal(book);
       }else if(previous && same(local,previous)){
@@ -136,17 +147,21 @@ async function startAccount(account){
     }
     connected=true;needsWrite=false;listen();
     show('synced','Đã kết nối và cập nhật dữ liệu mới nhất.');
-  }catch(e){if(seq===generation)show('error',friendlyError(e));}
+  }catch(e){if(sessionMatches(seq,account.uid))show(navigator.onLine?'error':'offline',friendlyError(e));}
 }
 function listen(){
   unlisten?.();if(!docRef)return;
-  const {fs}=modules;
+  const {fs}=modules, seq=generation, uid=user.uid;
   unlisten=fs.onSnapshot(docRef,snap=>{
-    if(!user || !snap.exists() || snap.metadata.hasPendingWrites)return;
+    if(!sessionMatches(seq,uid) || !snap.exists() || snap.metadata.hasPendingWrites || snap.metadata.fromCache)return;
     const row=snap.data(),nextRev=row.revision,remote=row.notebook;
     if(!remote || !Number.isSafeInteger(nextRev) || nextRev<=rev)return;
-    if(sending)return; // The transaction success path updates revision and baseline.
+    if(sending)return; // Firestore transaction verifies the revision before writing.
     const local=host().get();
+    if(same(local,remote)){
+      rev=nextRev;markSynced(remote);needsWrite=false;connected=true;clearTimeout(syncTimer);
+      show('synced','Dữ liệu trên máy đã khớp với bản mới trên Google.');return;
+    }
     if(needsWrite || (baseline && !same(local,baseline))){
       conflict={remote:clone(remote),revision:nextRev};
       connected=false;clearTimeout(syncTimer);
@@ -171,7 +186,7 @@ async function push(force=false){
   if(!force&&!needsWrite&&baseline&&same(local,baseline))return;
   if(!navigator.onLine){needsWrite=true;show('offline','Bạn đang ngoại tuyến. Dữ liệu vẫn được lưu trên thiết bị.');return;}
   sending=true;needsWrite=false;show('sending','Đang lưu an toàn lên Google…');
-  const oldRev=rev;
+  const oldRev=rev,seq=generation,uid=user.uid;
   try{
     const {fs}=modules;
     const nextRev=await fs.runTransaction(db,async tx=>{
@@ -180,51 +195,79 @@ async function push(force=false){
       tx.set(docRef,{revision:current+1,notebook:local,updatedAt:fs.serverTimestamp()});
       return current+1;
     });
+    if(!sessionMatches(seq,uid))return;
     rev=nextRev;markSynced(local);
     const changedAgain=!same(host().get(),local);
     needsWrite=changedAgain;
     show(changedAgain?'pending':'synced',changedAgain?'Có cập nhật mới đang chờ đồng bộ.':'Đã lưu lên Google an toàn.');
   }catch(e){
+    if(!sessionMatches(seq,uid))return;
     needsWrite=true;
     if(e?.code==='cloud/conflict'){
       try{
-        const snapshot=await modules.fs.getDoc(docRef);
+        const snapshot=await modules.fs.getDocFromServer(docRef);
+        if(!sessionMatches(seq,uid))return;
         if(snapshot.exists()){
           conflict={remote:clone(snapshot.data().notebook),revision:snapshot.data().revision};
           connected=false;show('conflict','Dữ liệu đã thay đổi trên thiết bị khác. Hãy chọn bản muốn giữ.');
         }
       }catch(err){show('error',friendlyError(err));}
     }else show('error',friendlyError(e));
-  }finally{sending=false;if(needsWrite&&!conflict&&phase==='pending')schedule();}
+  }finally{if(sessionMatches(seq,uid)){sending=false;if(needsWrite&&!conflict&&phase==='pending')schedule();}}
 }
 async function resolveConflict(choice){
-  if(!user||!conflict)return;
+  if(!user||!conflict || sending)return;
+  const seq=generation,uid=user.uid;
+  const expected=conflict.revision;
   if(choice==='cloud'){
-    if(!conflict.remote){
-      // New account cloud is empty: intentionally start with an empty notebook.
-      host().applyRemote(host().empty());
-      rev=0;baseline=null;connected=true;needsWrite=true;conflict=null;
-      show('pending','Tạo sổ mới cho tài khoản Google.');schedule();return;
-    }
-    rev=conflict.revision;setLocal(conflict.remote);
-    conflict=null;connected=true;needsWrite=false;listen();
-    show('synced','Đã dùng bản lưu trên tài khoản Google.');
+    show('loading','Đang đọc lại phiên bản mới nhất từ Google trước khi thay dữ liệu máy…');
+    try{
+      const snapshot=await modules.fs.getDocFromServer(docRef);
+      if(!sessionMatches(seq,uid))return;
+      const latest=snapshot.exists()?snapshot.data():null;
+      if(latest?.notebook){
+        rev=latest.revision;setLocal(latest.notebook);
+        conflict=null;connected=true;needsWrite=false;listen();
+        show('synced','Đã chuyển sang bản mới nhất trên Google.');
+      }else{
+        host().applyRemote(host().empty());
+        rev=0;baseline=null;connected=true;needsWrite=true;conflict=null;listen();
+        show('pending','Đang tạo sổ riêng cho tài khoản Google.');schedule();
+      }
+    }catch(e){if(sessionMatches(seq,uid))show('conflict',friendlyError(e));}
     return;
   }
   if(choice==='device'){
-    // Explicit, user-confirmed replacement, with transaction against latest revision.
-    sending=true;show('sending','Đang tải phiên bản thiết bị lên Google…');
     const local=clone(host().get());
+    sending=true;show('sending','Đang chuyển dữ liệu từ thiết bị lên Google…');
     try{
-      const next=await modules.fs.runTransaction(db,async tx=>{
-        const snap=await tx.get(docRef),old=snap.exists()?snap.data().revision:0;
-        tx.set(docRef,{revision:old+1,notebook:local,updatedAt:modules.fs.serverTimestamp()});
-        return old+1;
+      const nextRev=await modules.fs.runTransaction(db,async tx=>{
+        const snap=await tx.get(docRef),current=snap.exists()?snap.data().revision:0;
+        // A newer cloud write must be reviewed instead of silently overwritten.
+        if(current!==expected)throw Object.assign(new Error('Đã có dữ liệu mới trên Google.'),{code:'cloud/conflict'});
+        tx.set(docRef,{revision:current+1,notebook:local,updatedAt:modules.fs.serverTimestamp()});
+        return current+1;
       });
-      rev=next;markSynced(local);conflict=null;connected=true;needsWrite=false;
-      listen();show('synced','Đã dùng dữ liệu trên thiết bị này.');
-    }catch(e){show('error',friendlyError(e));}
-    finally{sending=false;}
+      if(!sessionMatches(seq,uid))return;
+      rev=nextRev;markSynced(local);
+      conflict=null;connected=true;
+      needsWrite=!same(host().get(),local);
+      listen();
+      show(needsWrite?'pending':'synced',needsWrite?'Có thêm thay đổi đang chờ lưu.':'Đã lưu bản trên thiết bị lên Google.');
+    }catch(e){
+      if(!sessionMatches(seq,uid))return;
+      if(e?.code==='cloud/conflict'){
+        try{
+          const snapshot=await modules.fs.getDocFromServer(docRef);
+          if(!sessionMatches(seq,uid))return;
+          conflict={remote:snapshot.exists()?clone(snapshot.data().notebook):null,
+                    revision:snapshot.exists()?snapshot.data().revision:0};
+          show('conflict','Một thiết bị khác vừa cập nhật Google. Hãy xem lại và chọn phiên bản lần nữa.');
+        }catch(err){show('conflict',friendlyError(err));}
+      }else show('conflict',friendlyError(e));
+    }finally{
+      if(sessionMatches(seq,uid)){sending=false;if(needsWrite&&!conflict)schedule();}
+    }
   }
 }
 async function googleSignIn(){
@@ -240,6 +283,7 @@ async function googleSignIn(){
   }
 }
 async function googleSignOut(){
+  if((needsWrite||sending||conflict) && !confirm('Có dữ liệu chưa đồng bộ xong. Đăng xuất bây giờ? Dữ liệu vẫn giữ trên trình duyệt này nhưng có thể chưa có trên Google.'))return;
   try{if(auth)await modules.fa.signOut(auth);}catch(e){show('error',friendlyError(e));}
 }
 function configure(fields){
@@ -248,8 +292,24 @@ function configure(fields){
   try{localStorage.setItem(CONFIG_STORE,JSON.stringify(c));}catch{}
   location.reload();return true;
 }
-function retry(){if(conflict)return;needsWrite=true;connected=true;show('pending','Đang thử đồng bộ lại…');schedule();}
-window.addEventListener('online',()=>{if(needsWrite&&!conflict){connected=true;schedule();}});
+function retry(){
+  if(conflict || !user)return;
+  if(!connected || phase==='offline' || phase==='error'){
+    void startAccount(user);return;
+  }
+  needsWrite=true;show('pending','Đang thử đồng bộ lại…');schedule();
+}
+window.addEventListener('online',()=>{
+  if(!user||conflict)return;
+  if(!connected || phase==='offline' || phase==='error')void startAccount(user);
+  else if(needsWrite)schedule();
+});
+window.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='visible' && user && !conflict && !sending){
+    // A suspended phone tab may have missed updates; refresh from server.
+    void startAccount(user);
+  }
+});
 window.HappyMealCloud={view,changed,configure,signIn:googleSignIn,signOut:googleSignOut,
   useCloud:()=>resolveConflict('cloud'),useDevice:()=>resolveConflict('device'),retry};
 (async()=>{
