@@ -18,7 +18,7 @@ let phase = 'checking', message = 'Đang kiểm tra cấu hình đồng bộ…'
 const host = () => window.HappyMealHost;
 const clone = value => JSON.parse(JSON.stringify(value));
 const stable = value => JSON.stringify(value, function(_key, val){
-  if (val && !Array.isArray(val) && Object.getPrototypeOf(val) === Object.prototype) {
+  if (val && !Array.isArray(val) && Object.prototype.toString.call(val) === '[object Object]') {
     return Object.fromEntries(Object.entries(val).sort(([a],[b]) => a.localeCompare(b)));
   }
   return val;
