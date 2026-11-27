@@ -19,6 +19,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate static app and catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import { readFileSync, existsSync, statSync } from 'node:fs';
+          const html=readFileSync('docs/index.html','utf8');
+          const script=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+          if (!script) throw Error('Missing app JavaScript');
+          new Function(script);
+          const data=JSON.parse(readFileSync('docs/catalog.json','utf8'));
+          const expected=['Quận 1','Quận 3','Quận 5','Gò Vấp','Tân Bình'];
+          if(data.places.length!==139)throw Error('Unexpected place count: '+data.places.length);
+          if(data.places.some(p=>!expected.includes(p.area)))throw Error('Location outside five selected areas');
+          let photos=0;
+          for(const p of data.places){
+            if(p.image?.startsWith('/venues/')){
+              const path='docs'+p.image;
+              if(!existsSync(path)||statSync(path).size<1024)throw Error('Missing photo: '+path);
+              photos++;
+            }
+          }
+          if(photos!==6)throw Error('Expected six sourced photos, got '+photos);
+          console.log('Validated:',data.places.length,'venues in five districts;',photos,'photo files; app JavaScript syntax OK.');
+          NODE
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -30,3 +55,28 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Smoke test published GitHub Pages
+        shell: bash
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          test -n "$SITE_URL"
+          SITE_URL="${SITE_URL%/}/"
+          for i in 1 2 3 4 5 6; do
+            if curl -fsSL --max-time 20 "$SITE_URL" -o /tmp/meal-happy-home.html \
+              && curl -fsSL --max-time 20 "${SITE_URL}catalog.json" -o /tmp/meal-happy-catalog.json \
+              && curl -fsSL --max-time 20 "${SITE_URL}venues/pizza-4ps-ben-thanh.jpg" -o /tmp/meal-happy-photo.jpg; then
+              break
+            fi
+            if [ "$i" -eq 6 ]; then echo "Live Pages assets were not reachable" >&2; exit 1; fi
+            sleep 5
+          done
+          grep -q "Meal Happy" /tmp/meal-happy-home.html
+          node --input-type=module <<'NODE'
+          import {readFileSync, statSync} from 'node:fs';
+          const data=JSON.parse(readFileSync('/tmp/meal-happy-catalog.json','utf8'));
+          if(data.places.length!==139)throw Error('Live site has wrong catalog size: '+data.places.length);
+          if(statSync('/tmp/meal-happy-photo.jpg').size<1024)throw Error('Live image missing');
+          console.log('Live GitHub Pages smoke test passed: 139 venues, HTML and photo returned successfully.');
+          NODE
