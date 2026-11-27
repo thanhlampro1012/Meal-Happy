@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f6f0"><meta name="description" content="Meal Happy — khám phá quán ăn, lưu món ngon và lên lịch hẹn tại năm quận Sài Gòn."><title>Meal Happy · Đi đâu, ăn gì?</title>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#064e36"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Happy Meal"><meta name="application-name" content="Happy Meal"><link rel="manifest" href="./site.webmanifest"><link rel="icon" type="image/svg+xml" href="./icon.svg"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png"><meta name="description" content="Happy Meal — khám phá quán ăn, lưu món ngon và lên lịch hẹn tại năm quận Sài Gòn."><title>Happy Meal · Đi đâu, ăn gì?</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
 :root{--bg:#f7f6f0;--surface:#fff;--ink:#26362f;--muted:#788179;--accent:#216c52;--accentlight:#e6f3eb;--border:#e5e9e2;--warm:#fbefda;--shadow:0 10px 32px #1238210b}
@@ -18,14 +18,18 @@ h2{letter-spacing:-.5px;line-height:1.35;margin:0 0 16px}h3{margin:0 0 6px;line-
 .photoMapLink{z-index:2;position:absolute;bottom:9px;right:10px;border-radius:8px;background:#fffef0ee;color:#244934;text-decoration:none;padding:4px 8px;font-size:11px;font-weight:700}
 .photoMapLink:hover{text-decoration:underline}
 @media(max-width:540px){.placeArt{height:160px}}
+
+.syncConflict{background:var(--warm);padding:15px;border-radius:14px;margin-top:15px;border:1px solid var(--border)}
+.syncConflict .btn{margin:5px 5px 0 0}
+@media(max-width:540px){.topRight{gap:5px}.topRight .btn{padding:8px 7px;font-size:11px}.topin{gap:6px}}
 </style></head><body>
-<header class="top"><div class="wrap"><div class="topin"><div class="logo"><span>♥</span>Meal Happy</div><div class="topRight"><button class="btn small" id="themeToggle" title="Chế độ tối">🌙 Tối</button><button class="btn small" id="backupBtn">⬇ Sao lưu</button></div></div><nav class="nav" aria-label="Điều hướng ứng dụng" id="tabs"></nav></div></header>
-<main class="wrap"><div class="hero"><div><div class="eyebrow">Hẹn Sài Gòn · Chỉ 5 khu vực</div><h1>Hôm nay mình ăn gì,<br>đi đâu cùng nhau? 💚</h1><p>Tìm món hợp túi tiền, để dành quán ngon và lên lịch hẹn của hai đứa.</p></div><div class="heroDeco">🍜🍵</div></div><div id="stats" class="stats"></div><div id="app"></div><footer class="foot">Meal Happy · Tập trung Quận 1, Quận 3, Quận 5, Gò Vấp và Tân Bình theo địa giới cũ. Dữ liệu địa chỉ và giá là tham khảo, hãy kiểm tra Google Maps trước khi đi. Dữ liệu riêng tư chỉ lưu trên trình duyệt này; xuất JSON để sao lưu. Không đồng bộ với bản Sites.</footer></main>
+<header class="top"><div class="wrap"><div class="topin"><div class="logo"><span>♥</span>Happy Meal</div><div class="topRight"><button class="btn small sync-top-button" id="syncTopButton">☁ Đồng bộ</button><button class="btn small" id="themeToggle" title="Chế độ tối">🌙 Tối</button><button class="btn small" id="backupBtn">⬇ Sao lưu</button></div></div><nav class="nav" aria-label="Điều hướng ứng dụng" id="tabs"></nav></div></header>
+<main class="wrap"><div class="hero"><div><div class="eyebrow">Ăn vui mỗi ngày · Chỉ 5 khu vực</div><h1>Hôm nay mình ăn gì,<br>đi đâu cùng nhau? 💚</h1><p>Tìm món hợp túi tiền, để dành quán ngon và lên lịch hẹn của hai đứa.</p></div><div class="heroDeco">🍜🍵</div></div><div id="stats" class="stats"></div><div id="app"></div><footer class="foot">Happy Meal · Tập trung Quận 1, Quận 3, Quận 5, Gò Vấp và Tân Bình theo địa giới cũ. Dữ liệu địa chỉ và giá là tham khảo, hãy kiểm tra Google Maps trước khi đi. Dữ liệu riêng tư chỉ lưu trên trình duyệt này; xuất JSON để sao lưu. Không đồng bộ với bản Sites.</footer></main>
 <div id="modalHost"></div><div id="toastHost" role="status" aria-live="polite"></div>
 <script>
 "use strict";
 const AREAS=["Quận 1","Quận 3","Quận 5","Gò Vấp","Tân Bình"], KEY="meal-happy-pages-v1";
-const MENU=[["explore","🧭 Khám phá"],["saved","🔖 Đã lưu"],["favorites","💗 Món yêu thích"],["wheel","🎡 Vòng quay"],["plans","🗓️ Lịch hẹn"],["settings","⚙ Cài đặt"]];
+const MENU=[["explore","🧭 Khám phá"],["saved","🔖 Đã lưu"],["favorites","💗 Món yêu thích"],["wheel","🎡 Vòng quay"],["plans","🗓️ Lịch hẹn"],["cloud","☁ Đồng bộ"],["settings","⚙ Cài đặt"]];
 const CUISINES={"com-tam":"Cơm tấm",com:"Cơm / cơm nhà",xoi:"Xôi","banh-bao":"Bánh bao",bun:"Bún","bun-bo":"Bún bò",pho:"Phở","hu-tieu":"Hủ tiếu","banh-mi":"Bánh mì","banh-cuon":"Bánh cuốn","banh-xeo":"Bánh xèo",mi:"Mì","banh-canh":"Bánh canh","chao-sup":"Cháo / súp",lau:"Lẩu",nuong:"Đồ nướng",oc:"Ốc","hai-san":"Hải sản",chay:"Món chay",nhat:"Món Nhật",han:"Món Hàn",thai:"Món Thái",hoa:"Món Hoa",au:"Món Âu",pizza:"Pizza",burger:"Burger","banh-trang":"Bánh tráng","an-vat":"Ăn vặt",che:"Chè",kem:"Kem","banh-ngot":"Bánh ngọt","ca-phe":"Cà phê","tra-sua":"Trà sữa","do-uong":"Đồ uống",khac:"Món khác"};
 const empty=()=>({customPlaces:[],saved:[],favorites:[],plans:[],notes:{},theme:"system"});
 let data=empty(),catalog=[],tab="explore",filters={q:"",area:"",kind:"",cuisine:"",budget:"",people:1},pageSize=24,selectedPlace="",isSpinning=false,spins=0;
@@ -37,7 +41,7 @@ const uid=()=>crypto.randomUUID?crypto.randomUUID():"id-"+Date.now()+"-"+Math.ra
 const all=()=>[...data.customPlaces,...catalog];
 const find=id=>all().find(x=>x.id===id);
 const mapUrl=p=>p.mapUrl||"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.name+" "+p.address);
-const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(data));return true}catch(e){toast("Trình duyệt không lưu được dữ liệu. Hãy xuất bản sao lưu JSON.");return false}};
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(data));window.HappyMealCloud?.changed?.();return true}catch(e){toast("Trình duyệt không lưu được dữ liệu. Hãy xuất bản sao lưu JSON.");return false}};
 const toast=s=>{let a=$("#toastHost");a.innerHTML='<div class="toast">'+esc(s)+'</div>';clearTimeout(toast.timer);toast.timer=setTimeout(()=>a.innerHTML="",3600)};
 const kinds={food:"Ăn uống",coffee:"Cà phê",dessert:"Tráng miệng",drinks:"Đồ uống"};
 const kindEmoji={food:"🍜",coffee:"☕",dessert:"🍧",drinks:"🧋"};
@@ -53,7 +57,8 @@ const option=(values,value)=>values.map(([v,t])=>'<option value="'+esc(v)+'"'+(S
 function load(){try{const x=JSON.parse(localStorage.getItem(KEY));if(x&&typeof x==="object")data={...empty(),...x}}catch{};if(!Array.isArray(data.customPlaces))data.customPlaces=[];if(!Array.isArray(data.saved))data.saved=[];if(!Array.isArray(data.favorites))data.favorites=[];if(!Array.isArray(data.plans))data.plans=[];if(!data.notes||typeof data.notes!=="object")data.notes={};theme()}
 function theme(){document.documentElement.classList.toggle("dark",data.theme==="dark"||(data.theme==="system"&&matchMedia("(prefers-color-scheme: dark)").matches));$("#themeToggle").textContent=data.theme==="dark"?"☀️ Sáng":"🌙 Tối"}
 function render(){const list=all();$("#tabs").innerHTML=MENU.map(([id,label])=>'<button class="tab '+(tab===id?'on':'')+'" data-tab="'+id+'">'+label+'</button>').join("");$("#stats").innerHTML='<span><strong>'+list.length+'</strong> địa điểm</span><span><strong>5</strong> khu vực</span><span><strong>'+data.saved.length+'</strong> quán đã lưu</span><span><strong>'+data.favorites.length+'</strong> món yêu thích</span>';
- $("#app").innerHTML=tab==="explore"||tab==="saved"?explore(tab==="saved"):tab==="favorites"?favorites():tab==="wheel"?wheel():tab==="plans"?plans():settings();
+ $("#app").innerHTML=tab==="explore"||tab==="saved"?explore(tab==="saved"):tab==="favorites"?favorites():tab==="wheel"?wheel():tab==="plans"?plans():tab==="cloud"?cloudPanel():settings();
+ const sync=window.HappyMealCloud?.view?.();const button=$("#syncTopButton");if(button)button.textContent=sync?.user?(sync.phase==="synced"?"☁ Đã lưu":"☁ "+(sync.phase==="offline"?"Ngoại tuyến":sync.phase==="conflict"?"Cần chọn bản":"Đồng bộ")):"☁ Đăng nhập";
 }
 function explore(saved=false){let list=all().filter(p=>(!saved||data.saved.includes(p.id))&&(!filters.area||p.area===filters.area)&&(!filters.kind||p.kind===filters.kind)&&(!filters.cuisine||(p.cuisineTags||[]).includes(filters.cuisine))&&(!filters.budget||((p.budgetMax||Infinity)*filters.people<=Number(filters.budget))));
  if(filters.q){const q=norm(filters.q);list=list.filter(p=>norm([p.name,p.address,p.area,...(p.dishes||[]),...(p.tags||[])].join(" ")).includes(q))}
@@ -74,6 +79,20 @@ function wheel(){const active=data.favorites.filter(f=>f.enabled),res=data.lastW
  return '<div class="two"><div class="card center"><h2>Hôm nay ăn món gì? 🎡</h2><p class="muted">'+active.length+' món đang tham gia quay</p><div class="wheel" id="wheelDisk" style="transform:rotate('+spins+'deg)"><div class="wheelCenter">🍴</div></div><button class="btn primary" id="spin" '+(!active.length?'disabled':'')+'>🎲 Quay chọn món</button><div id="wheelResult" class="card" style="margin-top:16px">'+(res?'Kết quả gần nhất: <b>'+esc(res.title)+'</b>':'Bấm quay để chọn ngẫu nhiên mỗi lần. Mỗi món có cơ hội như nhau.')+'</div></div><div class="card"><h3>Danh sách tham gia</h3><p class="muted">Bật hoặc tắt món ở đây. Tránh lặp món bằng cách bỏ chọn sau khi đã ăn.</p>'+active.map(f=>'<div class="itemRow"><span>🍱 '+esc(f.title)+'</span><button class="btn small" data-action="disable" data-id="'+esc(f.id)+'">Bỏ</button></div>').join("")+(active.length?'':'<p>Chưa có món bật tham gia. Vào Món yêu thích để thêm món.</p>')+'<p><button class="btn tonal" data-action="switchtab" data-id="favorites">Quản lý món yêu thích</button></p></div></div>';
 }
 function plans(){return '<div class="sectionHead"><h2>Lịch hẹn 🗓️</h2><button class="btn primary" data-action="newplan">＋ Tạo buổi hẹn</button></div><p class="muted">Mỗi kế hoạch gồm tối đa 5 địa điểm. Chi phí dự trù cho hai người dựa trên mức cao của từng quán.</p><div class="two">'+(data.plans.length?data.plans.map(plan=>'<div class="card"><h3>'+esc(plan.title)+'</h3><div class="sub">🗓 '+esc(plan.date||'Chưa chọn ngày')+' · '+esc(plan.time||'')+'</div><div class="stack">'+(plan.stops||[]).map((st,i)=>'<p>📍 '+esc(st.time||'')+' · '+esc(find(st.placeId)?.name||'Quán không còn trong danh mục')+'</p>').join("")+'</div><div class="price">Tổng dự trù: '+money((plan.stops||[]).reduce((s,st)=>s+(find(st.placeId)?.budgetMax||0)*2,0))+'</div><div class="placeActions"><button class="btn small tonal" data-action="route" data-id="'+esc(plan.id)+'">Google Maps</button><button class="btn small" data-action="editplan" data-id="'+esc(plan.id)+'">Sửa</button><button class="btn small" data-action="removeplan" data-id="'+esc(plan.id)+'">Xóa</button></div></div>').join(""):'<div class="empty">Chưa có lịch hẹn. Chọn quán và bấm “＋ Lịch hẹn” nhé!</div>')+'</div>'}
+
+function cloudPanel(){
+ const s=window.HappyMealCloud?.view?.()||{phase:'checking',configured:false,message:'Đang kiểm tra cấu hình…'};
+ const status={'synced':'✓ Đã lưu an toàn','loading':'⏳ Đang đọc dữ liệu','signed-out':'Đang lưu cục bộ','checking':'Đang kiểm tra','no-config':'Chưa kết nối Firebase','connecting':'Đang kết nối','sending':'Đang lưu…','pending':'Có dữ liệu cần đồng bộ','offline':'Ngoại tuyến','conflict':'Cần bạn chọn phiên bản','error':'Cần kiểm tra cấu hình'}[s.phase]||'Đang kiểm tra';
+ const setup='<div class="card"><h3>Thiết lập đồng bộ tài khoản Google</h3><p class="muted">Bản web vẫn lưu dữ liệu bình thường khi chưa kết nối. Để đồng bộ giữa điện thoại và máy tính, trước tiên cần tạo dự án Firebase của bạn, bật Google Authentication và Firestore với quy tắc bảo vệ từng tài khoản.</p><form id="firebaseSetup" class="formgrid"><label class="field"><span>Firebase API key (khóa web công khai)</span><input class="input" name="apiKey" autocomplete="off" required placeholder="AIza…" maxlength="250"></label><label class="field"><span>Project ID</span><input class="input" name="projectId" autocomplete="off" required placeholder="happy-meal-..." maxlength="100"></label><label class="field"><span>Auth domain</span><input class="input" name="authDomain" autocomplete="off" required placeholder="ten-du-an.firebaseapp.com" maxlength="250"></label><label class="field"><span>App ID</span><input class="input" name="appId" autocomplete="off" required placeholder="1:…:web:…" maxlength="250"></label><div class="wide"><button class="btn primary" type="submit">Lưu cấu hình và bật đăng nhập</button></div></form><p class="sub">Cấu hình ứng dụng web Firebase là thông tin công khai theo thiết kế; bảo mật dữ liệu dựa trên <strong>Firestore Rules</strong> và đăng nhập Google. Không nhập mật khẩu Gmail hoặc khóa tài khoản dịch vụ.</p><p><a class="btn tonal" href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer">Mở Firebase Console ↗</a> <a class="btn" href="https://github.com/thanhlampro1012/Meal-Happy/blob/main/firebase/SETUP.md" target="_blank" rel="noopener noreferrer">Xem hướng dẫn từng bước</a></p></div>';
+ return '<section class="section"><h2>☁ Lưu tiến trình trên mọi thiết bị</h2><p class="muted">Đăng nhập cùng một tài khoản Google trên các thiết bị để đồng bộ quán đã lưu, món yêu thích, lịch hẹn, ghi chú và chế độ giao diện. Các địa điểm gợi ý là dữ liệu chung, không cần đăng nhập.</p>'+
+ '<div class="card"><div class="sectionHead"><h3>'+esc(status)+'</h3><span class="sub">'+esc(s.projectId||'Dữ liệu trên thiết bị')+'</span></div><p>'+esc(s.message||'')+'</p>'+
+ (s.user?'<p><strong>👤 '+esc(s.account)+'</strong> <span class="sub">'+esc(s.email||'')+'</span></p><div class="placeActions"><button class="btn tonal" data-action="cloudRetry">Đồng bộ ngay</button><button class="btn" data-action="cloudSignOut">Đăng xuất Google</button></div>':
+ s.configured?'<button class="btn primary" data-action="cloudSignIn">Đăng nhập bằng Google</button>':'<p class="note">Chưa kết nối máy chủ: mọi thay đổi hiện lưu trên thiết bị này. Sao lưu JSON để tránh mất dữ liệu.</p>')+
+ (s.conflict?'<div class="syncConflict"><h3>Hai phiên bản dữ liệu khác nhau</h3><p>Bản trong máy và bản Google có thay đổi riêng. Để tránh ghi đè mất dữ liệu, hãy tải bản sao lưu JSON trước khi chọn.</p><button class="btn tonal" data-action="cloudUseCloud">Dùng dữ liệu trên Google</button> <button class="btn" data-action="cloudUseDevice">Dùng dữ liệu trên máy này</button></div>':'')+
+ '</div>'+(!s.configured?setup:'<div class="card"><h3>Cách sử dụng</h3><p>Đăng nhập cùng Gmail trên điện thoại và máy tính. Khi kết nối, những thay đổi được đồng bộ lên Firestore. Nếu hai thiết bị sửa cùng lúc hoặc máy bị mất mạng, ứng dụng sẽ giữ dữ liệu cục bộ và yêu cầu bạn giải quyết xung đột thay vì âm thầm ghi đè.</p><p class="sub">Ảnh cá nhân lưu trong trình duyệt không được đồng bộ qua Firebase. Nên dùng nút Sao lưu nếu có ảnh hoặc trước khi nhập dữ liệu từ thiết bị khác.</p></div>')+
+ '</section>';
+}
+
 function settings(){return '<h2>Cài đặt & dữ liệu</h2><div class="two"><div class="card"><h3>💾 Sao lưu dữ liệu</h3><p class="muted">Dữ liệu GitHub Pages lưu ở trình duyệt của thiết bị này; không có đăng nhập hay đồng bộ máy chủ. Nếu xóa dữ liệu website, bạn có thể mất ghi chú nếu chưa sao lưu.</p><div class="placeActions"><button class="btn tonal" id="export">Xuất JSON</button><label class="btn" for="importFile" style="cursor:pointer">Nhập JSON</label><input id="importFile" class="hidden" type="file" accept=".json,application/json"></div></div><div class="card"><h3>🌗 Giao diện</h3><p class="muted">Chọn chế độ sáng, tối hoặc theo thiết bị.</p><select id="themeSelect" class="input">'+option([["system","Theo thiết bị"],["light","Sáng"],["dark","Tối"]],data.theme)+'</select><p class="note">Địa điểm được tìm kiếm theo tên và địa chỉ trên Google Maps; app không có quyền đọc số sao Google mới nhất. Không nhập dữ liệu riêng tư vào GitHub repository công khai.</p></div></div>'}
 function showModal(title,body){$("#modalHost").innerHTML='<div class="modalWrap" id="modalWrap"><div class="modal" role="dialog" aria-modal="true" aria-label="'+esc(title)+'"><div class="modalHead"><h2>'+esc(title)+'</h2><button class="btn small" id="closeModal">✕</button></div>'+body+'</div></div>';$("#closeModal").onclick=closeModal;$("#modalWrap").addEventListener("click",e=>{if(e.target.id==="modalWrap")closeModal()});}
 function closeModal(){$("#modalHost").innerHTML=""}
@@ -97,10 +116,11 @@ function planForm(p,addPlace){const stops=p?.stops?.map(x=>({...x}))||[];if(addP
  $("#planForm").onsubmit=e=>{e.preventDefault();if(!stops.length)return toast("Cần ít nhất một địa điểm");if(new Set(stops.map(x=>x.placeId)).size!==stops.length)return toast("Mỗi điểm dừng chỉ được xuất hiện một lần");const form=new FormData(e.target);const plan={id:p?.id||uid(),title:String(form.get("title")),date:String(form.get("date")),time:String(form.get("time")),stops:stops.map(x=>({...x})),status:p?.status||"planned"};data.plans=p?data.plans.map(x=>x.id===p.id?plan:x):[plan,...data.plans];persist();closeModal();render();toast("Đã lưu lịch hẹn")};
 }
 function exportBackup(){const a=document.createElement("a"),blob=new Blob([JSON.stringify({schema:"meal-happy-pages-v1",exportedAt:new Date().toISOString(),data},null,2)],{type:"application/json"});a.href=URL.createObjectURL(blob);a.download="meal-happy-backup-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
-function importBackup(file){if(!file||file.size>2e6){toast("Tệp không hợp lệ hoặc quá lớn");return}file.text().then(s=>{let parsed;try{parsed=JSON.parse(s)}catch{return toast("Tệp không đúng định dạng JSON")};if(parsed?.schema!=="meal-happy-pages-v1"||!parsed.data||!Array.isArray(parsed.data.favorites)||!Array.isArray(parsed.data.customPlaces)||!Array.isArray(parsed.data.plans)||!Array.isArray(parsed.data.saved)){toast("Chỉ hỗ trợ bản sao lưu của Meal Happy GitHub Pages");return}if(!confirm("Khôi phục sẽ thay toàn bộ dữ liệu đang lưu ở trình duyệt này. Bạn chắc chắn?"))return;data={...empty(),...parsed.data};persist();theme();render();toast("Đã khôi phục dữ liệu")}).catch(()=>toast("Không đọc được tệp"))}
+function importBackup(file){if(!file||file.size>2e6){toast("Tệp không hợp lệ hoặc quá lớn");return}file.text().then(s=>{let parsed;try{parsed=JSON.parse(s)}catch{return toast("Tệp không đúng định dạng JSON")};if(parsed?.schema!=="meal-happy-pages-v1"||!parsed.data||!Array.isArray(parsed.data.favorites)||!Array.isArray(parsed.data.customPlaces)||!Array.isArray(parsed.data.plans)||!Array.isArray(parsed.data.saved)){toast("Chỉ hỗ trợ bản sao lưu của Happy Meal GitHub Pages");return}if(!confirm("Khôi phục sẽ thay toàn bộ dữ liệu đang lưu ở trình duyệt này. Bạn chắc chắn?"))return;data={...empty(),...parsed.data};persist();theme();render();toast("Đã khôi phục dữ liệu")}).catch(()=>toast("Không đọc được tệp"))}
 function route(plan){const stops=(plan.stops||[]).map(x=>find(x.placeId)).filter(Boolean);if(!stops.length)return toast("Lịch không có quán hợp lệ");const q=p=>p.name+", "+p.address;const url=new URL("https://www.google.com/maps/dir/");url.searchParams.set("api","1");url.searchParams.set("destination",q(stops[stops.length-1]));if(stops.length>1)url.searchParams.set("origin",q(stops[0]));if(stops.length>2)url.searchParams.set("waypoints",stops.slice(1,-1).map(q).join("|"));window.open(url.toString(),"_blank","noopener,noreferrer")}
 document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
  if(b.dataset.tab){tab=b.dataset.tab;pageSize=24;render();return}
+ if(b.id==='syncTopButton'){tab='cloud';render();return}
  if(b.dataset.cuisine!==undefined){filters.cuisine=b.dataset.cuisine;pageSize=24;render();return}
  if(b.id==="themeToggle"){data.theme=data.theme==="dark"?"light":"dark";theme();persist();return}
  if(b.id==="backupBtn"||b.id==="export"){exportBackup();return}
@@ -109,6 +129,11 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)r
  if(b.id==="more"){pageSize+=24;render();return}
  if(b.id==="spin"){if(isSpinning)return;const active=data.favorites.filter(x=>x.enabled);if(!active.length)return;isSpinning=true;b.disabled=true;$("#wheelResult").textContent="Đang chọn món...";const ary=new Uint32Array(1);crypto.getRandomValues(ary);const winner=active[ary[0]%active.length];spins+=720+Math.floor(Math.random()*360);$("#wheelDisk").style.transform="rotate("+spins+"deg)";const finish=()=>{data.lastWinner=winner.id;persist();$("#wheelResult").innerHTML='🍽️ Hôm nay ăn <b>'+esc(winner.title)+'</b>!';b.disabled=false;isSpinning=false};if(matchMedia("(prefers-reduced-motion: reduce)").matches)finish();else setTimeout(finish,1850);return}
  const id=b.dataset.id;switch(b.dataset.action){
+ case "cloudSignIn":window.HappyMealCloud?.signIn?.();break;
+ case "cloudSignOut":window.HappyMealCloud?.signOut?.();break;
+ case "cloudRetry":window.HappyMealCloud?.retry?.();break;
+ case "cloudUseCloud":if(confirm("Dùng dữ liệu trên Google sẽ thay bản hiện tại của thiết bị. Trình duyệt sẽ tải sao lưu trước khi thay. Tiếp tục?")){exportBackup();window.HappyMealCloud?.useCloud?.()}break;
+ case "cloudUseDevice":if(confirm("Ghi đè bản Google bằng dữ liệu trên thiết bị này? Nếu một thiết bị khác vừa thay đổi, dữ liệu trên đó có thể bị thay. Tiếp tục?")){exportBackup();window.HappyMealCloud?.useDevice?.()}break;
  case "details":detail(id);break;case "newplace":placeForm();break;
  case "save":data.saved=data.saved.includes(id)?data.saved.filter(x=>x!==id):[...data.saved,id];persist();render();break;
  case "planadd":planForm(null,id);break;case "newfavorite":favoriteForm();break;
@@ -122,6 +147,28 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)r
  }});
 document.addEventListener("change",e=>{const t=e.target;if(t.dataset.enabled){const f=data.favorites.find(x=>x.id===t.dataset.enabled);if(f)f.enabled=t.checked;persist();return}if(["area","kind","budget"].includes(t.id)){filters[t.id]=t.value;pageSize=24;render();return}if(t.id==="themeSelect"){data.theme=t.value;theme();persist();return}if(t.id==="importFile"){importBackup(t.files?.[0]);return}});
 document.addEventListener("input",e=>{if(e.target.id==="search"){filters.q=e.target.value;const pos=e.target.selectionStart;pageSize=24;const body=$("#app");const section=body.querySelector(".catalog")||body.querySelector(".empty");const height=window.scrollY;render();const input=$("#search");input.focus();input.setSelectionRange(pos,pos);window.scrollTo(0,height)}});
+
+document.addEventListener("submit",e=>{
+ if(e.target?.id!=="firebaseSetup")return;
+ e.preventDefault();
+ const f=new FormData(e.target);
+ window.HappyMealCloud?.configure?.({apiKey:f.get('apiKey'),projectId:f.get('projectId'),authDomain:f.get('authDomain'),appId:f.get('appId')});
+});
+window.HappyMealHost={
+ get:()=>JSON.parse(JSON.stringify(data)),
+ empty:()=>empty(),
+ applyRemote:incoming=>{
+  const next={...empty(),...incoming};
+  for(const k of ['customPlaces','saved','favorites','plans'])if(!Array.isArray(next[k]))next[k]=[];
+  if(!next.notes||typeof next.notes!=='object'||Array.isArray(next.notes))next.notes={};
+  data=next;
+  try{localStorage.setItem(KEY,JSON.stringify(data))}catch{toast("Máy này không lưu được dữ liệu mới từ Google.");}
+  theme();render();
+ },
+ refresh:()=>{if(tab==='cloud')render();else{const sync=window.HappyMealCloud?.view?.();const button=$("#syncTopButton");if(button)button.textContent=sync?.user?(sync.phase==="synced"?"☁ Đã lưu":sync.phase==="offline"?"☁ Ngoại tuyến":"☁ Đồng bộ"):"☁ Đăng nhập";}}
+};
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+
 fetch("./catalog.json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(json=>{catalog=(json.places||[]).filter(p=>AREAS.includes(p.area));render()}).catch(()=>{render();toast("Không tải được danh mục địa điểm. Hãy tải lại trang khi có mạng.")});
 load();render();if(matchMedia)matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{if(data.theme==="system")theme()});
-</script></body></html>
+</script><script type="module" src="./firebase-sync.js"></script></body></html>
