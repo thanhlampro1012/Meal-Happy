@@ -73,10 +73,12 @@ function render(){const list=all();$("#tabs").innerHTML=MENU.map(([id,label])=>'
 }
 function explore(saved=false){let list=all().filter(p=>(saved||AREAS.includes(p.area))&&(!saved||data.saved.includes(p.id))&&(!filters.area||p.area===filters.area)&&(!filters.kind||p.kind===filters.kind)&&(!filters.cuisine||(p.cuisineTags||[]).includes(filters.cuisine))&&(!filters.budget||((p.budgetMax||Infinity)*filters.people<=Number(filters.budget))));
  if(filters.q){const q=norm(filters.q);list=list.filter(p=>norm([p.name,p.address,p.area,...(p.dishes||[]),...(p.tags||[])].join(" ")).includes(q))}
+ // Với các món uống/ngọt, đưa lựa chọn giá sinh viên lên trước thay vì các quán đắt ở trung tâm.
+ if(!saved&&["dessert","coffee","drinks"].includes(filters.kind))list.sort((a,b)=>(a.budgetMax||Infinity)-(b.budgetMax||Infinity)||a.name.localeCompare(b.name,"vi"));
  const candidatePlaces=all().filter(p=>(saved||AREAS.includes(p.area))&&(!saved||data.saved.includes(p.id))&&(!filters.area||p.area===filters.area)&&(!filters.kind||p.kind===filters.kind));
  const available=new Set(candidatePlaces.flatMap(p=>p.cuisineTags||[]));
  const choices=filters.kind?KIND_CUISINES[filters.kind]:(ALL_POPULAR.concat(Object.values(KIND_CUISINES).flat()));
- const cuisines=[...new Set(choices)].filter(id=>CUISINES[id]&&available.has(id));
+ const cuisines=[...new Set(choices)].filter(id=>CUISINES[id]&&(available.has(id)||id===filters.cuisine));
  const title=filters.kind==="dessert"?"Hôm nay muốn ăn món ngọt gì?":filters.kind==="coffee"?"Hôm nay uống cà phê gì?":filters.kind==="drinks"?"Hôm nay muốn uống gì?":"Hôm nay muốn ăn món gì?";
  const budgetOptions=[30000,50000,70000,100000,150000,200000,300000,500000,1000000];
  return '<div class="sectionHead"><h2>'+(saved?"Quán hai đứa đã lưu":"Khám phá quán ăn")+'</h2><button class="btn tonal" data-action="newplace">＋ Tự thêm quán</button></div>'+
