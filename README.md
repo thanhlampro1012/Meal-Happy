@@ -4,13 +4,13 @@ Có **PWA** (Thêm vào Màn hình chính), icon Happy Meal và tab **Đồng b�
 
 Sổ địa điểm, món muốn thử, món yêu thích và lịch hẹn riêng tư cho hai người tại TP.HCM. Giao diện tiếng Việt, dùng trên điện thoại và máy tính, có chế độ sáng và tối.
 
-Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản v3 có **139 địa điểm trong 5 khu vực và 35 nhóm món**. Xem [ghi chú v3](docs/release-v3.md) để biết các cải tiến, nguồn đối chiếu và phạm vi đã kiểm tra.
+Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản v3 có **184 địa điểm trong 5 khu vực và 35 nhóm món**. Xem [ghi chú v3](docs/release-v3.md) để biết các cải tiến, nguồn đối chiếu và phạm vi đã kiểm tra.
 
 Địa chỉ đích khi triển khai qua **Sites**: https://hen-saigon-cua-hai-dua.workspace-qu-1719.chatgpt.site. URL này là cấu hình đích; trạng thái phát hành cần được xác nhận bằng kết quả triển khai của Sites.
 
 ## Tính năng đã triển khai
 
-- Khám phá **139 địa điểm** trong đúng năm khu vực (Quận 1, 3, 5, Gò Vấp, Tân Bình), từ bình dân đến sang trọng.
+- Khám phá **184 địa điểm** trong đúng năm khu vực (Quận 1, 3, 5, Gò Vấp, Tân Bình), từ bình dân đến sang trọng.
 - Lọc theo **35 nhóm món**, khu vực, loại quán, không khí, trạng thái đã ghé và ngân sách cho **1 hoặc 2 người**; có các mức 30.000đ, 50.000đ, 70.000đ và 100.000đ.
 - Tìm không dấu, hỗ trợ đổi thứ tự từ khóa, hiểu cách viết `q3`/`q.3`; chọn nhiều món để tìm quán bán một trong các món đó.
 - Sắp xếp theo tên, điểm cộng đồng hoặc ngân sách; chuyển lưới/danh sách; chọn ngẫu nhiên trong kết quả đang lọc và xem thêm 24 địa điểm mỗi lượt.
@@ -30,7 +30,7 @@ Xóa một quán tự thêm sẽ gỡ các món muốn thử, ghi chú quán và
 
 ## Khám phá theo món và ngân sách
 
-Danh mục v4 gồm **105 quán ăn, 16 quán cà phê, 12 điểm tráng miệng và 6 điểm đồ uống**, chỉ trong năm khu vực. Các nhóm món gồm cơm tấm, cơm, xôi, bánh bao/bánh giò, bún, bún bò, phở, hủ tiếu, bánh mì, mì, lẩu, nướng, ốc, món chay và các nhóm ẩm thực khác. Chọn **Cơm** bao gồm cơm tấm; chọn **Bún** bao gồm bún bò. Quán tự thêm từ phiên bản cũ vẫn được phân loại từ tên, menu và nhãn khi chưa có nhóm món do người dùng chọn.
+Danh mục v5 gồm **105 quán ăn, 25 quán cà phê, 38 điểm tráng miệng và 16 điểm đồ uống**, chỉ trong năm khu vực. Các nhóm món gồm cơm tấm, cơm, xôi, bánh bao/bánh giò, bún, bún bò, phở, hủ tiếu, bánh mì, mì, lẩu, nướng, ốc, món chay và các nhóm ẩm thực khác. Chọn **Cơm** bao gồm cơm tấm; chọn **Bún** bao gồm bún bò. Quán tự thêm từ phiên bản cũ vẫn được phân loại từ tên, menu và nhãn khi chưa có nhóm món do người dùng chọn.
 
 Số lựa chọn theo mức chi tham khảo của bản dữ liệu ngày 27/11/2026:
 
@@ -227,3 +227,8 @@ Không có đặt bàn/thanh toán trong app, push notification, lịch hẹn qu
 ## Bản GitHub Pages độc lập
 
 Thư mục `docs/` là bản web tĩnh, lưu quán và món yêu thích bằng bộ nhớ trình duyệt; không dùng D1 hoặc Sites authentication, không đồng bộ khác thiết bị. Cần xuất JSON để sao lưu và nhập lại nếu đổi trình duyệt. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.
+
+
+## V5 — Chỉ năm quận và nhóm món riêng
+
+Khám phá có 184 địa điểm, với nhóm món theo từng loại quán: cơm/bún/phở; cà phê/matcha/cold brew; chè/flan/kem/trái cây tô/xôi xoài; trà sữa/trà trái cây/nước ép/sinh tố. Xem [ghi chú v5](docs/release-v5.md) và [nguồn 45 địa điểm mới](docs/venue-research-v5.json). Bản cũ giữ nguyên ID, còn quán tự thêm bên ngoài năm quận không xuất hiện trong mục Khám phá (vẫn giữ trong dữ liệu riêng để không mất lịch sử).

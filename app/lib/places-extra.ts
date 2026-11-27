@@ -4477,5 +4477,1562 @@ export const EXTRA_PLACES: Place[] = [
     "curated": true,
     "checkedAt": "2026-11-27",
     "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v5-nantha-xoi-xoai-che-thai",
+    "name": "Nantha — Xôi Xoài & Chè Thái",
+    "kind": "dessert",
+    "area": "Quận 1",
+    "address": "21B/5 Nguyễn Đình Chiểu, Quận 1, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nantha%20%E2%80%94%20X%C3%B4i%20Xo%C3%A0i%20%26%20Ch%C3%A8%20Th%C3%A1i%2021B%2F5%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Xôi xoài Thái",
+      "Chè Thái"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 70000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "xoi-xoai",
+      "che"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/tim-kiem/x%C3%B4i-xo%C3%A0i-%E1%BB%9F-qu%E1%BA%ADn-1"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Nantha%20%E2%80%94%20X%C3%B4i%20Xo%C3%A0i%20%26%20Ch%C3%A8%20Th%C3%A1i%2021B%2F5%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-bi-lun-xoi-xoai-cho-ton-that-dam",
+    "name": "Bi Lùn — Xôi Xoài Chợ Tôn Thất Đạm",
+    "kind": "dessert",
+    "area": "Quận 1",
+    "address": "Sạp 127B, Chợ Tôn Thất Đạm, Quận 1, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bi%20L%C3%B9n%20%E2%80%94%20X%C3%B4i%20Xo%C3%A0i%20Ch%E1%BB%A3%20T%C3%B4n%20Th%E1%BA%A5t%20%C4%90%E1%BA%A1m%20S%E1%BA%A1p%20127B%2C%20Ch%E1%BB%A3%20T%C3%B4n%20Th%E1%BA%A5t%20%C4%90%E1%BA%A1m%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Xôi xoài cốt dừa"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "xoi-xoai"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/tim-kiem/x%C3%B4i-xo%C3%A0i-%E1%BB%9F-qu%E1%BA%ADn-1"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bi%20L%C3%B9n%20%E2%80%94%20X%C3%B4i%20Xo%C3%A0i%20Ch%E1%BB%A3%20T%C3%B4n%20Th%E1%BA%A5t%20%C4%90%E1%BA%A1m%20S%E1%BA%A1p%20127B%2C%20Ch%E1%BB%A3%20T%C3%B4n%20Th%E1%BA%A5t%20%C4%90%E1%BA%A1m%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-che-me-den-nguyen-thai-binh",
+    "name": "Chè Mè Đen — Nguyễn Thái Bình",
+    "kind": "dessert",
+    "area": "Quận 1",
+    "address": "149 Nguyễn Thái Bình, Quận 1, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20M%C3%A8%20%C4%90en%20%E2%80%94%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%20149%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè mè đen",
+      "Flan mè đen"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che",
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20M%C3%A8%20%C4%90en%20%E2%80%94%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%20149%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-che-thai-kim-s-nguyen-van-thu",
+    "name": "Chè Thái Kim’s — Nguyễn Văn Thủ",
+    "kind": "dessert",
+    "area": "Quận 1",
+    "address": "82 Nguyễn Văn Thủ, Quận 1, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Th%C3%A1i%20Kim%E2%80%99s%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Th%E1%BB%A7%2082%20Nguy%E1%BB%85n%20V%C4%83n%20Th%E1%BB%A7%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè Thái",
+      "Chè sầu riêng"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Th%C3%A1i%20Kim%E2%80%99s%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Th%E1%BB%A7%2082%20Nguy%E1%BB%85n%20V%C4%83n%20Th%E1%BB%A7%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-tuoi-vu-dung",
+    "name": "Kem Tươi Vũ Dũng",
+    "kind": "dessert",
+    "area": "Quận 3",
+    "address": "31 Trần Quốc Toản, Quận 3, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20T%C6%B0%C6%A1i%20V%C5%A9%20D%C5%A9ng%2031%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem tươi",
+      "Kem ốc quế"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 40000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.greensm.com/vn-vi/news/quan-kem-quan-3"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20T%C6%B0%C6%A1i%20V%C5%A9%20D%C5%A9ng%2031%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ca-rem-kem-dua-thai-cach-mang-thang-tam",
+    "name": "Cà-rem Kem Dừa Thái — Cách Mạng Tháng Tám",
+    "kind": "dessert",
+    "area": "Quận 3",
+    "address": "191 Cách Mạng Tháng 8, Quận 3, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C3%A0-rem%20Kem%20D%E1%BB%ABa%20Th%C3%A1i%20%E2%80%94%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%20T%C3%A1m%20191%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%208%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dừa Thái",
+      "Kem xôi dừa"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-dua"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/ca-rem-kem-dua-thai"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C3%A0-rem%20Kem%20D%E1%BB%ABa%20Th%C3%A1i%20%E2%80%94%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%20T%C3%A1m%20191%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%208%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-dua-phaya-thai-nguyen-dinh-chieu",
+    "name": "Kem Dừa Phaya Thái — Nguyễn Đình Chiểu",
+    "kind": "dessert",
+    "area": "Quận 3",
+    "address": "782 Nguyễn Đình Chiểu, Quận 3, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Phaya%20Th%C3%A1i%20%E2%80%94%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%20782%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dừa",
+      "Kem xôi"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-dua"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Phaya%20Th%C3%A1i%20%E2%80%94%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%20782%20Nguy%E1%BB%85n%20%C4%90%C3%ACnh%20Chi%E1%BB%83u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-banh-flan-223-tran-binh-trong",
+    "name": "Bánh Flan 223 — Trần Bình Trọng",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "223 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20223%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20223%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Bánh flan caramel",
+      "Chè"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "banh-flan",
+      "che"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20223%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20223%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-che-tam-tam-tran-xuan-hoa",
+    "name": "Chè Tâm Tâm — Trần Xuân Hòa",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "14 Trần Xuân Hòa, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20T%C3%A2m%20T%C3%A2m%20%E2%80%94%20Tr%E1%BA%A7n%20Xu%C3%A2n%20H%C3%B2a%2014%20Tr%E1%BA%A7n%20Xu%C3%A2n%20H%C3%B2a%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè khúc bạch",
+      "Chè thập cẩm",
+      "Flan"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che",
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20T%C3%A2m%20T%C3%A2m%20%E2%80%94%20Tr%E1%BA%A7n%20Xu%C3%A2n%20H%C3%B2a%2014%20Tr%E1%BA%A7n%20Xu%C3%A2n%20H%C3%B2a%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-quan-che-613-nguyen-trai",
+    "name": "Quán Chè 613 — Nguyễn Trãi",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "634A Nguyễn Trãi, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Qu%C3%A1n%20Ch%C3%A8%20613%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20634A%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè sầu riêng",
+      "Chè kiểu Hoa"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che",
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Qu%C3%A1n%20Ch%C3%A8%20613%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20634A%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-fruit-crush-trai-cay-tuoi",
+    "name": "Fruit Crush — Trái Cây Tươi",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "181/6 Lê Hồng Phong, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fruit%20Crush%20%E2%80%94%20Tr%C3%A1i%20C%C3%A2y%20T%C6%B0%C6%A1i%20181%2F6%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Trái cây tô",
+      "Trái cây tươi",
+      "Sữa chua trái cây"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "trai-cay-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Fruit%20Crush%20%E2%80%94%20Tr%C3%A1i%20C%C3%A2y%20T%C6%B0%C6%A1i%20181%2F6%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-trai-cay-to-541-phan-van-tri",
+    "name": "Trái Cây Tô 541 — Phan Văn Trị",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "541 Phan Văn Trị, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20541%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20541%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Trái cây tô",
+      "Sinh tố bơ"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "trai-cay-to",
+      "sinh-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20541%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20541%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-dua-phaya-thai-nguyen-bieu",
+    "name": "Kem Dừa Phaya Thai — Nguyễn Biểu",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "146 Nguyễn Biểu, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Phaya%20Thai%20%E2%80%94%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%20146%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dừa trong trái dừa"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-dua"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Phaya%20Thai%20%E2%80%94%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%20146%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-banh-flan-tay-ban-nha-duong-so-1",
+    "name": "Bánh Flan Tây Ban Nha — Đường Số 1",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "119 Đường Số 1, Gò Vấp, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20T%C3%A2y%20Ban%20Nha%20%E2%80%94%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%201%20119%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%201%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Bánh flan caramel",
+      "Flan phô mai"
+    ],
+    "budgetMin": 10000,
+    "budgetMax": 35000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/tim-kiem/flan"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20T%C3%A2y%20Ban%20Nha%20%E2%80%94%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%201%20119%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%201%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-boobo-s-flan-le-van-tho",
+    "name": "Boobo’s Flan — Lê Văn Thọ",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "106 Lê Văn Thọ, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Boobo%E2%80%99s%20Flan%20%E2%80%94%20L%C3%AA%20V%C4%83n%20Th%E1%BB%8D%20106%20L%C3%AA%20V%C4%83n%20Th%E1%BB%8D%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Bánh flan nhiều vị",
+      "Flan cà phê"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 45000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Boobo%E2%80%99s%20Flan%20%E2%80%94%20L%C3%AA%20V%C4%83n%20Th%E1%BB%8D%20106%20L%C3%AA%20V%C4%83n%20Th%E1%BB%8D%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-thanh-phuc-flan-rau-cau",
+    "name": "Thành Phúc — Flan & Rau Câu",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "42 Đường Số 45, Gò Vấp, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Th%C3%A0nh%20Ph%C3%BAc%20%E2%80%94%20Flan%20%26%20Rau%20C%C3%A2u%2042%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2045%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Bánh flan",
+      "Rau câu",
+      "Cao quy linh"
+    ],
+    "budgetMin": 10000,
+    "budgetMax": 30000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/thanh-phuc-banh-flan-rau-cau-cao-quy-linh"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Th%C3%A0nh%20Ph%C3%BAc%20%E2%80%94%20Flan%20%26%20Rau%20C%C3%A2u%2042%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2045%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-dua-siam-nguyen-van-bao",
+    "name": "Kem Dừa Siam — Nguyễn Văn Bảo",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "61 Nguyễn Văn Bảo, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Siam%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20B%E1%BA%A3o%2061%20Nguy%E1%BB%85n%20V%C4%83n%20B%E1%BA%A3o%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dừa Thái",
+      "Kem xôi dừa"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-dua"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20Siam%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20B%E1%BA%A3o%2061%20Nguy%E1%BB%85n%20V%C4%83n%20B%E1%BA%A3o%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-dua-hanh-phuc-cityland",
+    "name": "Kem Dừa Hạnh Phúc — Cityland",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "14 Đường Số 3, KDC Cityland, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20H%E1%BA%A1nh%20Ph%C3%BAc%20%E2%80%94%20Cityland%2014%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%203%2C%20KDC%20Cityland%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dừa sầu riêng",
+      "Kem dừa"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 65000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-dua"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20D%E1%BB%ABa%20H%E1%BA%A1nh%20Ph%C3%BAc%20%E2%80%94%20Cityland%2014%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%203%2C%20KDC%20Cityland%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-trai-cay-to-truong-minh-giang",
+    "name": "Trái Cây Tô — Trương Minh Giảng",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "26/32 Trương Minh Giảng, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20%E2%80%94%20Tr%C6%B0%C6%A1ng%20Minh%20Gi%E1%BA%A3ng%2026%2F32%20Tr%C6%B0%C6%A1ng%20Minh%20Gi%E1%BA%A3ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Trái cây tô",
+      "Sữa chua trái cây"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "trai-cay-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20%E2%80%94%20Tr%C6%B0%C6%A1ng%20Minh%20Gi%E1%BA%A3ng%2026%2F32%20Tr%C6%B0%C6%A1ng%20Minh%20Gi%E1%BA%A3ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-kem-bo-trai-cay-to-le-thi-hong",
+    "name": "Kem Bơ — Trái Cây Tô Lê Thị Hồng",
+    "kind": "dessert",
+    "area": "Gò Vấp",
+    "address": "40/38 Lê Thị Hồng, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20B%C6%A1%20%E2%80%94%20Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2040%2F38%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem bơ",
+      "Trái cây tô"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "kem-bo",
+      "trai-cay-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20B%C6%A1%20%E2%80%94%20Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2040%2F38%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-che-mai-gia-lai-truong-cong-dinh",
+    "name": "Chè Mai Gia Lai — Trương Công Định",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "220 Trương Công Định, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Mai%20Gia%20Lai%20%E2%80%94%20Tr%C6%B0%C6%A1ng%20C%C3%B4ng%20%C4%90%E1%BB%8Bnh%20220%20Tr%C6%B0%C6%A1ng%20C%C3%B4ng%20%C4%90%E1%BB%8Bnh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè Gia Lai",
+      "Bánh flan"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che",
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Mai%20Gia%20Lai%20%E2%80%94%20Tr%C6%B0%C6%A1ng%20C%C3%B4ng%20%C4%90%E1%BB%8Bnh%20220%20Tr%C6%B0%C6%A1ng%20C%C3%B4ng%20%C4%90%E1%BB%8Bnh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-che-chi-tran-nguyen-sy-sach",
+    "name": "Chè Chi Trần — Nguyễn Sỹ Sách",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "143 Nguyễn Sỹ Sách, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Chi%20Tr%E1%BA%A7n%20%E2%80%94%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%20143%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Chè xứ Quảng",
+      "Trái cây tô",
+      "Flan"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "che",
+      "trai-cay-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Chi%20Tr%E1%BA%A7n%20%E2%80%94%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%20143%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-trai-cay-to-241-dong-den",
+    "name": "Trái Cây Tô 241 — Đồng Đen",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "84 Đồng Đen, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20241%20%E2%80%94%20%C4%90%E1%BB%93ng%20%C4%90en%2084%20%C4%90%E1%BB%93ng%20%C4%90en%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Trái cây tô",
+      "Nước ép",
+      "Sinh tố"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "trai-cay-to",
+      "sinh-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A1i%20C%C3%A2y%20T%C3%B4%20241%20%E2%80%94%20%C4%90%E1%BB%93ng%20%C4%90en%2084%20%C4%90%E1%BB%93ng%20%C4%90en%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-i-love-kem-le-van-sy",
+    "name": "I Love Kem — Lê Văn Sỹ",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "355 Lê Văn Sỹ, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=I%20Love%20Kem%20%E2%80%94%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%20355%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem tự chọn",
+      "Kem socola",
+      "Kem dâu"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 65000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/i-love-kem-kem-tu-chon-le-van-sy/thuc-don"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=I%20Love%20Kem%20%E2%80%94%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%20355%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-que-phuong-kem-dia",
+    "name": "Quế Phương — Kem Dĩa",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "110 Ca Văn Thỉnh, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Qu%E1%BA%BF%20Ph%C6%B0%C6%A1ng%20%E2%80%94%20Kem%20D%C4%A9a%20110%20Ca%20V%C4%83n%20Th%E1%BB%89nh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Kem dĩa",
+      "Kem ký",
+      "Bánh flan"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 45000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "kem",
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/que-phuong"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Qu%E1%BA%BF%20Ph%C6%B0%C6%A1ng%20%E2%80%94%20Kem%20D%C4%A9a%20110%20Ca%20V%C4%83n%20Th%E1%BB%89nh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-banh-flan-thanh-chau-cho-hoang-hoa-tham",
+    "name": "Bánh Flan Thanh Châu — Chợ Hoàng Hoa Thám",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "B15 Phố Chợ, Hoàng Hoa Thám, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20Thanh%20Ch%C3%A2u%20%E2%80%94%20Ch%E1%BB%A3%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%20B15%20Ph%E1%BB%91%20Ch%E1%BB%A3%2C%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Gợi ý tráng miệng dễ ghé sau bữa chính: món ngọt mát, giá dự trù phù hợp đi học và đi chơi.",
+    "dishes": [
+      "Bánh flan caramel",
+      "Rau câu"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 45000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Tráng miệng"
+    ],
+    "cuisineTags": [
+      "banh-flan"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20Thanh%20Ch%C3%A2u%20%E2%80%94%20Ch%E1%BB%A3%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%20B15%20Ph%E1%BB%91%20Ch%E1%BB%A3%2C%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-vida-cafe-pham-ngoc-thach",
+    "name": "ViDa Cafe — Phạm Ngọc Thạch",
+    "kind": "coffee",
+    "area": "Quận 3",
+    "address": "58/11 Phạm Ngọc Thạch, Quận 3, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=ViDa%20Cafe%20%E2%80%94%20Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%2058%2F11%20Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê sữa",
+      "Bạc xỉu",
+      "Cà phê muối"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=ViDa%20Cafe%20%E2%80%94%20Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%2058%2F11%20Ph%E1%BA%A1m%20Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tiem-ca-phe-mo-cao-thang",
+    "name": "Tiệm Cà Phê Mơ — Cao Thắng",
+    "kind": "coffee",
+    "area": "Quận 3",
+    "address": "52/13 Cao Thắng, Quận 3, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BB%87m%20C%C3%A0%20Ph%C3%AA%20M%C6%A1%20%E2%80%94%20Cao%20Th%E1%BA%AFng%2052%2F13%20Cao%20Th%E1%BA%AFng%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê nâu",
+      "Cold brew",
+      "Latte"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe",
+      "cold-brew"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BB%87m%20C%C3%A0%20Ph%C3%AA%20M%C6%A1%20%E2%80%94%20Cao%20Th%E1%BA%AFng%2052%2F13%20Cao%20Th%E1%BA%AFng%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tran-coffee-tran-binh-trong",
+    "name": "TRẦN Coffee — Trần Bình Trọng",
+    "kind": "coffee",
+    "area": "Quận 5",
+    "address": "22/53 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=TR%E1%BA%A6N%20Coffee%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2022%2F53%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê sữa",
+      "Cà phê đen"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=TR%E1%BA%A6N%20Coffee%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2022%2F53%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-moda-house-coffee-nguyen-oanh",
+    "name": "Moda House Coffee — Nguyễn Oanh",
+    "kind": "coffee",
+    "area": "Gò Vấp",
+    "address": "11 Nguyễn Oanh, Gò Vấp, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Moda%20House%20Coffee%20%E2%80%94%20Nguy%E1%BB%85n%20Oanh%2011%20Nguy%E1%BB%85n%20Oanh%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê",
+      "Trà đào",
+      "Trà dưa lưới"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/moda-coffee"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Moda%20House%20Coffee%20%E2%80%94%20Nguy%E1%BB%85n%20Oanh%2011%20Nguy%E1%BB%85n%20Oanh%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-caffuzzy-cafe-cozy-fuzzy",
+    "name": "Caffuzzy — Cafe Cozy Fuzzy",
+    "kind": "coffee",
+    "area": "Gò Vấp",
+    "address": "200 Đường Số 9, Gò Vấp, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Caffuzzy%20%E2%80%94%20Cafe%20Cozy%20Fuzzy%20200%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%209%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê sữa",
+      "Latte",
+      "Bạc xỉu"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.yellowmega.com/VN/Ho-Chi-Minh-City/890169540852575/Caffuzzy---Cafe.Cozy.Fuzzy"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Caffuzzy%20%E2%80%94%20Cafe%20Cozy%20Fuzzy%20200%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%209%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ha-an-corner-dong-xoai",
+    "name": "Hạ An Corner — Đồng Xoài",
+    "kind": "coffee",
+    "area": "Tân Bình",
+    "address": "41/6 Đồng Xoài, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%E1%BA%A1%20An%20Corner%20%E2%80%94%20%C4%90%E1%BB%93ng%20Xo%C3%A0i%2041%2F6%20%C4%90%E1%BB%93ng%20Xo%C3%A0i%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê",
+      "Bạc xỉu",
+      "Bánh ngọt"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe",
+      "banh-ngot"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://truecafe.vn/ban-tin/quan-ca-phe-dep-tan-binh/"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=H%E1%BA%A1%20An%20Corner%20%E2%80%94%20%C4%90%E1%BB%93ng%20Xo%C3%A0i%2041%2F6%20%C4%90%E1%BB%93ng%20Xo%C3%A0i%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ticos-coffee-bau-cat",
+    "name": "Ticos Coffee — Bàu Cát",
+    "kind": "coffee",
+    "area": "Tân Bình",
+    "address": "145–147 Bàu Cát, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ticos%20Coffee%20%E2%80%94%20B%C3%A0u%20C%C3%A1t%20145%E2%80%93147%20B%C3%A0u%20C%C3%A1t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê",
+      "Cold brew",
+      "Trà"
+    ],
+    "budgetMin": 28000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe",
+      "cold-brew"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://truecafe.vn/ban-tin/quan-ca-phe-dep-tan-binh/"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ticos%20Coffee%20%E2%80%94%20B%C3%A0u%20C%C3%A1t%20145%E2%80%93147%20B%C3%A0u%20C%C3%A1t%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-wego-coffee-ut-tich",
+    "name": "Wego Coffee — Út Tịch",
+    "kind": "coffee",
+    "area": "Tân Bình",
+    "address": "64 Út Tịch, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Wego%20Coffee%20%E2%80%94%20%C3%9At%20T%E1%BB%8Bch%2064%20%C3%9At%20T%E1%BB%8Bch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê sữa",
+      "Latte"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://truecafe.vn/ban-tin/quan-ca-phe-dep-tan-binh/"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Wego%20Coffee%20%E2%80%94%20%C3%9At%20T%E1%BB%8Bch%2064%20%C3%9At%20T%E1%BB%8Bch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-beo-cafe-truong-chinh",
+    "name": "béo. cafe — Trường Chinh",
+    "kind": "coffee",
+    "area": "Tân Bình",
+    "address": "291/17 Trường Chinh, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=b%C3%A9o.%20cafe%20%E2%80%94%20Tr%C6%B0%E1%BB%9Dng%20Chinh%20291%2F17%20Tr%C6%B0%E1%BB%9Dng%20Chinh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Đi cà phê hoặc học bài, ưu tiên mức giá vừa túi tiền.",
+    "dishes": [
+      "Cà phê",
+      "Trà mãng cầu",
+      "Trà vải"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 70000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Cà phê"
+    ],
+    "cuisineTags": [
+      "ca-phe",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=b%C3%A9o.%20cafe%20%E2%80%94%20Tr%C6%B0%E1%BB%9Dng%20Chinh%20291%2F17%20Tr%C6%B0%E1%BB%9Dng%20Chinh%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tiem-tra-sua-tran-chau-le-van-sy",
+    "name": "Tiệm Trà Sữa Trân Châu — Lê Văn Sỹ",
+    "kind": "drinks",
+    "area": "Quận 3",
+    "address": "386/35 Lê Văn Sỹ, Quận 3, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BB%87m%20Tr%C3%A0%20S%E1%BB%AFa%20Tr%C3%A2n%20Ch%C3%A2u%20%E2%80%94%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%20386%2F35%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa Thái",
+      "Trà trái cây"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BB%87m%20Tr%C3%A0%20S%E1%BB%AFa%20Tr%C3%A2n%20Ch%C3%A2u%20%E2%80%94%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%20386%2F35%20L%C3%AA%20V%C4%83n%20S%E1%BB%B9%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tra-sua-bong-map-vo-van-tan",
+    "name": "Trà Sữa Bông Mập — Võ Văn Tần",
+    "kind": "drinks",
+    "area": "Quận 3",
+    "address": "202/10 Võ Văn Tần, Quận 3, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20S%E1%BB%AFa%20B%C3%B4ng%20M%E1%BA%ADp%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20202%2F10%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa trân châu",
+      "Trà sữa kem cheese"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 45000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://bobapop.com.vn/tra-sua-vo-van-tan/"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20S%E1%BB%AFa%20B%C3%B4ng%20M%E1%BA%ADp%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20202%2F10%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tra-dem-126-tran-binh-trong",
+    "name": "Trà Đêm 126 — Trần Bình Trọng",
+    "kind": "drinks",
+    "area": "Quận 5",
+    "address": "126C Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20%C4%90%C3%AAm%20126%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20126C%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà trái cây",
+      "Trà sữa"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20%C4%90%C3%AAm%20126%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20126C%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-juice-time-an-duong-vuong",
+    "name": "Juice Time — An Dương Vương",
+    "kind": "drinks",
+    "area": "Quận 5",
+    "address": "118 An Dương Vương, Quận 5, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Juice%20Time%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20118%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Nước ép cam",
+      "Sinh tố bơ",
+      "Trà trái cây"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "nuoc-ep",
+      "sinh-to",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Juice%20Time%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20118%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-bobapop-tran-binh-trong",
+    "name": "Bobapop — Trần Bình Trọng",
+    "kind": "drinks",
+    "area": "Quận 5",
+    "address": "233 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bobapop%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20233%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa trân châu",
+      "Trà đào"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 65000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.greensm.com/vn-vi/news/tra-sua-quan-5"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bobapop%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20233%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ola-ngon-nha-duong-quang-ham",
+    "name": "OLA Ngon Nha — Dương Quảng Hàm",
+    "kind": "drinks",
+    "area": "Gò Vấp",
+    "address": "80/101 Dương Quảng Hàm, Gò Vấp, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=OLA%20Ngon%20Nha%20%E2%80%94%20D%C6%B0%C6%A1ng%20Qu%E1%BA%A3ng%20H%C3%A0m%2080%2F101%20D%C6%B0%C6%A1ng%20Qu%E1%BA%A3ng%20H%C3%A0m%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa",
+      "Trà dâu",
+      "Trà trái cây"
+    ],
+    "budgetMin": 10000,
+    "budgetMax": 40000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/ho-chi-minh/ola-ngon-nha-tra-tra-sua"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=OLA%20Ngon%20Nha%20%E2%80%94%20D%C6%B0%C6%A1ng%20Qu%E1%BA%A3ng%20H%C3%A0m%2080%2F101%20D%C6%B0%C6%A1ng%20Qu%E1%BA%A3ng%20H%C3%A0m%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-tra-sua-hai-yen-phan-van-tri",
+    "name": "Trà Sữa Hải Yến — Phan Văn Trị",
+    "kind": "drinks",
+    "area": "Gò Vấp",
+    "address": "710/6/6 Phan Văn Trị, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20S%E1%BB%AFa%20H%E1%BA%A3i%20Y%E1%BA%BFn%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20710%2F6%2F6%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa",
+      "Sinh tố",
+      "Yaourt trái cây"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "sinh-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%A0%20S%E1%BB%AFa%20H%E1%BA%A3i%20Y%E1%BA%BFn%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20710%2F6%2F6%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ai-cha-cityland-duong-so-10",
+    "name": "Ai-CHA Cityland — Đường Số 10",
+    "kind": "drinks",
+    "area": "Gò Vấp",
+    "address": "32 Đường Số 10, KDC Cityland, Gò Vấp, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ai-CHA%20Cityland%20%E2%80%94%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%2032%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%2C%20KDC%20Cityland%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa",
+      "Trà trái cây",
+      "Kem"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 50000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ai-CHA%20Cityland%20%E2%80%94%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%2032%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%2C%20KDC%20Cityland%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-nho-xiu-quan-nguyen-quang-bich",
+    "name": "Nhỏ Xíu Quán — Nguyễn Quang Bích",
+    "kind": "drinks",
+    "area": "Tân Bình",
+    "address": "42A Nguyễn Quang Bích, Tân Bình, TP.HCM",
+    "addressSource": "Danh bạ địa điểm/Google Maps, cần xác minh trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nh%E1%BB%8F%20X%C3%ADu%20Qu%C3%A1n%20%E2%80%94%20Nguy%E1%BB%85n%20Quang%20B%C3%ADch%2042A%20Nguy%E1%BB%85n%20Quang%20B%C3%ADch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa",
+      "Trà trái cây",
+      "Sinh tố"
+    ],
+    "budgetMin": 20000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua",
+      "tra-trai-cay",
+      "sinh-to"
+    ],
+    "sources": [
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Nh%E1%BB%8F%20X%C3%ADu%20Qu%C3%A1n%20%E2%80%94%20Nguy%E1%BB%85n%20Quang%20B%C3%ADch%2042A%20Nguy%E1%BB%85n%20Quang%20B%C3%ADch%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
+  },
+  {
+    "id": "v5-ola-ngon-nha-cach-mang-thang-tam",
+    "name": "OLA Ngon Nha — Cách Mạng Tháng Tám",
+    "kind": "drinks",
+    "area": "Tân Bình",
+    "address": "766/83 Cách Mạng Tháng 8, Tân Bình, TP.HCM",
+    "addressSource": "Nguồn địa chỉ công khai, kiểm tra lại giờ hoạt động trước khi đến",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=OLA%20Ngon%20Nha%20%E2%80%94%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%20T%C3%A1m%20766%2F83%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%208%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Món nước giải khát, trà sữa hoặc sinh tố phù hợp hẹn nhẹ nhàng.",
+    "dishes": [
+      "Trà sữa",
+      "Trà dâu"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 40000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Đồ uống"
+    ],
+    "cuisineTags": [
+      "tra-sua"
+    ],
+    "sources": [
+      {
+        "label": "Nguồn quán & địa chỉ tham khảo",
+        "url": "https://www.foody.vn/thuong-hieu/ola-ngon-nha-tra-tra-sua?c=ho-chi-minh"
+      },
+      {
+        "label": "Xem địa điểm và tình trạng mới nhất trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=OLA%20Ngon%20Nha%20%E2%80%94%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%20T%C3%A1m%20766%2F83%20C%C3%A1ch%20M%E1%BA%A1ng%20Th%C3%A1ng%208%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Mức dự trù biên tập cho 1 phần/người; không phải giá bán cố định. Hãy đối chiếu thực đơn, vị trí, giờ mở cửa và hoạt động trước khi đi."
   }
 ];
