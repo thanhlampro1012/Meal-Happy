@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid}/appData/notebook {
+      function owner() {
+        return request.auth != null && request.auth.uid == uid;
+      }
+      function allowedShape() {
+        return request.resource.data.keys().hasOnly(['revision','notebook','updatedAt'])
+          && request.resource.data.keys().hasAll(['revision','notebook','updatedAt'])
+          && request.resource.data.revision is int
+          && request.resource.data.notebook is map
+          && request.resource.data.updatedAt == request.time;
+      }
+      allow get: if owner();
+      allow list: if false;
+      allow create: if owner() && allowedShape()
+        && request.resource.data.revision == 1;
+      allow update: if owner() && allowedShape()
+        && request.resource.data.revision == resource.data.revision + 1;
+      allow delete: if false;
+    }
+  }
+}
