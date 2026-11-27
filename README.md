@@ -2,10 +2,9 @@
 
 **Website đang chạy:** https://thanhlampro1012.github.io/Meal-Happy/ · **Source:** https://github.com/thanhlampro1012/Meal-Happy · **Dữ liệu:** 184 địa điểm thuộc đúng 5 khu vực. Mã tĩnh trong `docs/` là bản website chính trên GitHub Pages; mã `app/` là nhánh ứng dụng Sites khác backend, không tự chạy trên GitHub Pages.
 
-**Trạng thái thực tế:** khám phá, phân loại món, bộ lọc sinh viên, lưu quán, ghi chú, món yêu thích, vòng quay, so sánh 2–3 quán, lịch hẹn, chế độ tối, PWA, icon và xuất/nhập JSON có ảnh cá nhân đều triển khai. Có 6 ảnh quán được phép sử dụng với nguồn rõ ràng; quán khác mở Google Maps hoặc người dùng tự thêm ảnh. **Đồng bộ Google còn chờ dự án Firebase/Firestore của chủ app**; không thể xác nhận đồng bộ thật khi chưa kết nối. Xem [hướng dẫn thiết lập Firebase](firebase/SETUP.md).
+**Trạng thái thực tế:** khám phá, phân loại món, bộ lọc sinh viên, lưu quán, ghi chú, món yêu thích, vòng quay, so sánh 2–3 quán, lịch hẹn, chế độ tối, PWA, icon và xuất/nhập JSON có ảnh cá nhân đều triển khai. Có 6 ảnh quán được phép sử dụng với nguồn rõ ràng; quán khác mở Google Maps hoặc người dùng tự thêm ảnh. Để đồng bộ, mở **Đồng bộ → Đăng nhập bằng Google** trên cả hai thiết bị bằng cùng tài khoản. Chờ **Đã lưu** trước khi đóng app. Có thể chuyển cả ảnh riêng bằng tệp sao lưu trong tab này.
 
-
-Có **PWA** (Thêm vào Màn hình chính), icon Happy Meal và tab **Đồng bộ** (Google Auth + Firestore, cần cấu hình Firebase thuộc tài khoản của chủ ứng dụng). Xem [firebase/SETUP.md](firebase/SETUP.md) để kết nối. Mã nguồn giữ tên repo Meal-Happy để URL web cũ vẫn hoạt động; dữ liệu cục bộ dùng khóa cũ để không mất lịch sử.
+Bạn có thể thêm Happy Meal vào màn hình chính trên điện thoại. Địa chỉ GitHub Pages và khóa lưu cục bộ của bản trước được giữ để tiếp tục dùng sổ đang có.
 
 Sổ địa điểm, món muốn thử, món yêu thích và lịch hẹn riêng tư cho hai người tại TP.HCM. Giao diện tiếng Việt, dùng trên điện thoại và máy tính, có chế độ sáng và tối.
 
@@ -231,7 +230,7 @@ Không có đặt bàn/thanh toán trong app, push notification, lịch hẹn qu
 
 ## Bản GitHub Pages độc lập
 
-Thư mục `docs/` là bản web GitHub Pages độc lập với Sites. Dữ liệu luôn lưu trên trình duyệt và có thể đồng bộ Firestore theo Google UID sau khi **người chủ tự cấu hình Firebase** (hiện `docs/firebase-config.json` trống). Có sao lưu/khôi phục JSON kể cả ảnh cá nhân; ảnh cá nhân lưu riêng trong IndexedDB và **không đồng bộ qua Firestore**. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.
+Thư mục `docs/` là bản web GitHub Pages độc lập với Sites. Dữ liệu luôn lưu trên trình duyệt và đồng bộ với Firestore theo Google UID khi đăng nhập. Có sao lưu/khôi phục JSON kể cả ảnh cá nhân; ảnh cá nhân lưu riêng trong IndexedDB và **không đồng bộ qua Firestore**. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.
 
 
 ## V5 — Chỉ năm quận và nhóm món riêng

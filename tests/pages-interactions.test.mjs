@@ -107,3 +107,23 @@ test('unsafe imported venue links cannot be used as script URLs',()=>{
  a.run('detail("unsafe")');
  assert.ok(!a.element('#modalHost').innerHTML.includes('href="javascript:'));
 });
+
+test('backup refuses malformed nested data before it can replace the notebook',async()=>{
+ const a=app();
+ a.run("data.saved=['keep-me']");
+ const invalid={...a.run('empty()'),customPlaces:[{id:'p',name:'Quán',address:'1',dishes:[],cuisineTags:[],sources:'invalid'}]};
+ const input=JSON.stringify({schema:'meal-happy-pages-v1',data:invalid});
+ a.ctx.file={text:async()=>input};
+ await a.run('importBackup(file)');
+ assert.equal(a.run('data.saved[0]'),'keep-me');
+ assert.match(a.element('#toastHost').innerHTML,/không phải bản sao/);
+});
+
+test('failed local write preserves the notebook and stops remote acknowledgement',()=>{
+ const a=app();a.run("data.saved=['original']");
+ a.ctx.localStorage.setItem=()=>{throw Error('quota')};
+ assert.equal(a.run('persist()'),false);
+ assert.equal(a.element('#storageWarning').hidden,false);
+ assert.throws(()=>a.run("window.HappyMealHost.applyRemote({...empty(),saved:['other']})"),/bộ nhớ/);
+ assert.equal(a.run('data.saved[0]'),'original');
+});

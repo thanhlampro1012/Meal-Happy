@@ -12,7 +12,7 @@ const sdk = {
 };
 let modules, app, auth, db, user = null, config = null, docRef = null;
 let generation = 0, rev = 0, baseline = null, conflict = null, unlisten = null;
-let connected = false, sending = false, needsWrite = false, syncTimer = null;
+let connected = false, sending = false, needsWrite = false, syncTimer = null, deferredSnapshot = null;
 let phase = 'checking', message = 'Đang kiểm tra cấu hình đồng bộ…';
 
 const host = () => window.HappyMealHost;
@@ -25,9 +25,9 @@ const stable = value => JSON.stringify(value, function(_key, val){
 });
 const same = (a,b) => stable(a) === stable(b);
 function hasContent(book) {
-  return !!(book && ((book.customPlaces?.length || 0) + (book.saved?.length || 0)
-    + (book.favorites?.length || 0) + (book.plans?.length || 0)
-    + Object.keys(book.notes || {}).length) > 0);
+  if(!book)return false;
+  return ['customPlaces','saved','favorites','plans'].some(key=>book[key]?.length)
+    || Object.keys(book.notes || {}).length>0 || !!book.lastWinner || !!(book.theme && book.theme!=='system');
 }
 function show(status, info = '') {phase = status; message = info; host()?.refresh(); }
 function readConfig(c) {
@@ -62,7 +62,7 @@ function setLocal(book){
 function disconnect(){
   generation++; clearTimeout(syncTimer); unlisten?.(); unlisten=null;
   docRef=null; user=null; rev=0; baseline=null; conflict=null;
-  connected=false; sending=false; needsWrite=false;
+  connected=false; sending=false; needsWrite=false; deferredSnapshot=null;
 }
 async function loadDependencies(){
   if (!modules) {
@@ -94,7 +94,7 @@ async function boot(c) {
     auth=fa.getAuth(app); db=fs.getFirestore(app);
     try {await fa.setPersistence(auth,fa.browserLocalPersistence);}catch { /* Browser may block durable login. */ }
     fa.onAuthStateChanged(auth,account=>{void startAccount(account);},e=>show('error',friendlyError(e)));
-  } catch(e){show('error',friendlyError(e));}
+  } catch(e){show(navigator.onLine?'error':'offline',friendlyError(e));}
 }
 async function startAccount(account){
   disconnect();
@@ -121,9 +121,7 @@ async function startAccount(account){
         show('conflict','Thiết bị chứa dữ liệu của một tài khoản Google khác. Hãy sao lưu rồi chọn phiên bản muốn sử dụng.');
         return;
       }
-      if(!hasContent(local)||same(local,book)){
-        setLocal(book);
-      }else if(previous && same(local,previous)){
+      if(same(local,book) || (!previous && !hasContent(local)) || (previous && same(local,previous))){
         setLocal(book); // Another device has newer data; local matches last synced state.
       }else if(previous && same(book,previous)){
         baseline=clone(book);
@@ -153,10 +151,15 @@ function listen(){
   unlisten?.();if(!docRef)return;
   const {fs}=modules, seq=generation, uid=user.uid;
   unlisten=fs.onSnapshot(docRef,snap=>{
-    if(!sessionMatches(seq,uid) || !snap.exists() || snap.metadata.hasPendingWrites || snap.metadata.fromCache)return;
+    if(sessionMatches(seq,uid))receiveSnapshot(snap);
+  },e=>{if(sessionMatches(seq,uid))show('error',friendlyError(e));});
+}
+function receiveSnapshot(snap){
+    if(!snap.exists() || snap.metadata.hasPendingWrites || snap.metadata.fromCache)return;
     const row=snap.data(),nextRev=row.revision,remote=row.notebook;
     if(!remote || !Number.isSafeInteger(nextRev) || nextRev<=rev)return;
-    if(sending)return; // Firestore transaction verifies the revision before writing.
+    if(sending){deferredSnapshot=snap;return;}
+    if(conflict)return;
     const local=host().get();
     if(same(local,remote)){
       rev=nextRev;markSynced(remote);needsWrite=false;connected=true;clearTimeout(syncTimer);
@@ -167,10 +170,17 @@ function listen(){
       connected=false;clearTimeout(syncTimer);
       show('conflict','Có thay đổi trên thiết bị khác trong lúc máy này chưa đồng bộ.');
     }else{
-      rev=nextRev;setLocal(remote);
+      try {setLocal(remote);} catch(e){connected=false;show('error',friendlyError(e));return;}
+      rev=nextRev;
       show('synced','Dữ liệu vừa cập nhật từ một thiết bị khác.');
     }
-  },e=>show('error',friendlyError(e)));
+}
+function finishWrite(){
+  sending=false;
+  const snap=deferredSnapshot;
+  deferredSnapshot=null;
+  if(snap)receiveSnapshot(snap);
+  if(needsWrite&&!conflict&&phase==='pending')schedule();
 }
 function schedule(){
   if(!user||!connected||conflict)return;
@@ -186,13 +196,14 @@ async function push(force=false){
   if(!force&&!needsWrite&&baseline&&same(local,baseline))return;
   if(!navigator.onLine){needsWrite=true;show('offline','Bạn đang ngoại tuyến. Dữ liệu vẫn được lưu trên thiết bị.');return;}
   sending=true;needsWrite=false;show('sending','Đang lưu an toàn lên Google…');
-  const oldRev=rev,seq=generation,uid=user.uid;
+  const oldRev=rev,seq=generation,uid=user.uid,ref=docRef;
   try{
     const {fs}=modules;
     const nextRev=await fs.runTransaction(db,async tx=>{
-      const snap=await tx.get(docRef),current=snap.exists()?snap.data().revision:0;
+      const snap=await tx.get(ref),current=snap.exists()?snap.data().revision:0;
+      if(!sessionMatches(seq,uid))throw Error('Phiên đồng bộ đã thay đổi.');
       if(current!==oldRev)throw Object.assign(new Error('Dữ liệu trên Google đã đổi.'),{code:'cloud/conflict'});
-      tx.set(docRef,{revision:current+1,notebook:local,updatedAt:fs.serverTimestamp()});
+      tx.set(ref,{revision:current+1,notebook:local,updatedAt:fs.serverTimestamp()});
       return current+1;
     });
     if(!sessionMatches(seq,uid))return;
@@ -213,11 +224,11 @@ async function push(force=false){
         }
       }catch(err){show('error',friendlyError(err));}
     }else show('error',friendlyError(e));
-  }finally{if(sessionMatches(seq,uid)){sending=false;if(needsWrite&&!conflict&&phase==='pending')schedule();}}
+  }finally{if(sessionMatches(seq,uid))finishWrite();}
 }
 async function resolveConflict(choice){
   if(!user||!conflict || sending)return;
-  const seq=generation,uid=user.uid;
+  const seq=generation,uid=user.uid,ref=docRef;
   const expected=conflict.revision;
   if(choice==='cloud'){
     show('loading','Đang đọc lại phiên bản mới nhất từ Google trước khi thay dữ liệu máy…');
@@ -242,10 +253,11 @@ async function resolveConflict(choice){
     sending=true;show('sending','Đang chuyển dữ liệu từ thiết bị lên Google…');
     try{
       const nextRev=await modules.fs.runTransaction(db,async tx=>{
-        const snap=await tx.get(docRef),current=snap.exists()?snap.data().revision:0;
+        const snap=await tx.get(ref),current=snap.exists()?snap.data().revision:0;
+        if(!sessionMatches(seq,uid))throw Error('Phiên đồng bộ đã thay đổi.');
         // A newer cloud write must be reviewed instead of silently overwritten.
         if(current!==expected)throw Object.assign(new Error('Đã có dữ liệu mới trên Google.'),{code:'cloud/conflict'});
-        tx.set(docRef,{revision:current+1,notebook:local,updatedAt:modules.fs.serverTimestamp()});
+        tx.set(ref,{revision:current+1,notebook:local,updatedAt:modules.fs.serverTimestamp()});
         return current+1;
       });
       if(!sessionMatches(seq,uid))return;
@@ -266,7 +278,7 @@ async function resolveConflict(choice){
         }catch(err){show('conflict',friendlyError(err));}
       }else show('conflict',friendlyError(e));
     }finally{
-      if(sessionMatches(seq,uid)){sending=false;if(needsWrite&&!conflict)schedule();}
+      if(sessionMatches(seq,uid))finishWrite();
     }
   }
 }
@@ -293,13 +305,15 @@ function configure(fields){
   location.reload();return true;
 }
 function retry(){
-  if(conflict || !user)return;
+  if(conflict)return;
+  if(!user){if(config&&!auth)void boot(config);return;}
   if(!connected || phase==='offline' || phase==='error'){
     void startAccount(user);return;
   }
   needsWrite=true;show('pending','Đang thử đồng bộ lại…');schedule();
 }
 window.addEventListener('online',()=>{
+  if(!user&&config&&!auth){void boot(config);return;}
   if(!user||conflict)return;
   if(!connected || phase==='offline' || phase==='error')void startAccount(user);
   else if(needsWrite)schedule();

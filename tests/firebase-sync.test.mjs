@@ -96,3 +96,30 @@ test('sign-out warns when changes are not yet synced',async()=>{
  await f.context.window.HappyMealCloud.signOut();
  assert.equal(f.signOutCount(),0);assert.equal(f.state().user,true);
 });
+
+test('removing the last saved place while offline survives a restart',async()=>{
+ const book=empty();book.saved=['last'];
+ const f=fixture(book,{revision:3,notebook:book});
+ await f.login();
+ f.change(book=>{book.saved=[];});
+ f.online(false);await f.flush();
+ f.online(true);await f.login();await f.flush();
+ assert.deepEqual(f.rows.get(f.key).notebook.saved,[]);
+ assert.equal(f.rows.get(f.key).revision,4);
+});
+
+test('server update arriving during a transaction is applied after its acknowledgement',async()=>{
+ const f=fixture();
+ await f.login();await f.flush();
+ const transaction=f.context.testModules.fs.runTransaction;
+ f.context.testModules.fs.runTransaction=async(db,write)=>{
+  const revision=await transaction(db,write);
+  const server=f.rows.get(f.key);
+  server.revision++;server.notebook.saved.push('other-device');
+  f.notify(f.key);
+  return revision;
+ };
+ f.change(book=>book.saved.push('this-device'));await f.flush();
+ assert.deepEqual(f.get().saved,['this-device','other-device']);
+ assert.equal(f.state().revision,3);
+});

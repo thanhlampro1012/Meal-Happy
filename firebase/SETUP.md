@@ -1,6 +1,10 @@
 # Happy Meal — đồng bộ Firebase với Gmail
 
-Hiện ứng dụng hoạt động và lưu dữ liệu cục bộ. Để sử dụng Google Sign-In và đồng bộ Firestore, trước hết bạn cần có một dự án Firebase dưới tài khoản Google của mình.
+## Dùng trên điện thoại và máy tính
+
+Happy Meal trên GitHub Pages sử dụng dự án `happy-meal-c9493` (Spark), với Firestore Standard tại Singapore. Mở tab **Đồng bộ** và đăng nhập cùng một tài khoản Google trên các thiết bị. Quán riêng, món yêu thích, danh sách đã lưu, ghi chú và lịch hẹn thuộc về UID của tài khoản đó. Ảnh tự thêm có trong bản sao lưu JSON.
+
+## Triển khai cho dự án Firebase khác
 
 1. Mở https://console.firebase.google.com/ và tạo dự án tên tùy ý. Trong Project settings > Your apps, thêm ứng dụng Web để lấy web app config.
 2. Trong Authentication > Sign-in method, bật Google. Trong Authentication > Settings > Authorized domains, thêm: thanhlampro1012.github.io.
@@ -10,7 +14,7 @@ Hiện ứng dụng hoạt động và lưu dữ liệu cục bộ. Để sử d
 
 Cấu hình Firebase web là dữ liệu công khai theo thiết kế, nhưng quyền đọc/ghi Firestore phải được giới hạn theo UID bởi Rules.
 
-Bạn có thể đặt cấu hình đã xác nhận vào docs/firebase-config.json (chỉ các trường config web nêu trên) trong repo để các thiết bị dùng chung cấu hình mà không cần nhập lại. Bản mặc định là tệp rỗng.
+Bạn có thể đặt cấu hình đã xác nhận vào docs/firebase-config.json (chỉ các trường config web nêu trên) trong repo để các thiết bị dùng chung cấu hình mà không cần nhập lại. Bản GitHub Pages hiện tại đã có cấu hình dùng chung.
 
 Ảnh cá nhân lưu trong trình duyệt không nằm trong dữ liệu Firestore. Trình duyệt ngoại tuyến giữ thay đổi cục bộ; chờ trạng thái Đã lưu trước khi đóng tab. Nếu popup Google bị chặn trên iOS PWA, dùng Safari/Chrome để đăng nhập.
 
@@ -20,4 +24,4 @@ Tham khảo tài liệu: https://firebase.google.com/docs/auth/web/google-signin
 
 ## Kiểm tra an toàn đồng bộ
 
-Repository chạy `node --test tests/firebase-sync.test.mjs` trên mỗi bản deploy để mô phỏng: tải dữ liệu lên Google lần đầu, máy khác tải về, hai máy sửa đồng thời, mất mạng rồi nối lại và xác nhận trước khi đăng xuất. Đây là kiểm thử bằng Firestore giả lập; cần kết nối Firebase thật để kiểm tra end-to-end trên tài khoản Google của bạn.
+Repository chạy `node --test tests/firebase-sync.test.mjs` trên mỗi bản deploy để mô phỏng: tải dữ liệu lên Google lần đầu, máy khác tải về, hai máy sửa đồng thời, mất mạng rồi nối lại và xác nhận trước khi đăng xuất. Các kiểm thử này mô phỏng Firestore để tái hiện cả lỗi mạng và xung đột.

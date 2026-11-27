@@ -1,17 +1,36 @@
-// Cache only public static assets; never intercept Firebase/OAuth domains.
-const CACHE='happy-meal-shell-v1';
-const SHELL=['./','./index.html','./catalog.json','./site.webmanifest','./icon.svg','./icon-maskable.svg','./firebase-sync.js','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
-self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));});
-self.addEventListener('activate',event=>{event.waitUntil(Promise.all([
- caches.keys().then(names=>Promise.all(names.filter(n=>n!==CACHE&&n.startsWith('happy-meal-')).map(n=>caches.delete(n)))),
- self.clients.claim()
-]));});
-self.addEventListener('fetch',event=>{
- const req=event.request, url=new URL(req.url);
- if(req.method!=='GET'||url.origin!==self.location.origin)return;
- if(url.pathname.endsWith('/firebase-config.json')){event.respondWith(fetch(req));return;}
- if(req.mode==='navigate'){
-   event.respondWith(fetch(req).then(r=>{if(r.ok){const copy=r.clone();void caches.open(CACHE).then(c=>c.put('./index.html',copy));}return r;}).catch(()=>caches.match('./index.html')));return;
+// Only cache this app's public files, including its public Firebase web identifiers.
+const CACHE='happy-meal-shell-v2';
+const FILES=['./','./index.html','./catalog.json','./site.webmanifest','./icon.svg','./icon-maskable.svg',
+ './firebase-config.json','./firebase-sync.js','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
+const allowed=new Set(FILES.map(path=>new URL(path,self.registration.scope).href));
+const venuePrefix=new URL('./venues/',self.registration.scope).href;
+
+self.addEventListener('install',event=>{
+ event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));
+});
+self.addEventListener('activate',event=>{
+ event.waitUntil(Promise.all([caches.delete('happy-meal-shell-v1'),self.clients.claim()]));
+});
+async function fromNetworkOrCache(request,key){
+ const cache=await caches.open(CACHE);
+ try{
+  const response=await fetch(request);
+  if(response.ok){
+   try{await cache.put(key,response.clone());}catch{/* The network response can still be used with a full cache. */}
+  }else if(response.status>=500){
+   return await cache.match(key)||response;
+  }
+  return response;
+ }catch{
+  return await cache.match(key)||Response.error();
  }
- event.respondWith(fetch(req).then(r=>{if(r.ok){const copy=r.clone();void caches.open(CACHE).then(c=>c.put(req,copy));}return r;}).catch(()=>caches.match(req)));
+}
+self.addEventListener('fetch',event=>{
+ const request=event.request;
+ if(request.method!=='GET')return;
+ const url=new URL(request.url);
+ url.search='';url.hash='';
+ if(!allowed.has(url.href)&&!url.href.startsWith(venuePrefix))return;
+ const key=request.mode==='navigate'?new URL('./index.html',self.registration.scope).href:url.href;
+ event.respondWith(fromNetworkOrCache(request,key));
 });
