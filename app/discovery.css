@@ -1,0 +1,195 @@
+/* Discovery, food taxonomy and comparison share the app's light/dark tokens. */
+.discovery-panel { min-width: 0; }
+.student-discovery { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; padding: 23px 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--sage); }
+.student-discovery-copy { max-width: 440px; }
+.student-discovery-copy > span { display: flex; align-items: center; gap: 10px; color: var(--forest); font-size: 18px; font-weight: 600; }
+.student-discovery-copy p { margin-top: 7px; color: var(--body); font-size: 14px; line-height: 1.7; }
+.student-budget-buttons { display: grid; grid-template-columns: repeat(4, minmax(70px, 1fr)); gap: 9px; }
+.student-budget-buttons button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 66px; padding: 11px 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; color: var(--forest); white-space: nowrap; }
+.student-budget-buttons strong { font-size: 17px; font-weight: 600; }
+.student-budget-buttons span { font-size: 12px; color: var(--muted); }
+.student-budget-buttons button:hover, .student-budget-buttons button[aria-pressed='true'] { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+.student-budget-buttons button[aria-pressed='true'] { background: var(--forest); color: var(--accent-contrast); }
+.student-budget-buttons button[aria-pressed='true'] span { color: inherit; }
+.discovery-panel .discovery-top { margin-bottom: 0; }
+.discovery-panel .category-tabs { min-width: 0; overflow-x: auto; }
+.surprise-place { flex-shrink: 0; margin-bottom: 10px; }
+.cuisine-filter { padding: 21px 0 23px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.cuisine-filter-heading { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 12px; }
+.cuisine-filter-heading h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: var(--ink); }
+.cuisine-filter-heading > button { display: inline-flex; align-items: center; gap: 5px; color: var(--forest); font-size: 12px; min-height: 32px; white-space: nowrap; }
+.cuisine-filter-heading > button[aria-expanded='true'] svg { transform: rotate(180deg); }
+.cuisine-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.cuisine-chips button { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--body); border-radius: 22px; padding: 7px 14px; min-height: 36px; font-size: 13px; }
+.cuisine-chips button:hover { border-color: var(--forest); color: var(--forest); }
+.cuisine-chips button.selected { background: var(--forest); border-color: var(--forest); color: var(--accent-contrast); }
+.discovery-filter-grid { display: grid; grid-template-columns: minmax(190px, 1.6fr) minmax(140px, .8fr) minmax(310px, 1.5fr); gap: 10px; align-items: stretch; }
+.discovery-filter-grid input, .discovery-filter-grid select { font-size: 14px; color: var(--ink); height: 45px; }
+.discovery-filter-grid .search-box { background: var(--input-bg); border-color: var(--line); color: var(--muted); }
+.discovery-filter-grid .search-box input { background: transparent; }
+.discovery-filter-grid .search-box input::placeholder { color: var(--muted); }
+.budget-filter-group { display: flex; align-items: stretch; gap: 8px; min-width: 0; }
+.budget-filter-group > .select-wrap { flex: 1; min-width: 140px; }
+.people-toggle { display: flex; padding: 3px; border: 1px solid var(--line); background: var(--surface-soft); border-radius: 8px; flex-shrink: 0; }
+.people-toggle button { display: inline-flex; align-items: center; justify-content: center; gap: 2px; padding: 5px 8px; border-radius: 5px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.people-toggle button[aria-pressed='true'] { background: var(--surface-raised); color: var(--forest); box-shadow: 0 1px 3px #0000000b; }
+.discovery-more-filters { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.discovery-more-filters summary { display: flex; align-items: center; gap: 7px; cursor: pointer; width: fit-content; min-height: 32px; list-style: none; }
+.discovery-more-filters summary::-webkit-details-marker { display: none; }
+.discovery-more-filters[open] summary { color: var(--forest); }
+.discovery-more-filters > div { display: grid; grid-template-columns: 1fr 1fr; max-width: 640px; gap: 12px; padding: 12px 0; }
+.discovery-more-filters label > span { display: block; font-size: 12px; margin-bottom: 6px; }
+.discovery-more-filters select { font-size: 14px; }
+.filter-explainer { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.budget-explainer { display: flex; align-items: flex-start; gap: 7px; padding: 10px 13px; border-radius: 8px; background: var(--surface-soft); }
+.budget-explainer svg { margin-top: 3px; }
+.active-discovery-filters { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
+.active-filter-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 4px 9px; border-radius: 6px; background: var(--sage); color: var(--forest); border: 1px solid var(--line); font-size: 12px; }
+.active-discovery-filters .clear-filter { font-size: 12px; padding: 6px 9px; }
+.discovery-panel .results-heading { margin-top: 25px; }
+.discovery-panel .results-heading:focus { outline: none; }
+.discovery-panel .result-controls select { max-width: 180px; }
+.discovery-panel .place-grid > div { min-width: 0; }
+.discovery-panel .place-card { height: 100%; display: flex; flex-direction: column; }
+.discovery-panel .card-body { flex: 1; display: flex; flex-direction: column; padding: 18px; }
+.discovery-panel .card-body h3 { font-size: 19px; }
+.discovery-panel .card-body h3 button { font-weight: 600; }
+.discovery-panel .card-image { flex-shrink: 0; }
+.discovery-panel .no-photo .card-image { height: 144px; }
+.cuisine-placeholder { gap: 5px; padding-top: 17px; position: relative; }
+.cuisine-placeholder > span { font-family: var(--font-ui); font-size: 17px; font-weight: 500; letter-spacing: -.2px; }
+.cuisine-placeholder > small { font-size: 11px; opacity: .85; }
+.discovery-panel .cuisine-placeholder > svg { margin-bottom: 2px; }
+.discovery-panel .card-area { flex-wrap: wrap; line-height: 1.5; }
+.discovery-panel .card-area > span { font-size: 11px; }
+.card-menu { display: flex; align-items: flex-start; gap: 7px; margin: 10px 0 7px; font-size: 13px; line-height: 1.7; color: var(--forest); }
+.card-menu > svg { margin-top: 4px; }
+.card-menu > span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.discovery-panel .card-description { font-size: 14px; line-height: 1.7; min-height: 0; margin-top: 0; }
+.discovery-panel .card-tags { margin: 13px 0 15px; }
+.discovery-panel .card-tags > span { font-size: 11px; }
+.discovery-panel .card-footer { margin-top: auto; padding-top: 13px; gap: 8px; }
+.discovery-panel .rating { max-width: 53%; }
+.evidence-label { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 11px; line-height: 1.65; }
+.discovery-panel .card-budget { margin-left: auto; }
+.discovery-panel .card-budget strong { font-size: 14px; }
+.discovery-panel .card-budget small { font-size: 11px; }
+.card-quick-actions { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 9px; }
+.card-quick-actions > button, .card-quick-actions > a { display: inline-flex; align-items: center; justify-content: center; gap: 4px; color: var(--body); padding: 5px 3px; min-height: 32px; font-size: 11px; white-space: nowrap; }
+.card-quick-actions > button:first-child { color: var(--forest); font-weight: 500; }
+.card-quick-actions > button[aria-pressed='true'] { color: var(--forest); background: var(--sage); padding-inline: 7px; border-radius: 6px; }
+.discovery-panel .place-card.in-comparison { border-color: var(--forest); box-shadow: 0 0 0 1px var(--forest); }
+.discovery-pagination { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; margin: 28px 0 18px; }
+.discovery-pagination > p { font-size: 12px; color: var(--muted); }
+.discovery-panel .list-mode { grid-template-columns: 1fr 1fr; }
+.discovery-panel .list-mode .place-card { flex-direction: row; }
+.discovery-panel .list-mode .card-image { width: 27%; min-height: 230px; height: auto; }
+.discovery-panel .list-mode .card-body { padding: 15px; }
+.discovery-panel .list-mode .card-body h3 { font-size: 18px; }
+.discovery-panel .list-mode .cuisine-placeholder { padding: 10px; }
+.discovery-panel .list-mode .cuisine-placeholder > span { display: block; text-align: center; font-size: 13px; }
+.discovery-panel .list-mode .cuisine-placeholder > small { display: none; }
+.discovery-panel .list-mode .kind-pill { display: none; }
+.discovery-panel .list-mode .card-tags { margin: 10px 0; }
+.comparison-tray { position: sticky; bottom: 18px; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--forest); background: var(--surface-raised); box-shadow: 0 6px 28px #18382524; border-radius: 12px; padding: 14px 18px; margin-top: 18px; }
+.comparison-tray > div { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.comparison-tray > div:first-child { color: var(--forest); }
+.comparison-tray strong { font-size: 14px; white-space: nowrap; }
+.comparison-tray span { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.comparison-tray > div:last-child { flex-shrink: 0; }
+.compare-note { font-size: 13px !important; line-height: 1.8; }
+.compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.compare-place { min-width: 0; display: flex; flex-direction: column; background: var(--surface-soft); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.compare-place-heading { padding: 18px 17px; background: var(--sage); border-bottom: 1px solid var(--line); }
+.compare-place-heading > span { font-size: 12px; color: var(--muted); }
+.compare-place-heading h3 { font-size: 18px; font-weight: 600; color: var(--ink); margin-top: 5px; overflow-wrap: anywhere; }
+.compare-place dl { padding: 17px; margin: 0; flex: 1; }
+.compare-place dt { font-size: 11px; color: var(--muted); margin-top: 18px; }
+.compare-place dt:first-child { margin-top: 0; }
+.compare-place dd { margin: 4px 0 0; font-size: 13px; line-height: 1.8; color: var(--ink); overflow-wrap: anywhere; }
+.compare-place dd.compare-price { font-size: 16px; font-weight: 600; color: var(--forest); }
+.compare-place-actions { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-top: 1px solid var(--line); }
+.compare-place-actions .text-button { justify-content: center; font-size: 12px; }
+.compare-place-actions .button { font-size: 12px; }
+.cuisine-editor { border: 1px solid var(--line); padding: 14px; border-radius: 9px; min-width: 0; }
+.cuisine-editor legend { padding: 0 5px; color: var(--ink); font-size: 14px; font-weight: 500; }
+.cuisine-editor > p { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.cuisine-editor > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-height: 260px; overflow-y: auto; padding: 3px; }
+.cuisine-editor label { display: flex; align-items: center; gap: 6px; color: var(--body); font-size: 12px; padding: 5px 2px; }
+.cuisine-editor input { width: 16px; height: 16px; accent-color: var(--forest); flex-shrink: 0; }
+.route-incomplete { flex-basis: 100%; font-size: 12px; color: var(--muted); line-height: 1.7; }
+.stop-map-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 5px; font-size: 12px; color: var(--forest); }
+.detail-cover.without-photo { height: 175px; }
+.detail-cover.without-photo .cuisine-placeholder { padding-top: 0; }
+
+@media (max-width: 1280px) {
+  .student-discovery { flex-direction: column; align-items: stretch; gap: 16px; }
+  .student-discovery-copy { max-width: none; }
+  .student-budget-buttons { grid-template-columns: repeat(4, 1fr); }
+  .student-budget-buttons button { flex-direction: row; gap: 7px; min-height: 49px; }
+  .discovery-filter-grid { grid-template-columns: minmax(190px, 1.5fr) minmax(140px, 1fr); }
+  .budget-filter-group { grid-column: 1 / -1; }
+  .discovery-panel .list-mode { grid-template-columns: 1fr; }
+  .discovery-panel .list-mode .card-image { max-width: 200px; }
+}
+@media (max-width: 760px) {
+  .student-discovery { padding: 18px; margin-bottom: 24px; }
+  .student-discovery-copy > span { font-size: 17px; }
+  .student-discovery-copy p { font-size: 13px; }
+  .student-budget-buttons { gap: 7px; }
+  .student-budget-buttons button { flex-direction: column; gap: 2px; padding: 9px 5px; }
+  .student-budget-buttons strong { font-size: 16px; }
+  .discovery-panel .discovery-top { flex-wrap: wrap; gap: 8px; }
+  .discovery-panel .category-tabs { width: 100%; }
+  .surprise-place { margin: 0 0 5px auto; font-size: 12px !important; min-height: 34px; }
+  .cuisine-filter { padding-top: 12px; }
+  .cuisine-filter-heading { align-items: flex-start; gap: 6px; }
+  .cuisine-filter-heading h2 { font-size: 14px; padding-top: 5px; }
+  .cuisine-filter-heading > button { font-size: 11px; }
+  .cuisine-chips { gap: 7px; }
+  .cuisine-chips button { font-size: 12px; padding: 7px 11px; min-height: 36px; }
+  .discovery-filter-grid input, .discovery-filter-grid select { font-size: 16px; }
+  .discovery-filter-grid { grid-template-columns: 1fr; }
+  .budget-filter-group { grid-column: auto; }
+  .budget-filter-group select { font-size: 14px; }
+  .people-toggle button { min-width: 63px; font-size: 12px; }
+  .discovery-more-filters > div { grid-template-columns: 1fr; }
+  .discovery-panel .results-heading { gap: 8px; }
+  .discovery-panel .results-heading > p { flex-shrink: 0; }
+  .discovery-panel .result-controls select { font-size: 12px; max-width: 150px; }
+  .discovery-panel .result-controls { gap: 4px; }
+  .discovery-panel .no-photo .card-image { height: 150px; }
+  .discovery-panel .card-body h3 { font-size: 20px; }
+  .discovery-panel .card-description { font-size: 14px; }
+  .comparison-tray { bottom: 96px; padding: 12px; gap: 10px; flex-wrap: wrap; }
+  .comparison-tray > div:first-child { flex: 1; }
+  .comparison-tray span { display: none; }
+  .comparison-tray .button { font-size: 12px; padding: 8px 10px; }
+  .comparison-tray > div:last-child { gap: 6px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-place dl { display: grid; grid-template-columns: minmax(90px, .7fr) 1.5fr; gap: 12px; }
+  .compare-place dt, .compare-place dd { margin: 0; }
+  .compare-place-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 8px; }
+  .cuisine-editor > div { grid-template-columns: 1fr 1fr; }
+  .cuisine-editor label { font-size: 12px; }
+}
+@media (max-width: 460px) {
+  .budget-filter-group { display: grid; grid-template-columns: 1fr; }
+  .people-toggle { width: fit-content; }
+  .people-toggle button { min-height: 33px; min-width: 83px; }
+  .card-quick-actions > button, .card-quick-actions > a { min-height: 40px; }
+  .cuisine-filter-heading h2 { max-width: 210px; font-size: 13px; }
+  .cuisine-filter-heading > button { font-size: 10px; }
+  .discovery-panel .card-area > span { font-size: 11px; }
+  .discovery-panel .list-mode .card-image { width: 24%; min-height: 250px; }
+  .discovery-panel .list-mode .card-body { padding: 12px; }
+  .discovery-panel .list-mode .card-body h3 { font-size: 17px; }
+  .discovery-panel .list-mode .cuisine-placeholder > span { display: none; }
+  .discovery-panel .list-mode .card-menu { font-size: 12px; }
+  .discovery-panel .list-mode .card-description { font-size: 12px; }
+  .discovery-panel .list-mode .card-footer { flex-wrap: wrap; }
+  .discovery-panel .list-mode .rating { max-width: none; }
+  .discovery-panel .list-mode .card-budget { text-align: left; margin-left: 0; }
+  .discovery-panel .list-mode .card-quick-actions { flex-wrap: wrap; justify-content: flex-start; gap: 9px; }
+  .discovery-panel .list-mode .card-quick-actions > button, .discovery-panel .list-mode .card-quick-actions > a { font-size: 10px; }
+}

@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {mkdtemp,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+const dir=await mkdtemp(join(tmpdir(),'hen-calendar-'));
+try {
+ const bundled=await build({entryPoints:['app/lib/calendar.ts'],bundle:true,format:'esm',platform:'node',write:false});
+ const file=join(dir,'calendar.mjs');await writeFile(file,bundled.outputFiles[0].contents);
+ const {calendarFile,routeUrl,saigonDate}=await import(file);
+ const places=Array.from({length:5},(_,i)=>({id:'p'+i,name:'Quán '+i,address:'TP.HCM',mapUrl:'',placeId:'Place'+i+'123456789'}));
+ const plan={id:'test-calendar',title:'Tối hẹn, cà phê; yêu thương',date:'2026-11-28',time:'19:00',budget:600000,notes:'Nhiều dòng\nDòng sau',status:'planned',stops:[{placeId:'p0',time:'19:00',note:''},{placeId:'p1',time:'20:30',note:'Cà phê'}]};
+ const ics=calendarFile(plan,places);
+ assert.match(ics,/DTSTART:20261128T120000Z/);
+ assert.match(ics,/DTEND:20261128T150000Z/);
+ assert.match(ics,/SUMMARY:Tối hẹn\\, cà phê\\; yêu thương/);
+ for(const line of ics.split('\r\n'))assert.ok(Buffer.byteLength(line)<=75);
+ const route=new URL(routeUrl({...plan,stops:places.map(p=>({placeId:p.id,time:'19:00',note:''}))},places));
+ assert.equal(route.searchParams.get('waypoints').split('|').length,3);
+ assert.equal(route.searchParams.get('waypoint_place_ids').split('|').length,3);
+ assert.equal(routeUrl({...plan,stops:[]},places),'');
+ const single=new URL(routeUrl({...plan,stops:plan.stops.slice(0,1)},places));
+ assert.equal(single.searchParams.get('destination_place_id'),places[0].placeId);
+ const linkOnly={id:'private-nickname',name:'Quán lần đầu hai đứa đi',address:'',mapUrl:'https://maps.app.goo.gl/ExactBranchExample'};
+ const linkStop={placeId:linkOnly.id,time:'20:30',note:''};
+ assert.equal(routeUrl({...plan,stops:[linkStop]},[linkOnly]),linkOnly.mapUrl);
+ assert.equal(routeUrl({...plan,stops:[plan.stops[0],linkStop]},[...places,linkOnly]),'');
+ assert.equal(routeUrl({...plan,stops:[plan.stops[0],{...linkStop,placeId:'missing-place'}]},places),'');
+ assert.equal(saigonDate(new Date('2026-11-26T17:30:00Z')),'2026-11-27');
+ assert.equal(saigonDate(new Date('2026-12-31T17:00:00Z')),'2027-01-01');
+ console.log('9 calendar/directions checks passed: Vietnam timezone, end time, text escape and Unicode folding, mobile-safe waypoints, zero/single stops, link-only single stop, unresolved multi-stop safety, missing stop safety, ISO Vietnam dates.');
+} finally {await rm(dir,{recursive:true,force:true});}

@@ -1,0 +1,18 @@
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+import { Bookmark, Check, Coffee, ExternalLink, IceCreamBowl, MapPin, NotebookPen, Scale, Star, Utensils, Wine } from 'lucide-react';
+import { KIND_LABELS, mapsUrl, shortMoney, type Place, type PlacePref } from '../lib/types';
+import { cuisineLabels } from '../lib/cuisines';
+export const KIND_ICONS={food:Utensils,coffee:Coffee,dessert:IceCreamBowl,drinks:Wine};
+export function PlacePhoto({place,hero=false}:{place:Place;hero?:boolean}){
+  const [failed,setFailed]=useState(false);const Icon=KIND_ICONS[place.kind];
+  return place.image&&!failed?<Image src={place.image} width={960} height={640} unoptimized alt={`${place.name} · ảnh từ website quán`} loading={hero?'eager':'lazy'} onError={()=>setFailed(true)}/>:<div className={'photo-placeholder cuisine-placeholder kind-'+place.kind}><Icon size={hero?40:31} strokeWidth={1.4}/><span>{cuisineLabels(place)[0]||KIND_LABELS[place.kind]}</span><small>{place.area}</small></div>;
+}
+export default function PlaceCard({place,pref,onOpen,onSave,saving,compact=false,compared=false,onCompare,people=1}:{place:Place;pref:PlacePref;onOpen:()=>void;onSave:()=>void;saving:boolean;compact?:boolean;compared?:boolean;onCompare?:()=>void;people?:1|2}){
+  const Icon=KIND_ICONS[place.kind];const labels=cuisineLabels(place);
+  return <article className={'place-card '+(compact?'compact ':'')+(!place.image?'no-photo ':'')+(compared?'in-comparison':'')}>
+    <div className="card-image"><button className="photo-button" onClick={onOpen} aria-label={'Xem '+place.name}><PlacePhoto place={place}/></button><span className="kind-pill"><Icon size={13}/>{KIND_LABELS[place.kind]}</span><button disabled={saving} aria-label={(pref.saved?'Bỏ lưu ':'Lưu ')+place.name} aria-pressed={pref.saved} className={'save-btn '+(pref.saved?'saved':'')} onClick={onSave}><Bookmark size={18} fill={pref.saved?'currentColor':'none'}/></button>{pref.status==='visited'&&<span className="visited-pill"><Check size={12}/> Đã ghé</span>}</div>
+    <div className="card-body"><div className="card-area"><MapPin size={13}/>{place.area}<span>{place.budgetMax>0&&place.budgetMax<=70000?'Tầm 70k trở xuống':place.curated?'Gợi ý có nguồn':'Bạn đã thêm'}</span></div><h3><button onClick={onOpen}>{place.name}</button></h3><p className="card-menu"><Utensils size={14}/><span>{place.dishes.slice(0,2).join(' · ')||labels.join(' · ')}</span></p><p className="card-description">{place.description||'Mở chi tiết để xem địa chỉ và ghi chú của bạn.'}</p><div className="card-tags">{labels.slice(0,2).map(label=><span key={label}>{label}</span>)}</div><div className="card-footer"><div className="rating">{place.community?<><Star size={14} fill="currentColor"/><strong>{place.community.score.toFixed(1)}</strong><small>{place.community.provider}</small></>:<span className="evidence-label"><NotebookPen size={14}/>{place.sources.length?'Có nguồn tham khảo':'Bạn tự thêm'}</span>}</div><div className="card-budget"><strong>{place.budgetMax>0?`${shortMoney(place.budgetMin*people)}–${shortMoney(place.budgetMax*people)}`:'Chưa ghi giá'}</strong><small>/ {people===1?'người':'2 người'} · dự trù</small></div></div><div className="card-quick-actions"><button type="button" onClick={onOpen}>Chi tiết</button><a href={mapsUrl(place)} target="_blank" rel="noopener noreferrer" aria-label={'Mở Google Maps '+place.name}><MapPin size={14}/> Maps <ExternalLink size={12}/></a>{onCompare&&<button type="button" aria-label={'So sánh '+place.name} aria-pressed={compared} onClick={onCompare}><Scale size={14}/>{compared?'Đã chọn':'So sánh'}</button>}</div></div>
+  </article>;
+}
