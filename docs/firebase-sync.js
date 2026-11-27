@@ -304,7 +304,7 @@ window.addEventListener('online',()=>{
   if(!connected || phase==='offline' || phase==='error')void startAccount(user);
   else if(needsWrite)schedule();
 });
-window.addEventListener('visibilitychange',()=>{
+document.addEventListener('visibilitychange',()=>{
   if(document.visibilityState==='visible' && user && !conflict && !sending){
     // A suspended phone tab may have missed updates; refresh from server.
     void startAccount(user);

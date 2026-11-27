@@ -17,3 +17,7 @@ Bạn có thể đặt cấu hình đã xác nhận vào docs/firebase-config.js
 Tên repo Meal-Happy giữ nguyên để link github.io không đổi dù giao diện đổi thành Happy Meal.
 
 Tham khảo tài liệu: https://firebase.google.com/docs/auth/web/google-signin ; https://firebase.google.com/docs/projects/api-keys ; https://firebase.google.com/docs/firestore/security/rules-conditions
+
+## Kiểm tra an toàn đồng bộ
+
+Repository chạy `node --test tests/firebase-sync.test.mjs` trên mỗi bản deploy để mô phỏng: tải dữ liệu lên Google lần đầu, máy khác tải về, hai máy sửa đồng thời, mất mạng rồi nối lại và xác nhận trước khi đăng xuất. Đây là kiểm thử bằng Firestore giả lập; cần kết nối Firebase thật để kiểm tra end-to-end trên tài khoản Google của bạn.
