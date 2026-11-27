@@ -51,108 +51,6 @@ const ORIGINAL_PLACES: Place[] = [
     ]
   },
   {
-    "id": "the-deck-saigon",
-    "name": "The Deck Saigon",
-    "kind": "food",
-    "area": "Thảo Điền",
-    "address": "38 Nguyễn Ư Dĩ, phường An Khánh, TP.HCM",
-    "addressSource": "Website chính thức The Deck",
-    "mapUrl": "https://maps.app.goo.gl/t6zLGj4iRTgiVTki7",
-    "description": "Bàn ăn ven sông cho một dịp đặc biệt; hợp đến trước hoàng hôn rồi ở lại ăn tối. Nên hỏi trước bàn ven sông và phương án trong nhà khi mưa. Mức chi sẽ tăng nếu gọi cocktail hoặc rượu.",
-    "dishes": [
-      "Hải sản theo thực đơn",
-      "Món gà",
-      "Sườn cừu"
-    ],
-    "budgetMin": 700000,
-    "budgetMax": 1600000,
-    "tags": [
-      "Ven sông",
-      "Kỷ niệm",
-      "Hoàng hôn"
-    ],
-    "community": {
-      "provider": "Tripadvisor",
-      "score": 4.2,
-      "count": 1403,
-      "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d1928671-Reviews-The_Deck_Saigon-Ho_Chi_Minh_City.html",
-      "checkedAt": "2026-11-27"
-    },
-    "sources": [
-      {
-        "label": "Địa chỉ và vị trí ven sông",
-        "url": "https://www.thedecksaigon.com/contact-us/"
-      },
-      {
-        "label": "Đánh giá cộng đồng",
-        "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d1928671-Reviews-The_Deck_Saigon-Ho_Chi_Minh_City.html"
-      },
-      {
-        "label": "Trải nghiệm cặp đôi, món gà và cừu",
-        "url": "https://www.tripadvisor.com/Restaurant_Review-g293925-d1928671-Reviews-The_Deck_Saigon-Ho_Chi_Minh_City.html"
-      }
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "booking": "https://www.thedecksaigon.com/",
-    "image": "/venues/the-deck-saigon.jpg",
-    "imageSource": "https://www.thedecksaigon.com/contact-us/",
-    "cuisineTags": [
-      "hai-san",
-      "au"
-    ]
-  },
-  {
-    "id": "hum-garden",
-    "name": "Hum Garden",
-    "kind": "food",
-    "area": "Thảo Điền",
-    "address": "32 đường số 10, phường An Khánh, TP.HCM",
-    "addressSource": "Website chính thức Hum Dining",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hum%20Garden%2032%20%C4%91%C6%B0%E1%BB%9Dng%20s%E1%BB%91%2010%2C%20ph%C6%B0%E1%BB%9Dng%20An%20Kh%C3%A1nh%2C%20TP.HCM",
-    "description": "Món chay trong biệt thự có sân vườn, phù hợp một buổi hẹn muốn ăn chậm và trò chuyện. Chọn đúng Hum Garden ở Thảo Điền khi đặt bàn; Hum Signature và Hum Lounge là những địa điểm khác.",
-    "dishes": [
-      "Chả giò nấm",
-      "Chè nhãn hạt sen"
-    ],
-    "budgetMin": 300000,
-    "budgetMax": 650000,
-    "tags": [
-      "Yên tĩnh",
-      "Sân vườn",
-      "Ăn chay"
-    ],
-    "community": {
-      "provider": "Tripadvisor",
-      "score": 4.7,
-      "count": 98,
-      "url": "https://www.tripadvisor.com/Restaurant_Review-g293925-d12711227-Reviews-Hum_Garden-Ho_Chi_Minh_City.html",
-      "checkedAt": "2026-11-27"
-    },
-    "sources": [
-      {
-        "label": "Địa chỉ và không gian",
-        "url": "https://hum-dining.vn/en/locations/"
-      },
-      {
-        "label": "Món được giới thiệu",
-        "url": "https://guide.michelin.com/us/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/hum-garden"
-      },
-      {
-        "label": "Đánh giá cộng đồng",
-        "url": "https://www.tripadvisor.com/Restaurant_Review-g293925-d12711227-Reviews-Hum_Garden-Ho_Chi_Minh_City.html"
-      }
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "booking": "https://hum-dining.vn/en/locations/",
-    "image": "/venues/hum-garden.jpg",
-    "imageSource": "https://hum-dining.vn/en/locations/",
-    "cuisineTags": [
-      "chay"
-    ]
-  },
-  {
     "id": "cuc-gach-quan",
     "name": "Cục Gạch Quán",
     "kind": "food",
@@ -533,49 +431,6 @@ const ORIGINAL_PLACES: Place[] = [
     ]
   },
   {
-    "id": "com-tam-ba-ghien",
-    "name": "Cơm Tấm Ba Ghiền",
-    "kind": "food",
-    "area": "Phú Nhuận",
-    "address": "84 Đặng Văn Ngữ, phường Phú Nhuận, TP.HCM",
-    "addressSource": "MICHELIN Guide",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Ba%20Ghi%E1%BB%81n%2084%20%C4%90%E1%BA%B7ng%20V%C4%83n%20Ng%E1%BB%AF%2C%20ph%C6%B0%E1%BB%9Dng%20Ph%C3%BA%20Nhu%E1%BA%ADn%2C%20TP.HCM",
-    "description": "Một đĩa cơm tấm sườn nướng cho buổi hẹn giản dị; nên ghép thêm quán cà phê nếu muốn ngồi lâu. Đây là quán ăn bình dân. Một buổi hẹn ăn ngon, nhanh gọn sẽ hợp hơn lịch cần không gian riêng tư.",
-    "dishes": [
-      "Cơm tấm sườn nướng",
-      "Cơm tấm gà"
-    ],
-    "budgetMin": 90000,
-    "budgetMax": 170000,
-    "tags": [
-      "Vừa túi tiền",
-      "Ăn trưa",
-      "Bình dân"
-    ],
-    "community": {
-      "provider": "Tripadvisor",
-      "score": 4.4,
-      "count": 135,
-      "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d9706209-Reviews-Com_Tam_Ba_Ghien-Ho_Chi_Minh_City.html",
-      "checkedAt": "2026-11-27"
-    },
-    "sources": [
-      {
-        "label": "Địa chỉ và món",
-        "url": "https://guide.michelin.com/us/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/com-tam-ba-ghien"
-      },
-      {
-        "label": "Đánh giá cộng đồng",
-        "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d9706209-Reviews-Com_Tam_Ba_Ghien-Ho_Chi_Minh_City.html"
-      }
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "cuisineTags": [
-      "com-tam"
-    ]
-  },
-  {
     "id": "banh-xeo-46a",
     "name": "Bánh Xèo 46A",
     "kind": "food",
@@ -659,58 +514,6 @@ const ORIGINAL_PLACES: Place[] = [
     ]
   },
   {
-    "id": "bosgaurus-saigon-pearl",
-    "name": "Bosgaurus · Saigon Pearl",
-    "kind": "coffee",
-    "area": "Bình Thạnh",
-    "address": "Villa 1, đường D5, 92 Nguyễn Hữu Cảnh, phường Thạnh Mỹ Tây, TP.HCM",
-    "addressSource": "Website chính thức Bosgaurus",
-    "mapUrl": "https://www.google.com/maps/place/Bosgaurus+Coffee+Roasters+-+Saigon+Pearl/@10.7889169,106.7180503,845m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31752919665bb315:0x61a84ad53007412!8m2!3d10.7889116!4d106.7206306!16s%2Fg%2F11clyzht3c?entry=ttu",
-    "description": "Quán cà phê trong khu biệt thự Saigon Pearl, dành cho hai người thích thử cà phê và trò chuyện ban ngày. Lưu cả Villa 1 và đường D5 để dễ tìm; số 92 Nguyễn Hữu Cảnh là lối vào khu lớn.",
-    "dishes": [
-      "Arabica cold brew chanh dây",
-      "Cà phê đen đá",
-      "Lemon cheesecake"
-    ],
-    "budgetMin": 80000,
-    "budgetMax": 200000,
-    "tags": [
-      "Cà phê",
-      "Hẹn ban ngày",
-      "Nhẹ nhàng"
-    ],
-    "community": {
-      "provider": "Tripadvisor",
-      "score": 4.8,
-      "count": 26,
-      "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d10210737-Reviews-Bosgaurus_Coffee_Roasters-Ho_Chi_Minh_City.html",
-      "checkedAt": "2026-11-27"
-    },
-    "sources": [
-      {
-        "label": "Địa chỉ và đồ uống",
-        "url": "https://bosgauruscoffee.com/"
-      },
-      {
-        "label": "Liên kết Maps chính thức và bánh",
-        "url": "https://bosgauruscoffee.com/blogs/BOS-stores"
-      },
-      {
-        "label": "Đánh giá cộng đồng",
-        "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d10210737-Reviews-Bosgaurus_Coffee_Roasters-Ho_Chi_Minh_City.html"
-      }
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "booking": "https://bosgauruscoffee.com/",
-    "image": "/venues/bosgaurus-saigon-pearl.jpg",
-    "imageSource": "https://bosgauruscoffee.com/blogs/BOS-stores",
-    "cuisineTags": [
-      "ca-phe",
-      "banh-ngot"
-    ]
-  },
-  {
     "id": "maison-marou-calmette",
     "name": "Maison Marou · Calmette",
     "kind": "dessert",
@@ -761,5 +564,5 @@ const ORIGINAL_PLACES: Place[] = [
 ];
 
 // A varied, affordable first row; original IDs remain stable for saved notebooks.
-const spotlight = ["xoi-binh-tien-tran-dai-nghia", "com-chay-huong-sen-phan-van-doi", "bun-thit-nuong-kieu-bao-de-tham", "com-tam-di-tu-huong-lo-2", "banh-mi-bay-ho-huynh-khuong-ninh", "bun-bo-hue-dong-ba-ni-su-huynh-lien", "banh-xeo-mien-trung-duong-so-10", "ca-phe-vot-phan-dinh-phung", "banh-mi-chao-co-3-hau", "che-ha-ky-chau-van-liem"];
+const spotlight = ["v4-com-tam-tai-nguyen-van-nghi","bun-thit-nuong-kieu-bao-de-tham","banh-mi-bay-ho-huynh-khuong-ninh","bun-bo-hue-dong-ba-ni-su-huynh-lien","pho-mien-ga-ky-dong","v4-hanoi-ngon-an-binh","che-ha-ky-chau-van-liem","v4-pho-huong-binh-vo-thi-sau","v4-pho-kiem-2-nguyen-van-khoi"];
 export const CURATED_PLACES: Place[] = [...spotlight.map(id=>EXTRA_PLACES.find(place=>place.id===id)!).filter(Boolean),...ORIGINAL_PLACES,...EXTRA_PLACES.filter(place=>!spotlight.includes(place.id))];

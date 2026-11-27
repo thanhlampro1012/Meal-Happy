@@ -1,0 +1,1039 @@
+{
+  "scope": [
+    "Quận 1",
+    "Quận 3",
+    "Quận 5",
+    "Gò Vấp",
+    "Tân Bình"
+  ],
+  "checkedAt": "2026-11-27",
+  "counts": {
+    "Quận 1": 50,
+    "Quận 3": 29,
+    "Quận 5": 34,
+    "Gò Vấp": 13,
+    "Tân Bình": 13
+  },
+  "added": [
+    {
+      "id": "v4-com-tam-sa-bi-chuong-tran-binh-trong",
+      "name": "Cơm Tấm Sà Bì Chưởng — Trần Bình Trọng",
+      "area": "Quận 5",
+      "address": "179 Trần Bình Trọng, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20S%C3%A0%20B%C3%AC%20Ch%C6%B0%E1%BB%9Fng%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20179%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-phuc-loc-tho-an-duong-vuong",
+      "name": "Cơm Tấm Phúc Lộc Thọ — An Dương Vương",
+      "area": "Quận 5",
+      "address": "301B An Dương Vương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Ph%C3%BAc%20L%E1%BB%99c%20Th%E1%BB%8D%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20301B%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-atispho-pho-atiso-quan-5",
+      "name": "Atispho — Phở Atiso Quận 5",
+      "area": "Quận 5",
+      "address": "245 Trần Bình Trọng, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Ph%E1%BB%9F%20Atiso%20Qu%E1%BA%ADn%205%20245%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-bo-thanh-canh",
+      "name": "Phở Bò Thanh Cảnh",
+      "area": "Quận 5",
+      "address": "1 Phan Phú Tiên, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20B%C3%B2%20Thanh%20C%E1%BA%A3nh%201%20Phan%20Ph%C3%BA%20Ti%C3%AAn%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-hanh-huynh-man-dat",
+      "name": "Phở Hạnh — Huỳnh Mẫn Đạt",
+      "area": "Quận 5",
+      "address": "93 Huỳnh Mẫn Đạt, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%E1%BA%A1nh%20%E2%80%94%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2093%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-tien-phat-diem-tam-hong-kong",
+      "name": "Tiến Phát — Điểm Tâm Hồng Kông",
+      "area": "Quận 5",
+      "address": "18 Ký Hòa, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BA%BFn%20Ph%C3%A1t%20%E2%80%94%20%C4%90i%E1%BB%83m%20T%C3%A2m%20H%E1%BB%93ng%20K%C3%B4ng%2018%20K%C3%BD%20H%C3%B2a%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-baoz-dimsum-nguyen-tri-phuong",
+      "name": "Baoz Dimsum — Nguyễn Tri Phương",
+      "area": "Quận 5",
+      "address": "82–88 Nguyễn Tri Phương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Baoz%20Dimsum%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2082%E2%80%9388%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-shan-dimsum-phu-dong-thien-vuong",
+      "name": "Shan Dimsum — Phù Đổng Thiên Vương",
+      "area": "Quận 5",
+      "address": "57–59 Phù Đổng Thiên Vương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Shan%20Dimsum%20%E2%80%94%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2057%E2%80%9359%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-dim-tu-tac-hung-vuong-plaza",
+      "name": "Dim Tu Tac — Hùng Vương Plaza",
+      "area": "Quận 5",
+      "address": "Tầng 3, Hùng Vương Plaza, 126 Hồng Bàng, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dim%20Tu%20Tac%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%20T%E1%BA%A7ng%203%2C%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%2C%20126%20H%E1%BB%93ng%20B%C3%A0ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-dimsum-mr-hao",
+      "name": "Dimsum Mr. Hào",
+      "area": "Quận 5",
+      "address": "175 Trần Tuấn Khải, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20Mr.%20H%C3%A0o%20175%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-bep-nha-bbq-vo-van-kiet",
+      "name": "Bếp Nhà BBQ — Võ Văn Kiệt",
+      "area": "Quận 5",
+      "address": "844 Võ Văn Kiệt, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%E1%BA%BFp%20Nh%C3%A0%20BBQ%20%E2%80%94%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%20844%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-hanoi-ngon-an-binh",
+      "name": "Hanoi Ngon — An Bình",
+      "area": "Quận 5",
+      "address": "143/8 An Bình, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Ngon%20%E2%80%94%20An%20B%C3%ACnh%20143%2F8%20An%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-mi-tang-nguyen-trai",
+      "name": "Bánh Mì Tăng — Nguyễn Trãi",
+      "area": "Quận 5",
+      "address": "822 Nguyễn Trãi, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20T%C4%83ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20822%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-trang-ma-hoc-lac",
+      "name": "Bánh Tráng Ma — Học Lạc",
+      "area": "Quận 5",
+      "address": "25 Học Lạc, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Tr%C3%A1ng%20Ma%20%E2%80%94%20H%E1%BB%8Dc%20L%E1%BA%A1c%2025%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-cuon-nam-viet",
+      "name": "Bánh Cuốn Nam Việt",
+      "area": "Quận 5",
+      "address": "152 Nguyễn Biểu, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Cu%E1%BB%91n%20Nam%20Vi%E1%BB%87t%20152%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-gia-truyen-an-duong-vuong",
+      "name": "Phở Gia Truyền — An Dương Vương",
+      "area": "Quận 5",
+      "address": "499 An Dương Vương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Gia%20Truy%E1%BB%81n%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20499%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-tom-chien-tran-tuan-khai",
+      "name": "Bánh Tôm Chiên — Trần Tuấn Khải",
+      "area": "Quận 5",
+      "address": "131–133 Trần Tuấn Khải, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20T%C3%B4m%20Chi%C3%AAn%20%E2%80%94%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%20131%E2%80%93133%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-kem-trang-tien-sai-thanh-nguyen-tri-phuong",
+      "name": "Kem Tràng Tiền Sài Thành — Nguyễn Tri Phương",
+      "area": "Quận 5",
+      "address": "205 Nguyễn Tri Phương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Kem%20Tr%C3%A0ng%20Ti%E1%BB%81n%20S%C3%A0i%20Th%C3%A0nh%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%20205%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-canh-tom-bot-gao-le-hong-phong",
+      "name": "Bánh Canh Tôm Bột Gạo — Lê Hồng Phong",
+      "area": "Quận 5",
+      "address": "131 Lê Hồng Phong, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Canh%20T%C3%B4m%20B%E1%BB%99t%20G%E1%BA%A1o%20%E2%80%94%20L%C3%AA%20H%E1%BB%93ng%20Phong%20131%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-xoi-bat-buu-xoi-sau-rieng-an-duong-vuong",
+      "name": "Xôi Bát Bửu & Xôi Sầu Riêng — An Dương Vương",
+      "area": "Quận 5",
+      "address": "447 An Dương Vương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20B%C3%A1t%20B%E1%BB%ADu%20%26%20X%C3%B4i%20S%E1%BA%A7u%20Ri%C3%AAng%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20447%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-lu-s-corner-hung-vuong",
+      "name": "Lu’s Corner — Hùng Vương",
+      "area": "Quận 5",
+      "address": "319 Hùng Vương, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Lu%E2%80%99s%20Corner%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20319%20H%C3%B9ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-44-tran-binh-trong",
+      "name": "Cơm Tấm 44 — Trần Bình Trọng",
+      "area": "Quận 5",
+      "address": "185 Trần Bình Trọng, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%2044%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20185%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-cali-nguyen-chi-thanh",
+      "name": "Cơm Tấm Cali — Nguyễn Chí Thanh",
+      "area": "Quận 5",
+      "address": "125 Nguyễn Chí Thanh, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Cali%20%E2%80%94%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%20125%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-dimsum-hoc-lac",
+      "name": "Dimsum Học Lạc",
+      "area": "Quận 5",
+      "address": "38B Học Lạc, Quận 5, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20H%E1%BB%8Dc%20L%E1%BA%A1c%2038B%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-tai-nguyen-van-nghi",
+      "name": "Cơm Tấm Tài — Nguyễn Văn Nghi",
+      "area": "Gò Vấp",
+      "address": "100 Nguyễn Văn Nghi, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20T%C3%A0i%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%20100%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-kiem-2-nguyen-van-khoi",
+      "name": "Phở Kiêm 2 — Nguyễn Văn Khối",
+      "area": "Gò Vấp",
+      "address": "142 Nguyễn Văn Khối, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Ki%C3%AAm%202%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%20142%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-viet-nam-le-duc-tho",
+      "name": "Phở Việt Nam — Lê Đức Thọ",
+      "area": "Gò Vấp",
+      "address": "125 Lê Đức Thọ, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%20125%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-bun-bo-tho-da-bep-ong-lap-nguyen-van-luong",
+      "name": "Bún Bò Thố Đá Bếp Ông Lập — Nguyễn Văn Lượng",
+      "area": "Gò Vấp",
+      "address": "301 Nguyễn Văn Lượng, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20B%C3%B2%20Th%E1%BB%91%20%C4%90%C3%A1%20B%E1%BA%BFp%20%C3%94ng%20L%E1%BA%ADp%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%20301%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-hai-lam-le-thi-hong",
+      "name": "Cơm Tấm Hai Lâm — Lê Thị Hồng",
+      "area": "Gò Vấp",
+      "address": "32/18 Lê Thị Hồng, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Hai%20L%C3%A2m%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2032%2F18%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-katinat-phan-van-tri",
+      "name": "KATINAT — Phan Văn Trị",
+      "area": "Gò Vấp",
+      "address": "18A Phan Văn Trị, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=KATINAT%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2018A%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-family-gardens-cafe-phan-van-tri",
+      "name": "Family Gardens Cafe — Phan Văn Trị",
+      "area": "Gò Vấp",
+      "address": "438 Phan Văn Trị, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Family%20Gardens%20Cafe%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20438%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-ly-quoc-su-nguyen-kiem",
+      "name": "Phở Lý Quốc Sư — Nguyễn Kiệm",
+      "area": "Gò Vấp",
+      "address": "729/9A Nguyễn Kiệm, Gò Vấp, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20L%C3%BD%20Qu%E1%BB%91c%20S%C6%B0%20%E2%80%94%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%20729%2F9A%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-nieu-thien-ly-au-co",
+      "name": "Cơm Niêu Thiên Lý — Âu Cơ",
+      "area": "Tân Bình",
+      "address": "786 Âu Cơ, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20Thi%C3%AAn%20L%C3%BD%20%E2%80%94%20%C3%82u%20C%C6%A1%20786%20%C3%82u%20C%C6%A1%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-izzibing-pho-quang",
+      "name": "Izzibing — Phổ Quang",
+      "area": "Tân Bình",
+      "address": "49 Phổ Quang, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Izzibing%20%E2%80%94%20Ph%E1%BB%95%20Quang%2049%20Ph%E1%BB%95%20Quang%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-nieu-bep-xua-binh-gia",
+      "name": "Cơm Niêu Bếp Xưa — Bình Giã",
+      "area": "Tân Bình",
+      "address": "61A Bình Giã, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20B%E1%BA%BFp%20X%C6%B0a%20%E2%80%94%20B%C3%ACnh%20Gi%C3%A3%2061A%20B%C3%ACnh%20Gi%C3%A3%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-seor-bingsu-hoang-hoa-tham",
+      "name": "Seor Bingsu — Hoàng Hoa Thám",
+      "area": "Tân Bình",
+      "address": "107 Hoàng Hoa Thám, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Seor%20Bingsu%20%E2%80%94%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%20107%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-hai-san-giang-ghe-cong-hoa",
+      "name": "Hải Sản Giang Ghẹ — Cộng Hòa",
+      "area": "Tân Bình",
+      "address": "495 Cộng Hòa, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=H%E1%BA%A3i%20S%E1%BA%A3n%20Giang%20Gh%E1%BA%B9%20%E2%80%94%20C%E1%BB%99ng%20H%C3%B2a%20495%20C%E1%BB%99ng%20H%C3%B2a%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-izakaya-unatoto-nguyen-hong-dao",
+      "name": "Izakaya Unatoto — Nguyễn Hồng Đào",
+      "area": "Tân Bình",
+      "address": "248 Nguyễn Hồng Đào, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Izakaya%20Unatoto%20%E2%80%94%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%20248%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-non-que-quan-dong-den",
+      "name": "Nón Quê Quán — Đồng Đen",
+      "area": "Tân Bình",
+      "address": "30 Đồng Đen, Tân Bình, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=N%C3%B3n%20Qu%C3%AA%20Qu%C3%A1n%20%E2%80%94%20%C4%90%E1%BB%93ng%20%C4%90en%2030%20%C4%90%E1%BB%93ng%20%C4%90en%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.google.com/maps/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-hoa-pasteur-260c",
+      "name": "Phở Hòa Pasteur — 260C",
+      "area": "Quận 3",
+      "address": "260C Pasteur, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B2a%20Pasteur%20%E2%80%94%20260C%20260C%20Pasteur%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-huong-binh-vo-thi-sau",
+      "name": "Phở Hương Bình — Võ Thị Sáu",
+      "area": "Quận 3",
+      "address": "148 Võ Thị Sáu, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C6%B0%C6%A1ng%20B%C3%ACnh%20%E2%80%94%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%20148%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-viet-nam-tran-quoc-toan",
+      "name": "Phở Việt Nam — Trần Quốc Toản",
+      "area": "Quận 3",
+      "address": "66 Trần Quốc Toản, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2066%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-nhon-nguyen-thong",
+      "name": "Phở NHON — Nguyễn Thông",
+      "area": "Quận 3",
+      "address": "52 Nguyễn Thông, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20NHON%20%E2%80%94%20Nguy%E1%BB%85n%20Th%C3%B4ng%2052%20Nguy%E1%BB%85n%20Th%C3%B4ng%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-ha-noi-pho-phu-lai-vo-van-tan",
+      "name": "Hà Nội Phở Phú Lai — Võ Văn Tần",
+      "area": "Quận 3",
+      "address": "116 Võ Văn Tần, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=H%C3%A0%20N%E1%BB%99i%20Ph%E1%BB%9F%20Ph%C3%BA%20Lai%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20116%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-bot-s-food-hoang-sa",
+      "name": "Bột’s Food — Hoàng Sa",
+      "area": "Quận 3",
+      "address": "825 Hoàng Sa, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%E1%BB%99t%E2%80%99s%20Food%20%E2%80%94%20Ho%C3%A0ng%20Sa%20825%20Ho%C3%A0ng%20Sa%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-atispho-tran-quoc-toan",
+      "name": "Atispho — Trần Quốc Toản",
+      "area": "Quận 3",
+      "address": "72C Trần Quốc Toản, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2072C%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-chao-long-doi-chien-co-chinh-tran-quang-dieu",
+      "name": "Cháo Lòng Dồi Chiên Cô Chính — Trần Quang Diệu",
+      "area": "Quận 3",
+      "address": "108/22 Trần Quang Diệu, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A1o%20L%C3%B2ng%20D%E1%BB%93i%20Chi%C3%AAn%20C%C3%B4%20Ch%C3%ADnh%20%E2%80%94%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%20108%2F22%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-dimsum-tan-sanh-hoat-nguyen-thi-minh-khai",
+      "name": "Dimsum Tân Sanh Hoạt — Nguyễn Thị Minh Khai",
+      "area": "Quận 3",
+      "address": "322 Nguyễn Thị Minh Khai, Quận 3, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20T%C3%A2n%20Sanh%20Ho%E1%BA%A1t%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%20322%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-hanoi-corner-nguyen-thi-minh-khai",
+      "name": "Hanoi Corner — Nguyễn Thị Minh Khai",
+      "area": "Quận 1",
+      "address": "18B/17 Nguyễn Thị Minh Khai, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Corner%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2018B%2F17%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-shancha-le-loi",
+      "name": "Shancha — Lê Lợi",
+      "area": "Quận 1",
+      "address": "38 Lê Lợi, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Shancha%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2038%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-hung-nguyen-trai",
+      "name": "Phở Hùng — Nguyễn Trãi",
+      "area": "Quận 1",
+      "address": "241–243 Nguyễn Trãi, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B9ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20241%E2%80%93243%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-ngoc-thach-quan-quan-1",
+      "name": "Ngọc Thạch Quán — Quận 1",
+      "area": "Quận 1",
+      "address": "57 Nguyễn Thái Bình, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%20Qu%C3%A1n%20%E2%80%94%20Qu%E1%BA%ADn%201%2057%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-quan-bac-le-loi",
+      "name": "Quán Bấc — Lê Lợi",
+      "area": "Quận 1",
+      "address": "36/3 Lê Lợi, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Qu%C3%A1n%20B%E1%BA%A5c%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2036%2F3%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-futea-dinh-tien-hoang",
+      "name": "FUTEA — Đinh Tiên Hoàng",
+      "area": "Quận 1",
+      "address": "56 Đinh Tiên Hoàng, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=FUTEA%20%E2%80%94%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2056%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-com-tam-2-sai-gon-trinh-van-can",
+      "name": "Cơm Tấm @2 Sài Gòn — Trịnh Văn Cấn",
+      "area": "Quận 1",
+      "address": "48 Trịnh Văn Cấn, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20%402%20S%C3%A0i%20G%C3%B2n%20%E2%80%94%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2048%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pearl-ly-tu-trong",
+      "name": "Pearl — Lý Tự Trọng",
+      "area": "Quận 1",
+      "address": "315 Lý Tự Trọng, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Pearl%20%E2%80%94%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%20315%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-banh-mi-huynh-hoa-le-thi-rieng",
+      "name": "Bánh Mì Huỳnh Hoa — Lê Thị Riêng",
+      "area": "Quận 1",
+      "address": "26 Lê Thị Riêng, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20Hu%E1%BB%B3nh%20Hoa%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2026%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-nha-hang-ngon-pasteur",
+      "name": "Nhà Hàng Ngon — Pasteur",
+      "area": "Quận 1",
+      "address": "160 Pasteur, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Nh%C3%A0%20H%C3%A0ng%20Ngon%20%E2%80%94%20Pasteur%20160%20Pasteur%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-xoi-ga-number-one-nguyen-trung-truc",
+      "name": "Xôi Gà Number One — Nguyễn Trung Trực",
+      "area": "Quận 1",
+      "address": "15 Nguyễn Trung Trực, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20G%C3%A0%20Number%20One%20%E2%80%94%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2015%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "id": "v4-pho-quynh-pham-ngu-lao",
+      "name": "Phở Quỳnh — Phạm Ngũ Lão",
+      "area": "Quận 1",
+      "address": "323 Phạm Ngũ Lão, Quận 1, TP.HCM",
+      "sources": [
+        {
+          "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Qu%E1%BB%B3nh%20%E2%80%94%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%20323%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+        },
+        {
+          "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+          "url": "https://misssaigontours.com/saigon-street-food/"
+        }
+      ],
+      "checkedAt": "2026-11-27"
+    }
+  ]
+}

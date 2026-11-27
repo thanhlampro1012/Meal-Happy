@@ -2,13 +2,13 @@
 
 Sổ địa điểm, món muốn thử, món yêu thích và lịch hẹn riêng tư cho hai người tại TP.HCM. Giao diện tiếng Việt, dùng trên điện thoại và máy tính, có chế độ sáng và tối.
 
-Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản v3 có **142 địa điểm, 21 khu vực và 35 nhóm món**. Xem [ghi chú v3](docs/release-v3.md) để biết các cải tiến, nguồn đối chiếu và phạm vi đã kiểm tra.
+Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản v3 có **139 địa điểm trong 5 khu vực và 35 nhóm món**. Xem [ghi chú v3](docs/release-v3.md) để biết các cải tiến, nguồn đối chiếu và phạm vi đã kiểm tra.
 
 Địa chỉ đích khi triển khai qua **Sites**: https://hen-saigon-cua-hai-dua.workspace-qu-1719.chatgpt.site. URL này là cấu hình đích; trạng thái phát hành cần được xác nhận bằng kết quả triển khai của Sites.
 
 ## Tính năng đã triển khai
 
-- Khám phá **142 địa điểm**, gồm 16 quán gốc và 126 quán bổ sung, từ lựa chọn bình dân đến nhà hàng cho dịp đặc biệt.
+- Khám phá **139 địa điểm** trong đúng năm khu vực (Quận 1, 3, 5, Gò Vấp, Tân Bình), từ bình dân đến sang trọng.
 - Lọc theo **35 nhóm món**, khu vực, loại quán, không khí, trạng thái đã ghé và ngân sách cho **1 hoặc 2 người**; có các mức 30.000đ, 50.000đ, 70.000đ và 100.000đ.
 - Tìm không dấu, hỗ trợ đổi thứ tự từ khóa, hiểu cách viết `q3`/`q.3`; chọn nhiều món để tìm quán bán một trong các món đó.
 - Sắp xếp theo tên, điểm cộng đồng hoặc ngân sách; chuyển lưới/danh sách; chọn ngẫu nhiên trong kết quả đang lọc và xem thêm 24 địa điểm mỗi lượt.
@@ -28,16 +28,16 @@ Xóa một quán tự thêm sẽ gỡ các món muốn thử, ghi chú quán và
 
 ## Khám phá theo món và ngân sách
 
-Danh mục v3 gồm **100 quán ăn, 19 quán cà phê, 16 điểm tráng miệng và 7 điểm đồ uống**, phân bố trong 21 khu vực của bộ lọc. Các nhóm món gồm cơm tấm, cơm, xôi, bánh bao/bánh giò, bún, bún bò, phở, hủ tiếu, bánh mì, mì, lẩu, nướng, ốc, món chay và các nhóm ẩm thực khác. Chọn **Cơm** bao gồm cơm tấm; chọn **Bún** bao gồm bún bò. Quán tự thêm từ phiên bản cũ vẫn được phân loại từ tên, menu và nhãn khi chưa có nhóm món do người dùng chọn.
+Danh mục v4 gồm **105 quán ăn, 16 quán cà phê, 12 điểm tráng miệng và 6 điểm đồ uống**, chỉ trong năm khu vực. Các nhóm món gồm cơm tấm, cơm, xôi, bánh bao/bánh giò, bún, bún bò, phở, hủ tiếu, bánh mì, mì, lẩu, nướng, ốc, món chay và các nhóm ẩm thực khác. Chọn **Cơm** bao gồm cơm tấm; chọn **Bún** bao gồm bún bò. Quán tự thêm từ phiên bản cũ vẫn được phân loại từ tên, menu và nhãn khi chưa có nhóm món do người dùng chọn.
 
 Số lựa chọn theo mức chi tham khảo của bản dữ liệu ngày 27/11/2026:
 
 | Ngân sách tối đa cho một người | Số địa điểm phù hợp |
 | --- | ---: |
-| 30.000đ | 6 |
-| 50.000đ | 22 |
-| 70.000đ | 53 |
-| 100.000đ | 86 |
+| 30.000đ | 0 |
+| 50.000đ | 9 |
+| 70.000đ | 31 |
+| 100.000đ | 69 |
 
 Các ngưỡng **cộng dồn**, tính bằng giá tối đa trong khoảng dự trù của mỗi quán. **Những lựa chọn đến 30.000đ áp dụng cho phần/món cơ bản được mô tả và dẫn nguồn**, không áp dụng cho toàn bộ thực đơn, món thêm hoặc tổng hóa đơn của mọi cách gọi món. Phần chi tiết và so sánh hiển thị ghi chú phạm vi mức chi khi có.
 
@@ -57,7 +57,7 @@ Lựa chọn được lưu trong `localStorage` của trình duyệt trên thi�
 
 ## Dữ liệu và nguồn tham khảo
 
-Danh sách nằm trong `app/lib/places.ts` và `app/lib/places-extra.ts`; ghi chú nghiên cứu nguồn tại [docs/venue-research-v3.json](docs/venue-research-v3.json). Mỗi quán có liên kết nguồn, ngày kiểm chứng, phân loại món và nguồn ảnh khi có. 16 ID gốc được giữ lại để các quán đã lưu, món liên kết và lịch hẹn tiếp tục tham chiếu đúng.
+Danh sách nằm trong `app/lib/places.ts` và `app/lib/places-extra.ts`; nguồn bổ sung tại [docs/venue-research-v4.json](docs/venue-research-v4.json). Mỗi quán có liên kết nguồn, ngày kiểm chứng, phân loại món và nguồn ảnh khi có. 12 ID gốc trong phạm vi được giữ lại để các quán đã lưu, món liên kết và lịch hẹn tiếp tục tham chiếu đúng.
 
 - Điểm cộng đồng gồm các hồ sơ **Tripadvisor** của danh sách cũ và **3 hồ sơ beFood** bổ sung trong v3. Nguồn, số lượt đánh giá và ngày tra cứu được lưu theo từng quán; dữ liệu tra cứu ngày 27/11/2026 có thể lấy từ bản lưu của công cụ tìm kiếm và không tự cập nhật. Đây là điểm của nguồn được ghi tên, không phải số sao Google Maps.
 - Nhiều địa điểm có nguồn tham khảo nhưng chưa ghi nhận số sao. App hiển thị trạng thái này rõ ràng và dẫn nguồn để người dùng xem thêm.
@@ -220,3 +220,8 @@ Không sửa hoặc chạy lại migration đã áp dụng. Các migration tiế
 Không có đặt bàn/thanh toán trong app, push notification, lịch hẹn qua đêm, khoảng cách hoặc thời gian di chuyển trực tiếp, lịch đồng bộ hai chiều hay notebook dùng chung nhiều tài khoản. Tệp ICS là tệp để nhập thủ công vào ứng dụng lịch. Lịch trình tối đa 5 điểm dừng trong cùng ngày; tuyến đường được xử lý ở Google Maps. Với quán chỉ có link Maps mà thiếu địa chỉ/Place ID, app mở link của quán và hướng dẫn mở riêng từng điểm khi chưa thể tạo tuyến nhiều điểm. Thời lượng kết thúc ICS là ước lượng từ thời điểm bắt đầu và điểm dừng cuối, không phải giờ đặt bàn.
 
 Địa chỉ và điểm Google trực tiếp cần khóa hợp lệ; luồng này chưa được xác minh với tài khoản Google thật. Dữ liệu cộng đồng, địa chỉ tham khảo và ngân sách ban đầu có thể thay đổi theo thời gian.
+
+
+## Bản GitHub Pages độc lập
+
+Thư mục `docs/` là bản web tĩnh, lưu quán và món yêu thích bằng bộ nhớ trình duyệt; không dùng D1 hoặc Sites authentication, không đồng bộ khác thiết bị. Cần xuất JSON để sao lưu và nhập lại nếu đổi trình duyệt. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.

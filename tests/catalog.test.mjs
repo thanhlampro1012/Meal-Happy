@@ -7,10 +7,18 @@ import { join } from 'node:path';
 // Stable identifiers from the original catalog: saved places, dish links and
 // plans must continue resolving after the discovery list grows or is reordered.
 const ORIGINAL_IDS = [
-  'pizza-4ps-ben-thanh', 'the-deck-saigon', 'hum-garden', 'cuc-gach-quan',
-  'chay-garden-vo-van-tan', 'bep-me-in', 'anan-saigon', 'quan-bui-original',
-  'the-workshop', 'okkio-le-loi', 'lusine-le-thanh-ton', 'com-tam-ba-ghien',
-  'banh-xeo-46a', 'pho-mien-ga-ky-dong', 'bosgaurus-saigon-pearl', 'maison-marou-calmette',
+  "pizza-4ps-ben-thanh",
+  "cuc-gach-quan",
+  "chay-garden-vo-van-tan",
+  "bep-me-in",
+  "anan-saigon",
+  "quan-bui-original",
+  "the-workshop",
+  "okkio-le-loi",
+  "lusine-le-thanh-ton",
+  "banh-xeo-46a",
+  "pho-mien-ga-ky-dong",
+  "maison-marou-calmette"
 ];
 const KINDS = ['food', 'coffee', 'dessert', 'drinks'];
 const canonical = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -45,8 +53,10 @@ try {
     assert.ok(isHttpsUrl(value), `${location}: URL must use HTTPS without credentials or a custom port`);
   };
 
-  check('catalog adds at least 120 venues and retains all 16 original identifiers', () => {
-    assert.ok(places.length >= ORIGINAL_IDS.length + 120, `Expected at least 136 venues; found ${places.length}`);
+  check('catalog has 110+ places exclusively in the chosen five districts', () => {
+    assert.ok(places.length >= 110, `Expected 110 venues; found ${places.length}`);
+    const areas = [...new Set(places.map(p => p.area))].sort();
+    assert.deepEqual(areas, ['Quận 1','Quận 3','Quận 5','Gò Vấp','Tân Bình'].sort());
     for (const id of ORIGINAL_IDS) {
       assert.equal(places.filter(place => place.id === id).length, 1, `Original venue ${id} must occur exactly once`);
     }

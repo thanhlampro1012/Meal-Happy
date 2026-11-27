@@ -1,75 +1,7 @@
 import type { Place } from './types';
 
-// Sources were reviewed on 27/11/2026. Budgets are editorial estimates in VND/person.
+// Historical districts: 1, 3, 5, Go Vap, Tan Binh. Budgets are approximate VND/person.
 export const EXTRA_PLACES: Place[] = [
-  {
-    "id": "com-tam-tai-nguyen-an-ninh",
-    "name": "Cơm Tấm Tài — Nguyễn An Ninh",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "1 Nguyễn An Ninh, Bình Thạnh, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một bữa cơm tấm để ăn no trước khi đi chơi. Hai người có thể chọn phần riêng rồi gọi thêm món ăn kèm theo sức ăn.",
-    "budgetMin": 55000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Cơm tấm sườn",
-      "Cơm tấm bì chả"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "com-tam",
-      "com"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/com-tam-tai-khong-chi-nhanh-01-nguyen-an-ninh"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20T%C3%A0i%20%E2%80%94%20Nguy%E1%BB%85n%20An%20Ninh%201%20Nguy%E1%BB%85n%20An%20Ninh%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "com-tam-thuan-kieu-thuan-kieu",
-    "name": "Cơm Tấm Thuận Kiều — Thuận Kiều",
-    "kind": "food",
-    "area": "Quận 11",
-    "address": "54 Thuận Kiều, phường Minh Phụng, TP.HCM",
-    "addressSource": "Website Cơm Tấm Thuận Kiều — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Gợi ý cơm tấm cho buổi hẹn ăn trưa ở khu Chợ Lớn. Chọn một món chính trước, rồi cân nhắc gọi thêm canh để giữ ngân sách.",
-    "budgetMin": 45000,
-    "budgetMax": 85000,
-    "dishes": [
-      "Cơm tấm",
-      "Cơm mắm chưng"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "com-tam",
-      "com"
-    ],
-    "sources": [
-      {
-        "label": "Website Cơm Tấm Thuận Kiều: địa chỉ, món và thông tin tham khảo",
-        "url": "https://comtamthuankieu.com.vn/he-thong-chi-nhanh/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Thu%E1%BA%ADn%20Ki%E1%BB%81u%20%E2%80%94%20Thu%E1%BA%ADn%20Ki%E1%BB%81u%2054%20Thu%E1%BA%ADn%20Ki%E1%BB%81u%2C%20ph%C6%B0%E1%BB%9Dng%20Minh%20Ph%E1%BB%A5ng%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
   {
     "id": "com-tam-bui-sai-gon-thach-thi-thanh",
     "name": "Cơm Tấm Bụi Sài Gòn — Thạch Thị Thanh",
@@ -101,73 +33,6 @@ export const EXTRA_PLACES: Place[] = [
     ],
     "checkedAt": "2026-11-27",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20B%E1%BB%A5i%20S%C3%A0i%20G%C3%B2n%20%E2%80%94%20Th%E1%BA%A1ch%20Th%E1%BB%8B%20Thanh%20100%20Th%E1%BA%A1ch%20Th%E1%BB%8B%20Thanh%2C%20Qu%E1%BA%ADn%201%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "com-tam-phuc-loc-tho-le-van-viet",
-    "name": "Cơm Tấm Phúc Lộc Thọ — Lê Văn Việt",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "31–33 Lê Văn Việt, Hiệp Phú, Thủ Đức, TP.HCM",
-    "addressSource": "Website Cơm Tấm Phúc Lộc Thọ — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Lựa chọn cơm tấm ở phía đông thành phố cho buổi hẹn ăn nhanh sau giờ học. Hãy xem giá từng phần và món thêm tại chi nhánh.",
-    "budgetMin": 40000,
-    "budgetMax": 75000,
-    "dishes": [
-      "Cơm tấm sườn",
-      "Cơm tấm bì chả"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "com-tam",
-      "com"
-    ],
-    "sources": [
-      {
-        "label": "Website Cơm Tấm Phúc Lộc Thọ: địa chỉ, món và thông tin tham khảo",
-        "url": "https://comtamphucloctho.vn/pages/cua-hang"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Ph%C3%BAc%20L%E1%BB%99c%20Th%E1%BB%8D%20%E2%80%94%20L%C3%AA%20V%C4%83n%20Vi%E1%BB%87t%2031%E2%80%9333%20L%C3%AA%20V%C4%83n%20Vi%E1%BB%87t%2C%20Hi%E1%BB%87p%20Ph%C3%BA%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "com-tam-di-tu-huong-lo-2",
-    "name": "Cơm Tấm Dì Tư — Hương Lộ 2",
-    "kind": "food",
-    "area": "Bình Tân",
-    "address": "943 Hương Lộ 2, Bình Tân, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một điểm cơm tấm bình dân ở Bình Tân để lưu vào danh sách ăn hằng ngày. Phần sườn cơ bản phù hợp cho buổi hẹn đơn giản.",
-    "budgetMin": 35000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Cơm tấm sườn nướng"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "com-tam",
-      "com"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/com-tam-di-tu"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20D%C3%AC%20T%C6%B0%20%E2%80%94%20H%C6%B0%C6%A1ng%20L%E1%BB%99%202%20943%20H%C6%B0%C6%A1ng%20L%E1%BB%99%202%2C%20B%C3%ACnh%20T%C3%A2n%20TP.HCM",
     "curated": true,
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
@@ -272,42 +137,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "bun-rieu-co-ngoc-su-van-hanh",
-    "name": "Bún Riêu Cô Ngọc — Sư Vạn Hạnh",
-    "kind": "food",
-    "area": "Quận 10",
-    "address": "558 Sư Vạn Hạnh, Quận 10, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Lựa chọn bún riêu ở Quận 10 để bổ sung vào danh sách quán quanh khu học tập và vui chơi. Nên xem menu hiện tại trước khi chốt phần ăn.",
-    "budgetMin": 35000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Bún riêu"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "bun"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/bun-rieu-co-ngoc-su-van-hanh"
-      },
-      {
-        "label": "Đối chiếu địa chỉ và phản hồi khách hàng",
-        "url": "https://shopeefood.vn/ho-chi-minh/bun-rieu-co-ngoc-su-van-hanh"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20Ri%C3%AAu%20C%C3%B4%20Ng%E1%BB%8Dc%20%E2%80%94%20S%C6%B0%20V%E1%BA%A1n%20H%E1%BA%A1nh%20558%20S%C6%B0%20V%E1%BA%A1n%20H%E1%BA%A1nh%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "bun-bo-hue-hanh-banh-van-tran",
     "name": "Bún Bò Huế Hạnh — Bành Văn Trân",
     "kind": "food",
@@ -403,71 +232,6 @@ export const EXTRA_PLACES: Place[] = [
     ],
     "checkedAt": "2026-11-27",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20B%C3%B2%20Ch%C3%BA%20H%C3%A1%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20300%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "bun-mam-144-khanh-hoi",
-    "name": "Bún Mắm 144 — Khánh Hội",
-    "kind": "food",
-    "area": "Quận 4",
-    "address": "144 Khánh Hội, Quận 4, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Phù hợp khi cả hai đều thích vị mắm đặc trưng và muốn một bữa ăn no ở Quận 4. Hỏi thành phần và giá phần đầy đủ trước khi gọi.",
-    "budgetMin": 70000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Bún mắm"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "bun"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/bun-mam-144"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20M%E1%BA%AFm%20144%20%E2%80%94%20Kh%C3%A1nh%20H%E1%BB%99i%20144%20Kh%C3%A1nh%20H%E1%BB%99i%2C%20Qu%E1%BA%ADn%204%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "bun-bo-22-pham-the-hien",
-    "name": "Bún Bò 22 — Phạm Thế Hiển",
-    "kind": "food",
-    "area": "Quận 8",
-    "address": "451/34/30 Phạm Thế Hiển, Quận 8, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một lựa chọn bún bò trong hẻm ở Quận 8 cho buổi hẹn tiết kiệm. Mở bản đồ trước khi đi vì số nhà nằm sâu trong hẻm.",
-    "budgetMin": 40000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Bún bò"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "bun-bo",
-      "bun"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/bun-bo-22-pham-the-hien"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20B%C3%B2%2022%20%E2%80%94%20Ph%E1%BA%A1m%20Th%E1%BA%BF%20Hi%E1%BB%83n%20451/34/30%20Ph%E1%BA%A1m%20Th%E1%BA%BF%20Hi%E1%BB%83n%2C%20Qu%E1%BA%ADn%208%20TP.HCM",
     "curated": true,
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
@@ -704,39 +468,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "hu-tieu-ho-cao-van-lau",
-    "name": "Hủ Tiếu Hồ — Cao Văn Lầu",
-    "kind": "food",
-    "area": "Quận 6",
-    "address": "237 Cao Văn Lầu, Quận 6, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Đổi món với hủ tiếu hồ ở Quận 6 khi hai bạn muốn thử một kiểu hủ tiếu khác. Hỏi phần ăn và các loại thịt đi kèm trước khi gọi.",
-    "budgetMin": 35000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Hủ tiếu hồ"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "hu-tieu",
-      "hoa"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/hu-tieu-ho-cao-van-lau"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%E1%BB%A7%20Ti%E1%BA%BFu%20H%E1%BB%93%20%E2%80%94%20Cao%20V%C4%83n%20L%E1%BA%A7u%20237%20Cao%20V%C4%83n%20L%E1%BA%A7u%2C%20Qu%E1%BA%ADn%206%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "thiem-huy-mi-gia-nguyen-trai",
     "name": "Thiêm Huy Mì Gia — Nguyễn Trãi",
     "kind": "food",
@@ -936,39 +667,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "banh-mi-phuong-thao-khuong-viet",
-    "name": "Bánh Mì Phương Thảo — Khuông Việt",
-    "kind": "food",
-    "area": "Tân Phú",
-    "address": "Lô B chung cư Huỳnh Văn Chính, Khuông Việt, Tân Phú, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một lựa chọn bánh mì bình dân ở Tân Phú cho ngày cần ăn nhanh. Hợp lưu làm điểm mua mang đi; kiểm tra vị trí quầy khi đến chung cư. Dự trù cho một ổ bánh mì/người.",
-    "budgetMin": 20000,
-    "budgetMax": 35000,
-    "dishes": [
-      "Bánh mì"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "banh-mi",
-      "an-vat"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-mi-phuong-thao-khuong-viet"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20Ph%C6%B0%C6%A1ng%20Th%E1%BA%A3o%20%E2%80%94%20Khu%C3%B4ng%20Vi%E1%BB%87t%20L%C3%B4%20B%20chung%20c%C6%B0%20Hu%E1%BB%B3nh%20V%C4%83n%20Ch%C3%ADnh%2C%20Khu%C3%B4ng%20Vi%E1%BB%87t%2C%20T%C3%A2n%20Ph%C3%BA%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "banh-cuon-tay-ho-dinh-tien-hoang",
     "name": "Bánh Cuốn Tây Hồ — Đinh Tiên Hoàng",
     "kind": "food",
@@ -997,42 +695,6 @@ export const EXTRA_PLACES: Place[] = [
     ],
     "checkedAt": "2026-11-27",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Cu%E1%BB%91n%20T%C3%A2y%20H%E1%BB%93%20%E2%80%94%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%20127%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2C%20Qu%E1%BA%ADn%201%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "banh-cuon-hai-nam-hung-phu",
-    "name": "Bánh Cuốn Hải Nam — Hưng Phú",
-    "kind": "food",
-    "area": "Quận 8",
-    "address": "84 Hưng Phú, Quận 8, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Lựa chọn bánh cuốn trên đường Hưng Phú để bổ sung các quán ăn gần Quận 8. Kiểm tra menu hiện tại và phần ăn kèm trước khi chốt món.",
-    "budgetMin": 30000,
-    "budgetMax": 55000,
-    "dishes": [
-      "Bánh cuốn"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "banh-cuon"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-cuon-hai-nam-84-hung-phu"
-      },
-      {
-        "label": "Đối chiếu địa chỉ và phản hồi khách hàng",
-        "url": "https://shopeefood.vn/ho-chi-minh/banh-cuon-hai-nam-84-hung-phu"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Cu%E1%BB%91n%20H%E1%BA%A3i%20Nam%20%E2%80%94%20H%C6%B0ng%20Ph%C3%BA%2084%20H%C6%B0ng%20Ph%C3%BA%2C%20Qu%E1%BA%ADn%208%20TP.HCM",
     "curated": true,
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
@@ -1141,76 +803,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "banh-xeo-mien-trung-duong-so-10",
-    "name": "Bánh Xèo Miền Trung — Đường Số 10",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "8A Đường Số 10, Hiệp Bình Chánh, Thủ Đức, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Thêm lựa chọn bánh xèo bình dân ở khu Bình Triệu. Hỏi số bánh trong một phần và giá gọi thêm để hai người cùng ăn vừa đủ.",
-    "budgetMin": 30000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Bánh xèo miền Trung"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn no",
-      "Hẹn giản dị"
-    ],
-    "cuisineTags": [
-      "banh-xeo"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-xeo-mien-trung-8a-duong-so-10"
-      },
-      {
-        "label": "Đối chiếu địa chỉ và phản hồi khách hàng",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-xeo-nhan-thit-vit-duong-so-10"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20X%C3%A8o%20Mi%E1%BB%81n%20Trung%20%E2%80%94%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%208A%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%2010%2C%20Hi%E1%BB%87p%20B%C3%ACnh%20Ch%C3%A1nh%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "banh-can-da-lat-banh-uot-long-ga-dong-nai",
-    "name": "Bánh Căn Đà Lạt & Bánh Ướt Lòng Gà — Đồng Nai",
-    "kind": "food",
-    "area": "Quận 10",
-    "address": "58/8 Đồng Nai, Quận 10, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một buổi đổi món với bánh căn hoặc bánh ướt lòng gà. Quán có địa chỉ trong hẻm, nên xem đường trước khi hẹn nhau đến.",
-    "budgetMin": 35000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Bánh căn",
-      "Bánh ướt lòng gà"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "banh-cuon"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/quan-banh-can-da-lat"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20C%C4%83n%20%C4%90%C3%A0%20L%E1%BA%A1t%20%26%20B%C3%A1nh%20%C6%AF%E1%BB%9Bt%20L%C3%B2ng%20G%C3%A0%20%E2%80%94%20%C4%90%E1%BB%93ng%20Nai%2058/8%20%C4%90%E1%BB%93ng%20Nai%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "bot-chien-dat-thanh-dia-chi-moi",
     "name": "Bột Chiên Đạt Thành — địa chỉ mới",
     "kind": "food",
@@ -1245,211 +837,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "bot-chien-van-thanh-au-duong-lan",
-    "name": "Bột Chiên Vạn Thành — Âu Dương Lân",
-    "kind": "food",
-    "area": "Quận 8",
-    "address": "35 Âu Dương Lân, Quận 8, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một điểm ăn vặt để hai người chọn vài món nhỏ ở Quận 8. Bắt đầu bằng bột chiên rồi cân nhắc gọi thêm để giữ ngân sách.",
-    "budgetMin": 25000,
-    "budgetMax": 50000,
-    "dishes": [
-      "Bột chiên",
-      "Há cảo",
-      "Bánh cuốn"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "banh-cuon"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/van-thanh-vo-van-tan"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%E1%BB%99t%20Chi%C3%AAn%20V%E1%BA%A1n%20Th%C3%A0nh%20%E2%80%94%20%C3%82u%20D%C6%B0%C6%A1ng%20L%C3%A2n%2035%20%C3%82u%20D%C6%B0%C6%A1ng%20L%C3%A2n%2C%20Qu%E1%BA%ADn%208%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "ha-cao-ngoc-lan-vinh-vien",
-    "name": "Há Cảo Ngọc Lan — Vĩnh Viễn",
-    "kind": "food",
-    "area": "Quận 10",
-    "address": "500 Vĩnh Viễn, Quận 10, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Gọi một phần há cảo vừa đủ cho mỗi người, hoặc chia vài loại nếu menu có sẵn. Đây là điểm ăn nhẹ để nối với lịch dạo chơi ở Quận 10. Dự trù cho một phần ăn nhẹ/người.",
-    "budgetMin": 30000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Há cảo"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "hoa"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/ha-cao-ngoc-lan"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%C3%A1%20C%E1%BA%A3o%20Ng%E1%BB%8Dc%20Lan%20%E2%80%94%20V%C4%A9nh%20Vi%E1%BB%85n%20500%20V%C4%A9nh%20Vi%E1%BB%85n%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "sui-cao-thien-thien-ha-ton-quyen",
-    "name": "Sủi Cảo Thiên Thiên — Hà Tôn Quyền",
-    "kind": "food",
-    "area": "Quận 11",
-    "address": "195 Hà Tôn Quyền, Quận 11, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Gợi ý một bữa sủi cảo trên phố Hà Tôn Quyền. Hai bạn có thể thử phần nước và phần khô nếu có trên menu; hỏi giá trước khi gọi thêm.",
-    "budgetMin": 50000,
-    "budgetMax": 85000,
-    "dishes": [
-      "Sủi cảo",
-      "Mì sủi cảo"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "mi",
-      "an-vat",
-      "hoa"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/sui-cao-thien-thien-ha-ton-quyen"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=S%E1%BB%A7i%20C%E1%BA%A3o%20Thi%C3%AAn%20Thi%C3%AAn%20%E2%80%94%20H%C3%A0%20T%C3%B4n%20Quy%E1%BB%81n%20195%20H%C3%A0%20T%C3%B4n%20Quy%E1%BB%81n%2C%20Qu%E1%BA%ADn%2011%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "sui-cao-ngoc-y-ha-ton-quyen",
-    "name": "Sủi Cảo Ngọc Ý — Hà Tôn Quyền",
-    "kind": "food",
-    "area": "Quận 11",
-    "address": "187–189 Hà Tôn Quyền, Quận 11, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Thêm một điểm sủi cảo để tự so sánh khẩu vị sau mỗi lần hẹn. Phần chiên dùng chung dễ tăng tổng tiền, nên chốt số món trước.",
-    "budgetMin": 55000,
-    "budgetMax": 90000,
-    "dishes": [
-      "Sủi cảo nước",
-      "Sủi cảo chiên",
-      "Mì sủi cảo"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "mi",
-      "an-vat",
-      "hoa"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/sui-cao-ngoc-y-ha-ton-quyen"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=S%E1%BB%A7i%20C%E1%BA%A3o%20Ng%E1%BB%8Dc%20%C3%9D%20%E2%80%94%20H%C3%A0%20T%C3%B4n%20Quy%E1%BB%81n%20187%E2%80%93189%20H%C3%A0%20T%C3%B4n%20Quy%E1%BB%81n%2C%20Qu%E1%BA%ADn%2011%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "sup-cua-hanh-su-van-hanh",
-    "name": "Súp Cua Hạnh — Sư Vạn Hạnh",
-    "kind": "food",
-    "area": "Quận 10",
-    "address": "549 Sư Vạn Hạnh, Quận 10, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một chén súp cho buổi hẹn ăn nhẹ ở Quận 10. Phù hợp ghép với một món ăn vặt khác nếu cả hai muốn ăn no hơn. Dự trù cho một phần ăn nhẹ/người.",
-    "budgetMin": 25000,
-    "budgetMax": 45000,
-    "dishes": [
-      "Súp cua"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "chao-sup"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/sup-cua-hanh-su-van-hanh"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=S%C3%BAp%20Cua%20H%E1%BA%A1nh%20%E2%80%94%20S%C6%B0%20V%E1%BA%A1n%20H%E1%BA%A1nh%20549%20S%C6%B0%20V%E1%BA%A1n%20H%E1%BA%A1nh%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "sup-cua-trang-van-kiep",
-    "name": "Súp Cua Trang — Vạn Kiếp",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "210 Vạn Kiếp, Bình Thạnh, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Lưu một món ăn nhẹ trên phố Vạn Kiếp cho những ngày chỉ muốn gặp nhau một lúc. Hỏi giá từng loại topping trước khi thêm vào phần súp. Dự trù cho một phần ăn nhẹ/người.",
-    "budgetMin": 25000,
-    "budgetMax": 45000,
-    "dishes": [
-      "Súp cua"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "chao-sup"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/sup-cua-trang"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=S%C3%BAp%20Cua%20Trang%20%E2%80%94%20V%E1%BA%A1n%20Ki%E1%BA%BFp%20210%20V%E1%BA%A1n%20Ki%E1%BA%BFp%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "banh-trang-tron-chu-vien",
     "name": "Bánh Tráng Trộn Chú Viên",
     "kind": "food",
@@ -1479,39 +866,6 @@ export const EXTRA_PLACES: Place[] = [
     ],
     "checkedAt": "2026-11-27",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Tr%C3%A1ng%20Tr%E1%BB%99n%20Ch%C3%BA%20Vi%C3%AAn%2038%20Nguy%E1%BB%85n%20Th%C6%B0%E1%BB%A3ng%20Hi%E1%BB%81n%2C%20Qu%E1%BA%ADn%203%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "banh-trang-nuong-co-chin-nguyen-xi",
-    "name": "Bánh Tráng Nướng Cô Chín — Nguyễn Xí",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "123/36 Nguyễn Xí, Bình Thạnh, TP.HCM",
-    "addressSource": "ShopeeFood — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một món ăn vặt để thử cùng nhau ở Bình Thạnh. Xem nhân bánh và số phần trước khi gọi; nguồn hiện ghi Nguyễn Xí thay cho địa chỉ Chu Văn An trong bài cũ. Dự trù cho một phần ăn nhẹ/người.",
-    "budgetMin": 25000,
-    "budgetMax": 55000,
-    "dishes": [
-      "Bánh tráng nướng"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "banh-trang",
-      "an-vat"
-    ],
-    "sources": [
-      {
-        "label": "ShopeeFood: địa chỉ, món và thông tin tham khảo",
-        "url": "https://shopeefood.vn/ho-chi-minh/banh-trang-nuong-co-chin-chu-van-an"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Tr%C3%A1ng%20N%C6%B0%E1%BB%9Bng%20C%C3%B4%20Ch%C3%ADn%20%E2%80%94%20Nguy%E1%BB%85n%20X%C3%AD%20123/36%20Nguy%E1%BB%85n%20X%C3%AD%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%20TP.HCM",
     "curated": true,
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
@@ -1651,73 +1005,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
   },
   {
-    "id": "che-mam-khanh-vy",
-    "name": "Chè Mâm Khánh Vy",
-    "kind": "dessert",
-    "area": "Quận 10",
-    "address": "032 lô H chung cư Ngô Gia Tự, Quận 10, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Thử vài loại chè trong một buổi hẹn ăn ngọt. Hỏi có bán chén lẻ hay mâm nhỏ không, vì một mâm đủ loại có thể nhiều hơn sức ăn của hai người. Dự trù cho vài chén hoặc chia mâm, chưa tính món gọi thêm.",
-    "budgetMin": 30000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Chè mâm",
-      "Chè đậu",
-      "Chè mè đen"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/khanh-vy-che-mam"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20M%C3%A2m%20Kh%C3%A1nh%20Vy%20032%20l%C3%B4%20H%20chung%20c%C6%B0%20Ng%C3%B4%20Gia%20T%E1%BB%B1%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "che-my-nguyen-van-dau",
-    "name": "Chè Mỹ — Nguyễn Văn Đậu",
-    "kind": "dessert",
-    "area": "Bình Thạnh",
-    "address": "168A Nguyễn Văn Đậu, Bình Thạnh, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Thêm một điểm chè ở Bình Thạnh cho buổi hẹn sau bữa ăn. Hai bạn có thể chọn khác món để thử, rồi lưu món mình muốn ăn lại. Dự trù cho một phần chè/người.",
-    "budgetMin": 25000,
-    "budgetMax": 55000,
-    "dishes": [
-      "Chè Thái",
-      "Chè thập cẩm"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/che-my-nguyen-van-dau"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20M%E1%BB%B9%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20%C4%90%E1%BA%ADu%20168A%20Nguy%E1%BB%85n%20V%C4%83n%20%C4%90%E1%BA%ADu%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
     "id": "che-ky-dong",
     "name": "Chè Kỳ Đồng",
     "kind": "dessert",
@@ -1786,175 +1073,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
   },
   {
-    "id": "che-thai-y-phuong-nguyen-tri-phuong",
-    "name": "Chè Thái Ý Phương — Nguyễn Tri Phương",
-    "kind": "dessert",
-    "area": "Quận 10",
-    "address": "380 Nguyễn Tri Phương, Quận 10, TP.HCM",
-    "addressSource": "Digifood — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Phù hợp khi hai bạn thích chè Thái và mùi sầu riêng. Nếu một người không ăn được sầu riêng, nên hỏi tiệm về thành phần trước khi chọn. Dự trù cho một phần chè/người.",
-    "budgetMin": 35000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Chè Thái",
-      "Chè khúc bạch",
-      "Chè ba màu"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che"
-    ],
-    "sources": [
-      {
-        "label": "Digifood: địa chỉ, món và thông tin tham khảo",
-        "url": "https://digifood.vn/blog/che-thai-y-phuong/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Th%C3%A1i%20%C3%9D%20Ph%C6%B0%C6%A1ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%20380%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%2010%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "banh-flan-ngoc-nga-hoang-dieu",
-    "name": "Bánh Flan Ngọc Nga — Hoàng Diệu",
-    "kind": "dessert",
-    "area": "Quận 4",
-    "address": "F88 Hoàng Diệu, Quận 4, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Món ngọt nhỏ cho buổi hẹn tiết kiệm ở Quận 4. Chọn một vài bánh trước rồi gọi thêm nếu muốn, thay vì lấy nhiều ngay từ đầu. Dự trù cho một phần bánh nhỏ/người.",
-    "budgetMin": 15000,
-    "budgetMax": 40000,
-    "dishes": [
-      "Bánh flan",
-      "Bánh flan thập cẩm"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "an-vat",
-      "banh-ngot"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-flan-thap-cam"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Flan%20Ng%E1%BB%8Dc%20Nga%20%E2%80%94%20Ho%C3%A0ng%20Di%E1%BB%87u%20F88%20Ho%C3%A0ng%20Di%E1%BB%87u%2C%20Qu%E1%BA%ADn%204%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "che-chu-gau-to-ngoc-van",
-    "name": "Chè Chú Gấu — Tô Ngọc Vân",
-    "kind": "dessert",
-    "area": "Thủ Đức",
-    "address": "183 Tô Ngọc Vân, Linh Đông, Thủ Đức, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Thêm một điểm chè ở Thủ Đức cho lịch hẹn gần nhà hoặc sau giờ học. Kiểm tra thành phần sầu riêng nếu hai người có khẩu vị khác nhau. Dự trù cho một phần chè/người.",
-    "budgetMin": 25000,
-    "budgetMax": 55000,
-    "dishes": [
-      "Chè Thái",
-      "Chè"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/che-chu-gau"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Ch%C3%BA%20G%E1%BA%A5u%20%E2%80%94%20T%C3%B4%20Ng%E1%BB%8Dc%20V%C3%A2n%20183%20T%C3%B4%20Ng%E1%BB%8Dc%20V%C3%A2n%2C%20Linh%20%C4%90%C3%B4ng%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "10-che-truong-van-ngu",
-    "name": "10 Chè — Trương Văn Ngư",
-    "kind": "dessert",
-    "area": "Thủ Đức",
-    "address": "1 Trương Văn Ngư, Thủ Đức, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một điểm tráng miệng quanh khu chợ Thủ Đức để hai bạn chọn vài món ngọt. Xem menu rồi chọn phần cơ bản nếu muốn giữ ngân sách thấp. Dự trù cho một phần chè/người.",
-    "budgetMin": 25000,
-    "budgetMax": 60000,
-    "dishes": [
-      "Chè",
-      "Chè thập cẩm"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/10-che"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=10%20Ch%C3%A8%20%E2%80%94%20Tr%C6%B0%C6%A1ng%20V%C4%83n%20Ng%C6%B0%201%20Tr%C6%B0%C6%A1ng%20V%C4%83n%20Ng%C6%B0%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "co-trinh-che-tao-pho-linh-trung",
-    "name": "Cô Trinh — Chè & Tào Phớ Linh Trung",
-    "kind": "dessert",
-    "area": "Thủ Đức",
-    "address": "15A Đường Số 9, Linh Trung, Thủ Đức, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Gợi ý chè hoặc tào phớ cho buổi gặp ngắn ở Linh Trung. Mức chi nhẹ phù hợp thêm vào danh sách đi ăn hằng tuần của hai người. Dự trù cho một phần chè/người.",
-    "budgetMin": 20000,
-    "budgetMax": 45000,
-    "dishes": [
-      "Chè",
-      "Tào phớ",
-      "Sinh tố"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Tráng miệng",
-      "Hẹn nhẹ nhàng"
-    ],
-    "cuisineTags": [
-      "che",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/co-trinh-che-sinh-to-tao-pho"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C3%B4%20Trinh%20%E2%80%94%20Ch%C3%A8%20%26%20T%C3%A0o%20Ph%E1%BB%9B%20Linh%20Trung%2015A%20%C4%90%C6%B0%E1%BB%9Dng%20S%E1%BB%91%209%2C%20Linh%20Trung%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
     "id": "che-thanh-tam-phan-van-tri",
     "name": "Chè Thanh Tâm — Phan Văn Trị",
     "kind": "dessert",
@@ -1985,71 +1103,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A8%20Thanh%20T%C3%A2m%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20528%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20Qu%E1%BA%ADn%205%20TP.HCM",
     "curated": true,
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "banh-duc-phan-dang-luu",
-    "name": "Bánh Đúc Phan Đăng Lưu",
-    "kind": "food",
-    "area": "Phú Nhuận",
-    "address": "116/2/3 Phan Đăng Lưu, Phú Nhuận, TP.HCM",
-    "addressSource": "Foody — địa chỉ được công bố; chưa xác minh qua Google Places",
-    "description": "Một phần bánh đúc nóng cho buổi hẹn ăn nhẹ ở Phú Nhuận. Địa chỉ nằm trong hẻm nên xem đường trước, và cân nhắc mua mang đi khi đông. Dự trù cho một phần ăn nhẹ/người.",
-    "budgetMin": 25000,
-    "budgetMax": 50000,
-    "dishes": [
-      "Bánh đúc nóng"
-    ],
-    "tags": [
-      "Hợp túi tiền sinh viên",
-      "Ăn nhẹ",
-      "Đi cùng nhau"
-    ],
-    "cuisineTags": [
-      "an-vat"
-    ],
-    "sources": [
-      {
-        "label": "Foody: địa chỉ, món và thông tin tham khảo",
-        "url": "https://www.foody.vn/ho-chi-minh/banh-duc-phan-dang-luu"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20%C4%90%C3%BAc%20Phan%20%C4%90%C4%83ng%20L%C6%B0u%20116/2/3%20Phan%20%C4%90%C4%83ng%20L%C6%B0u%2C%20Ph%C3%BA%20Nhu%E1%BA%ADn%20TP.HCM",
-    "curated": true,
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "ca-phe-vot-phan-dinh-phung",
-    "name": "Cà phê vợt Phan Đình Phùng",
-    "kind": "coffee",
-    "area": "Phú Nhuận",
-    "address": "330/2 Phan Đình Phùng, Phú Nhuận, TP.HCM",
-    "addressSource": "Tuổi Trẻ · bài viết về cà phê vợt · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một điểm dừng cà phê vợt trong hẻm cho buổi hẹn ngắn. Hợp lúc hai bạn muốn ngồi trò chuyện giản dị rồi đi ăn tiếp; không nên kỳ vọng một quán riêng tư.",
-    "budgetMin": 15000,
-    "budgetMax": 40000,
-    "dishes": [
-      "Cà phê vợt",
-      "Cà phê sữa"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Cà phê truyền thống",
-      "Hẹn nhanh"
-    ],
-    "cuisineTags": [
-      "ca-phe"
-    ],
-    "sources": [
-      {
-        "label": "Tuổi Trẻ · bài viết về cà phê vợt",
-        "url": "https://tuoitre.vn/thuong-hieu-toi-yeu-sai-gon-tho-khe-cung-ngon-lua-liu-riu-cua-ca-phe-vot-100260914123105665.htm"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C3%A0%20ph%C3%AA%20v%E1%BB%A3t%20Phan%20%C4%90%C3%ACnh%20Ph%C3%B9ng%20330/2%20Phan%20%C4%90%C3%ACnh%20Ph%C3%B9ng%2C%20Ph%C3%BA%20Nhu%E1%BA%ADn%2C%20TP.HCM",
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
   },
   {
@@ -2373,40 +1426,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
   },
   {
-    "id": "mien-dong-thao-cafe",
-    "name": "Miền Đồng Thảo Cafe",
-    "kind": "coffee",
-    "area": "Phú Nhuận",
-    "address": "221A Nguyễn Trọng Tuyển, Phường 8, Phú Nhuận, TP.HCM",
-    "addressSource": "Foody · Miền Đồng Thảo Cafe · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Địa điểm cà phê sân vườn để đổi không khí tại Phú Nhuận. Phù hợp khi hai bạn dành riêng một chặng ngồi uống nước; xem nhận xét mới về phục vụ trước buổi hẹn.",
-    "budgetMin": 55000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Cà phê",
-      "Đồ uống"
-    ],
-    "tags": [
-      "Sân vườn",
-      "Hẹn cuối tuần",
-      "Phú Nhuận"
-    ],
-    "cuisineTags": [
-      "ca-phe",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "Foody · Miền Đồng Thảo Cafe",
-        "url": "https://www.foody.vn/ho-chi-minh/mien-dong-thao-cafe"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mi%E1%BB%81n%20%C4%90%E1%BB%93ng%20Th%E1%BA%A3o%20Cafe%20221A%20Nguy%E1%BB%85n%20Tr%E1%BB%8Dng%20Tuy%E1%BB%83n%2C%20Ph%C6%B0%E1%BB%9Dng%208%2C%20Ph%C3%BA%20Nhu%E1%BA%ADn%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
     "id": "soi-da-cafe-ngo-thoi-nhiem",
     "name": "Sỏi Đá Cafe · Ngô Thời Nhiệm",
     "kind": "coffee",
@@ -2517,40 +1536,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
   },
   {
-    "id": "tiem-ca-phe-linh-dan-chu",
-    "name": "Tiệm Cà Phê Linh · Dân Chủ",
-    "kind": "coffee",
-    "area": "Thủ Đức",
-    "address": "26 Dân Chủ, phường Bình Thọ, TP. Thủ Đức, TP.HCM",
-    "addressSource": "Tạp chí Mẹ và Con · gợi ý quán cà phê · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một điểm hẹn cà phê gợi không khí Sài Gòn xưa tại Thủ Đức. Hợp hai bạn muốn ngồi nói chuyện gần khu học tập, không cần đi vào trung tâm.",
-    "budgetMin": 35000,
-    "budgetMax": 85000,
-    "dishes": [
-      "Cà phê",
-      "Đồ uống"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Hoài niệm",
-      "Thủ Đức"
-    ],
-    "cuisineTags": [
-      "ca-phe",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "Tạp chí Mẹ và Con · gợi ý quán cà phê",
-        "url": "https://mevacon.com.vn/background-tet/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BB%87m%20C%C3%A0%20Ph%C3%AA%20Linh%20%C2%B7%20D%C3%A2n%20Ch%E1%BB%A7%2026%20D%C3%A2n%20Ch%E1%BB%A7%2C%20ph%C6%B0%E1%BB%9Dng%20B%C3%ACnh%20Th%E1%BB%8D%2C%20TP.%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
     "id": "la-viet-hai-ba-trung",
     "name": "Là Việt Coffee · Hai Bà Trưng",
     "kind": "coffee",
@@ -2618,248 +1603,6 @@ export const EXTRA_PLACES: Place[] = [
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20Nh%C3%A3n%20Ch%C3%BA%20T%C3%A1m%202%20Tr%C6%B0%C6%A1ng%20H%C3%A1n%20Si%C3%AAu%2C%20Ph%C6%B0%E1%BB%9Dng%20%C4%90a%20Kao%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
     "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "koi-the-aeon-binh-tan",
-    "name": "KOI Thé · AEON Bình Tân",
-    "kind": "drinks",
-    "area": "Bình Tân",
-    "address": "Lô F29B, tầng 1, AEON MALL Bình Tân, 1 đường số 17A, phường An Lạc, TP.HCM",
-    "addressSource": "KOI Thé · danh sách cửa hàng chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một điểm trà sữa trong trung tâm thương mại phía tây thành phố. Tiện ghép với xem phim hoặc đi dạo trong nhà, nhất là những hôm thời tiết khó đoán.",
-    "budgetMin": 45000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Trà sữa",
-      "Trà"
-    ],
-    "tags": [
-      "Trong trung tâm thương mại",
-      "Bình Tân",
-      "Một ly mỗi người"
-    ],
-    "cuisineTags": [
-      "tra-sua",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "KOI Thé · danh sách cửa hàng chính thức",
-        "url": "https://koithe.com/store.php?c=56&ipp=6&page=5&s=107"
-      },
-      {
-        "label": "AEON Bình Tân · thực đơn KOI Thé",
-        "url": "https://aeonmall-binhtan.com.vn/thuc-don/thuc-don-koi-the"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=KOI%20Th%C3%A9%20%C2%B7%20AEON%20B%C3%ACnh%20T%C3%A2n%20L%C3%B4%20F29B%2C%20t%E1%BA%A7ng%201%2C%20AEON%20MALL%20B%C3%ACnh%20T%C3%A2n%2C%201%20%C4%91%C6%B0%E1%BB%9Dng%20s%E1%BB%91%2017A%2C%20ph%C6%B0%E1%BB%9Dng%20An%20L%E1%BA%A1c%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "gong-cha-parc-mall",
-    "name": "Gong Cha · Parc Mall",
-    "kind": "drinks",
-    "area": "Quận 8",
-    "address": "Lô L1-K07, tầng 1, Parc Mall, 547–549 Tạ Quang Bửu, phường Chánh Hưng, TP.HCM",
-    "addressSource": "Gong Cha Việt Nam · cửa hàng chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Trà sữa tại Quận 8 để hai bạn có một điểm nghỉ khi đi chơi trong nhà. Gọi một ly mỗi người và xem lượng đường, topping trước khi chốt đơn.",
-    "budgetMin": 45000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Trà sữa",
-      "Trà"
-    ],
-    "tags": [
-      "Quận 8",
-      "Trong trung tâm thương mại",
-      "Một ly mỗi người"
-    ],
-    "cuisineTags": [
-      "tra-sua",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "Gong Cha Việt Nam · cửa hàng chính thức",
-        "url": "https://gongcha.com.vn/cua-hang/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gong%20Cha%20%C2%B7%20Parc%20Mall%20L%C3%B4%20L1-K07%2C%20t%E1%BA%A7ng%201%2C%20Parc%20Mall%2C%20547%E2%80%93549%20T%E1%BA%A1%20Quang%20B%E1%BB%ADu%2C%20ph%C6%B0%E1%BB%9Dng%20Ch%C3%A1nh%20H%C6%B0ng%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "abc-bakery-ba-hom",
-    "name": "ABC Bakery · Bà Hom",
-    "kind": "dessert",
-    "area": "Quận 6",
-    "address": "273 Bà Hom, Phường 13, Quận 6, TP.HCM",
-    "addressSource": "ABC Bakery · hệ thống cửa hàng chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Chọn vài chiếc bánh nhỏ để ăn nhẹ trước khi đi chơi hoặc mang theo cho bạn gái. Đây là gợi ý mua bánh, cần kiểm tra chỗ ngồi nếu muốn ở lại lâu.",
-    "budgetMin": 20000,
-    "budgetMax": 80000,
-    "dishes": [
-      "Bánh ngọt",
-      "Bánh mì"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Mua mang đi",
-      "Ăn nhẹ"
-    ],
-    "cuisineTags": [
-      "banh-ngot",
-      "banh-mi"
-    ],
-    "sources": [
-      {
-        "label": "ABC Bakery · hệ thống cửa hàng chính thức",
-        "url": "https://abcbakery.co/?page_id=8737"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=ABC%20Bakery%20%C2%B7%20B%C3%A0%20Hom%20273%20B%C3%A0%20Hom%2C%20Ph%C6%B0%E1%BB%9Dng%2013%2C%20Qu%E1%BA%ADn%206%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "cheese-coffee-lanh-binh-thang",
-    "name": "Cheese Coffee · Lãnh Binh Thăng",
-    "kind": "coffee",
-    "area": "Quận 11",
-    "address": "321–323–325 Lãnh Binh Thăng, Phường 8, Quận 11, TP.HCM",
-    "addressSource": "ShopeeFood · chi nhánh Cheese Coffee · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Điểm cà phê và trà ở Quận 11 cho lịch hẹn gần nhà. Nếu muốn giữ tiền cho bữa chính, hai bạn có thể chọn đồ uống riêng và bỏ qua phần bánh thêm.",
-    "budgetMin": 55000,
-    "budgetMax": 100000,
-    "dishes": [
-      "Cà phê",
-      "Trà sữa"
-    ],
-    "tags": [
-      "Quận 11",
-      "Hẹn gần nhà",
-      "Một ly mỗi người"
-    ],
-    "cuisineTags": [
-      "ca-phe",
-      "tra-sua"
-    ],
-    "sources": [
-      {
-        "label": "ShopeeFood · chi nhánh Cheese Coffee",
-        "url": "https://shopee.shopeefood.vn/thuong-hieu/cheese-coffee"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cheese%20Coffee%20%C2%B7%20L%C3%A3nh%20Binh%20Th%C4%83ng%20321%E2%80%93323%E2%80%93325%20L%C3%A3nh%20Binh%20Th%C4%83ng%2C%20Ph%C6%B0%E1%BB%9Dng%208%2C%20Qu%E1%BA%ADn%2011%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "tocotoco-le-van-khuong",
-    "name": "ToCoToCo · Lê Văn Khương",
-    "kind": "drinks",
-    "area": "Quận 12",
-    "address": "519A Lê Văn Khương, Khu phố 5, Phường Hiệp Thành, Quận 12, TP.HCM",
-    "addressSource": "ToCoToCo · cửa hàng chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một lựa chọn trà sữa gần khu dân cư Quận 12, hợp buổi hẹn sau giờ học. Dễ đặt giới hạn chi tiêu bằng cách chọn cỡ ly và topping ngay từ đầu.",
-    "budgetMin": 30000,
-    "budgetMax": 70000,
-    "dishes": [
-      "Trà sữa",
-      "Trà"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Quận 12",
-      "Hẹn sau giờ học"
-    ],
-    "cuisineTags": [
-      "tra-sua",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "ToCoToCo · cửa hàng chính thức",
-        "url": "https://tocotocotea.com/stores/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=ToCoToCo%20%C2%B7%20L%C3%AA%20V%C4%83n%20Kh%C6%B0%C6%A1ng%20519A%20L%C3%AA%20V%C4%83n%20Kh%C6%B0%C6%A1ng%2C%20Khu%20ph%E1%BB%91%205%2C%20Ph%C6%B0%E1%BB%9Dng%20Hi%E1%BB%87p%20Th%C3%A0nh%2C%20Qu%E1%BA%ADn%2012%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "chuk-nguyen-van-qua",
-    "name": "Chuk Express · Nguyễn Văn Quá",
-    "kind": "drinks",
-    "area": "Quận 12",
-    "address": "816 Nguyễn Văn Quá, phường Đông Hưng Thuận, Quận 12, TP.HCM",
-    "addressSource": "MoMo · Chuk Express Nguyễn Văn Quá · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Điểm mua trà, cà phê cho buổi gặp ngắn tại Quận 12. Phù hợp hai bạn muốn tiết kiệm thời gian di chuyển; kiểm tra chỗ ngồi nếu dự định trò chuyện lâu.",
-    "budgetMin": 30000,
-    "budgetMax": 70000,
-    "dishes": [
-      "Trà",
-      "Cà phê"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Quận 12",
-      "Hẹn nhanh"
-    ],
-    "cuisineTags": [
-      "ca-phe",
-      "do-uong"
-    ],
-    "sources": [
-      {
-        "label": "MoMo · Chuk Express Nguyễn Văn Quá",
-        "url": "https://www.momo.vn/page/9888970"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chuk%20Express%20%C2%B7%20Nguy%E1%BB%85n%20V%C4%83n%20Qu%C3%A1%20816%20Nguy%E1%BB%85n%20V%C4%83n%20Qu%C3%A1%2C%20ph%C6%B0%E1%BB%9Dng%20%C4%90%C3%B4ng%20H%C6%B0ng%20Thu%E1%BA%ADn%2C%20Qu%E1%BA%ADn%2012%2C%20TP.HCM",
-    "budgetNote": "Dự trù một đồ uống hoặc một phần ăn nhẹ/người; không phải chi phí một bữa ăn."
-  },
-  {
-    "id": "com-chay-dieu-hanh-tinh-lo-10",
-    "name": "Cơm Chay Diệu Hạnh · Tỉnh Lộ 10",
-    "kind": "food",
-    "area": "Bình Tân",
-    "address": "527 Tỉnh Lộ 10, Phường An Lạc A, Bình Tân, TP.HCM",
-    "addressSource": "ShopeeFood · Cơm Chay Diệu Hạnh · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa cơm chay giản dị để ăn cùng nhau vào ngày cần tiết kiệm. Hợp bữa trưa hoặc bữa nhanh ở Bình Tân trước khi chuyển sang hoạt động khác.",
-    "budgetMin": 30000,
-    "budgetMax": 70000,
-    "dishes": [
-      "Cơm chay",
-      "Món chay"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Ăn chay",
-      "Bữa nhanh"
-    ],
-    "cuisineTags": [
-      "chay",
-      "com"
-    ],
-    "sources": [
-      {
-        "label": "ShopeeFood · Cơm Chay Diệu Hạnh",
-        "url": "https://shopeefood.vn/ho-chi-minh/quan-com-chay-dieu-hanh"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Chay%20Di%E1%BB%87u%20H%E1%BA%A1nh%20%C2%B7%20T%E1%BB%89nh%20L%E1%BB%99%2010%20527%20T%E1%BB%89nh%20L%E1%BB%99%2010%2C%20Ph%C6%B0%E1%BB%9Dng%20An%20L%E1%BA%A1c%20A%2C%20B%C3%ACnh%20T%C3%A2n%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
     "id": "oromia-nam-ky-khoi-nghia",
@@ -2932,80 +1675,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A0%20C%C3%B4%20L%E1%BB%91c%20C%E1%BB%91c%2040A%20Tr%E1%BA%A7n%20Cao%20V%C3%A2n%2C%20ph%C6%B0%E1%BB%9Dng%20Xu%C3%A2n%20H%C3%B2a%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "oc-oanh-vinh-khanh",
-    "name": "Ốc Oanh · Vĩnh Khánh",
-    "kind": "food",
-    "area": "Quận 4",
-    "address": "534 Vĩnh Khánh, phường Khánh Hội, TP.HCM",
-    "addressSource": "MICHELIN Guide · Ốc Oanh · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Hẹn ăn ốc giữa không khí đường phố Vĩnh Khánh, hợp hai bạn thích sự nhộn nhịp. Hải sản cao cấp có thể đội tiền nhanh, nên chốt giá và số món trước khi gọi.",
-    "budgetMin": 200000,
-    "budgetMax": 400000,
-    "dishes": [
-      "Ốc",
-      "Tôm",
-      "Bạch tuộc"
-    ],
-    "tags": [
-      "Phố ẩm thực",
-      "Chia món",
-      "Ngoài trời"
-    ],
-    "cuisineTags": [
-      "oc",
-      "hai-san"
-    ],
-    "sources": [
-      {
-        "label": "MICHELIN Guide · Ốc Oanh",
-        "url": "https://guide.michelin.com/vn/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/oc-oanh"
-      },
-      {
-        "label": "VnExpress · phố ốc Vĩnh Khánh",
-        "url": "https://vnexpress.net/pho-oc-dem-vinh-khanh-tap-nap-khach-5004873.html"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E1%BB%90c%20Oanh%20%C2%B7%20V%C4%A9nh%20Kh%C3%A1nh%20534%20V%C4%A9nh%20Kh%C3%A1nh%2C%20ph%C6%B0%E1%BB%9Dng%20Kh%C3%A1nh%20H%E1%BB%99i%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "oc-nhu-dien-bien-phu",
-    "name": "Ốc Như · Điện Biên Phủ",
-    "kind": "food",
-    "area": "Quận 10",
-    "address": "650/4/29D Điện Biên Phủ, Phường 11, Quận 10, TP.HCM",
-    "addressSource": "Ốc Như · website quán · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Quán ốc trong hẻm để hai bạn gọi vài đĩa chia nhau, dễ thử món xào và nướng trong cùng bữa. Lưu đủ số hẻm và xem giá từng món trước khi quyết định.",
-    "budgetMin": 120000,
-    "budgetMax": 280000,
-    "dishes": [
-      "Ốc bông xào me",
-      "Ốc dừa",
-      "Ốc tỏi"
-    ],
-    "tags": [
-      "Trong hẻm",
-      "Chia món",
-      "Ốc và hải sản"
-    ],
-    "cuisineTags": [
-      "oc",
-      "hai-san"
-    ],
-    "sources": [
-      {
-        "label": "Ốc Như · website quán",
-        "url": "https://ocnhu.com/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E1%BB%90c%20Nh%C6%B0%20%C2%B7%20%C4%90i%E1%BB%87n%20Bi%C3%AAn%20Ph%E1%BB%A7%20650/4/29D%20%C4%90i%E1%BB%87n%20Bi%C3%AAn%20Ph%E1%BB%A7%2C%20Ph%C6%B0%E1%BB%9Dng%2011%2C%20Qu%E1%BA%ADn%2010%2C%20TP.HCM",
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
@@ -3114,160 +1783,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "gogi-house-aeon-tan-phu",
-    "name": "GoGi House · AEON Tân Phú",
-    "kind": "food",
-    "area": "Tân Phú",
-    "address": "Lô T45, tầng 3, AEON MALL Tân Phú Celadon, 30 Bờ Bao Tân Thắng, Tân Phú, TP.HCM",
-    "addressSource": "AEON MALL Tân Phú · GoGi House · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một buổi hẹn cùng nướng thịt Hàn trong trung tâm thương mại. Hãy chọn gói và kiểm tra thuế, nước uống ngay đầu bữa để tiền thanh toán đúng khả năng của hai bạn.",
-    "budgetMin": 300000,
-    "budgetMax": 500000,
-    "dishes": [
-      "Thịt bò nướng",
-      "Thịt heo nướng"
-    ],
-    "tags": [
-      "Nướng tại bàn",
-      "Món Hàn",
-      "Trong trung tâm thương mại"
-    ],
-    "cuisineTags": [
-      "nuong",
-      "han"
-    ],
-    "sources": [
-      {
-        "label": "AEON MALL Tân Phú · GoGi House",
-        "url": "https://aeonmall-tanphuceladon.com.vn/danh-muc-cua-hang/gogi-house"
-      },
-      {
-        "label": "Foody · GoGi House AEON Tân Phú",
-        "url": "https://www.foody.vn/ho-chi-minh/gogi-house-quan-nuong-han-quoc-aeon-mall"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=GoGi%20House%20%C2%B7%20AEON%20T%C3%A2n%20Ph%C3%BA%20L%C3%B4%20T45%2C%20t%E1%BA%A7ng%203%2C%20AEON%20MALL%20T%C3%A2n%20Ph%C3%BA%20Celadon%2C%2030%20B%E1%BB%9D%20Bao%20T%C3%A2n%20Th%E1%BA%AFng%2C%20T%C3%A2n%20Ph%C3%BA%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "kichi-kichi-huynh-tan-phat",
-    "name": "Kichi-Kichi · Huỳnh Tấn Phát",
-    "kind": "food",
-    "area": "Quận 7",
-    "address": "559 Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7, TP.HCM",
-    "addressSource": "Golden Gate · Kichi-Kichi khu vực HCM · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Lẩu băng chuyền giúp mỗi người chọn nước lẩu và phần ăn theo ý mình. Hợp hai bạn khác khẩu vị; xem tổng giá sau thuế và đồ uống trước khi chọn buffet.",
-    "budgetMin": 250000,
-    "budgetMax": 400000,
-    "dishes": [
-      "Lẩu băng chuyền",
-      "Thịt và rau nhúng lẩu"
-    ],
-    "tags": [
-      "Lẩu riêng",
-      "Buffet",
-      "Quận 7"
-    ],
-    "cuisineTags": [
-      "lau",
-      "nhat"
-    ],
-    "sources": [
-      {
-        "label": "Golden Gate · Kichi-Kichi khu vực HCM",
-        "url": "https://offer.ggg.com.vn/uu-dai-kichi-kichi-hcm/"
-      },
-      {
-        "label": "AEON Tân Phú · danh sách Kichi-Kichi",
-        "url": "https://www.aeonmall-tanphuceladon.com.vn/tin-tuc/kichi-kichi-chi-nhanh.html"
-      },
-      {
-        "label": "Golden Gate · địa chỉ chi nhánh Huỳnh Tấn Phát",
-        "url": "https://uat-offer.ggg.com.vn/uu-dai-100k-nhom-2/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kichi-Kichi%20%C2%B7%20Hu%E1%BB%B3nh%20T%E1%BA%A5n%20Ph%C3%A1t%20559%20Hu%E1%BB%B3nh%20T%E1%BA%A5n%20Ph%C3%A1t%2C%20Ph%C6%B0%E1%BB%9Dng%20T%C3%A2n%20Thu%E1%BA%ADn%20%C4%90%C3%B4ng%2C%20Qu%E1%BA%ADn%207%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "dookki-aeon-binh-tan",
-    "name": "Dookki · AEON Bình Tân",
-    "kind": "food",
-    "area": "Bình Tân",
-    "address": "Tầng 3, AEON MALL Bình Tân, 1 đường số 17A, Bình Tân, TP.HCM",
-    "addressSource": "AEON MALL Bình Tân · Dookki · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Lẩu tokbokki cho hai bạn thích tự pha sốt và chọn đồ nhúng. Đây là lựa chọn buffet dễ lên ngân sách hơn; hỏi rõ phụ thu phô mai, thuế và thời gian dùng bữa.",
-    "budgetMin": 160000,
-    "budgetMax": 230000,
-    "dishes": [
-      "Lẩu tokbokki",
-      "Bánh cá Hàn Quốc",
-      "Tempura"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Buffet",
-      "Món Hàn"
-    ],
-    "cuisineTags": [
-      "lau",
-      "han"
-    ],
-    "sources": [
-      {
-        "label": "AEON MALL Bình Tân · Dookki",
-        "url": "https://aeonmall-binhtan.com.vn/danh-muc-cua-hang/dookki"
-      },
-      {
-        "label": "Dookki Việt Nam · hệ thống nhà hàng",
-        "url": "https://dookkivietnam.com/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dookki%20%C2%B7%20AEON%20B%C3%ACnh%20T%C3%A2n%20T%E1%BA%A7ng%203%2C%20AEON%20MALL%20B%C3%ACnh%20T%C3%A2n%2C%201%20%C4%91%C6%B0%E1%BB%9Dng%20s%E1%BB%91%2017A%2C%20B%C3%ACnh%20T%C3%A2n%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "sushi-nhi-nguyen-cong-tru",
-    "name": "Sushi Nhí · Nguyễn Công Trứ",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "21 Nguyễn Công Trứ, Phường 19, Bình Thạnh, TP.HCM",
-    "addressSource": "Foody · Sushi Nhí Nguyễn Công Trứ · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa Nhật ở Bình Thạnh với sushi và mì để hai bạn dễ chọn theo sở thích. Gọi từng lượt nhỏ sẽ thử được nhiều món mà không vượt quá dự trù.",
-    "budgetMin": 150000,
-    "budgetMax": 350000,
-    "dishes": [
-      "Sushi lươn",
-      "Sushi cá hồi",
-      "Udon xào"
-    ],
-    "tags": [
-      "Món Nhật",
-      "Chia món",
-      "Bình Thạnh"
-    ],
-    "cuisineTags": [
-      "nhat",
-      "mi"
-    ],
-    "sources": [
-      {
-        "label": "Foody · Sushi Nhí Nguyễn Công Trứ",
-        "url": "https://www.foody.vn/ho-chi-minh/sushi-nhi-nguyen-cong-tru"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Nh%C3%AD%20%C2%B7%20Nguy%E1%BB%85n%20C%C3%B4ng%20Tr%E1%BB%A9%2021%20Nguy%E1%BB%85n%20C%C3%B4ng%20Tr%E1%BB%A9%2C%20Ph%C6%B0%E1%BB%9Dng%2019%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "tokyo-deli-phan-van-tri",
     "name": "Tokyo Deli · Phan Văn Trị",
     "kind": "food",
@@ -3302,79 +1817,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Deli%20%C2%B7%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20366A3%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20Ph%C6%B0%E1%BB%9Dng%205%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "som-tum-thai-estella",
-    "name": "Som Tum Thai · Estella Place",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "Lô L2-10, lầu 2, Estella Place, 88 Song Hành, phường Bình Trưng, TP.HCM",
-    "addressSource": "Som Tum Thai · địa điểm chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa Thái cho hôm hai bạn muốn đổi vị chua, cay và thơm gia vị. Hỏi trước mức cay và chọn món chia đôi để trải nghiệm nhiều vị trong một bữa.",
-    "budgetMin": 200000,
-    "budgetMax": 400000,
-    "dishes": [
-      "Món Thái",
-      "Gỏi kiểu Thái"
-    ],
-    "tags": [
-      "Món Thái",
-      "Chia món",
-      "Trong trung tâm thương mại"
-    ],
-    "cuisineTags": [
-      "thai"
-    ],
-    "sources": [
-      {
-        "label": "Som Tum Thai · địa điểm chính thức",
-        "url": "https://somtumthai.com.vn/location/"
-      },
-      {
-        "label": "Estella Place · Som Tum Thai",
-        "url": "https://estellaplace.com.vn/som--thai"
-      },
-      {
-        "label": "Som Tum Thai · giới thiệu món Thái",
-        "url": "https://somtumthai.com.vn/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Som%20Tum%20Thai%20%C2%B7%20Estella%20Place%20L%C3%B4%20L2-10%2C%20l%E1%BA%A7u%202%2C%20Estella%20Place%2C%2088%20Song%20H%C3%A0nh%2C%20ph%C6%B0%E1%BB%9Dng%20B%C3%ACnh%20Tr%C6%B0ng%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "chang-vo-van-ngan",
-    "name": "Chang · Võ Văn Ngân",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "292 Võ Văn Ngân, Phường Bình Thọ, TP. Thủ Đức, TP.HCM",
-    "addressSource": "beFood · Chang Modern Thai Cuisine · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Ăn món Thái ngay khu Võ Văn Ngân để bớt thời gian di chuyển vào trung tâm. Hợp bữa hẹn đổi món, nên chia phần và xác nhận độ cay cho cả hai.",
-    "budgetMin": 180000,
-    "budgetMax": 350000,
-    "dishes": [
-      "Món Thái"
-    ],
-    "tags": [
-      "Món Thái",
-      "Thủ Đức",
-      "Chia món"
-    ],
-    "cuisineTags": [
-      "thai"
-    ],
-    "sources": [
-      {
-        "label": "beFood · Chang Modern Thai Cuisine",
-        "url": "https://food.be.com.vn/ho-chi-minh/brand/chang-modern-thai-cuisine-3217"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chang%20%C2%B7%20V%C3%B5%20V%C4%83n%20Ng%C3%A2n%20292%20V%C3%B5%20V%C4%83n%20Ng%C3%A2n%2C%20Ph%C6%B0%E1%BB%9Dng%20B%C3%ACnh%20Th%E1%BB%8D%2C%20TP.%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%2C%20TP.HCM",
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
@@ -3415,146 +1857,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "buffet-chay-thien-y",
-    "name": "Buffet Chay Thiền Ý",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "36 Trần Quý Cáp, Phường 11, Bình Thạnh, TP.HCM",
-    "addressSource": "Green SM · buffet chay Bình Thạnh · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Buffet chay để mỗi người tự chọn món mình thích trong một bữa. Hợp buổi hẹn tiết kiệm có giới hạn tiền rõ; hỏi lại giá vé và lịch phục vụ trước ngày đi.",
-    "budgetMin": 90000,
-    "budgetMax": 150000,
-    "dishes": [
-      "Buffet chay"
-    ],
-    "tags": [
-      "Sinh viên",
-      "Ăn chay",
-      "Buffet"
-    ],
-    "cuisineTags": [
-      "chay"
-    ],
-    "sources": [
-      {
-        "label": "Green SM · buffet chay Bình Thạnh",
-        "url": "https://www.greensm.com/vn-vi/news/buffet-chay-binh-thanh"
-      },
-      {
-        "label": "HTV Thành Phố Kết Nối · giới thiệu buffet chay",
-        "url": "https://www.youtube.com/watch?v=ea51zisLXow"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Buffet%20Chay%20Thi%E1%BB%81n%20%C3%9D%2036%20Tr%E1%BA%A7n%20Qu%C3%BD%20C%C3%A1p%2C%20Ph%C6%B0%E1%BB%9Dng%2011%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "pizza-reale-thao-dien",
-    "name": "Pizza Reale · Thảo Điền",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "27–29 Nguyễn Đăng Giai, Thảo Điền, TP. Thủ Đức, TP.HCM",
-    "addressSource": "Tripadvisor · Pizza Reale · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Chia một chiếc pizza cho buổi hẹn tại Thảo Điền, rồi thêm món khi cả hai còn đói. Cách gọi theo từng lượt giúp tránh dư phần và giữ tiền cho hoạt động tiếp theo.",
-    "budgetMin": 170000,
-    "budgetMax": 350000,
-    "dishes": [
-      "Pizza"
-    ],
-    "tags": [
-      "Pizza",
-      "Chia món",
-      "Thảo Điền"
-    ],
-    "cuisineTags": [
-      "pizza",
-      "au"
-    ],
-    "sources": [
-      {
-        "label": "Tripadvisor · Pizza Reale",
-        "url": "https://www.tripadvisor.com.vn/Restaurant_Review-g293925-d15292623-Reviews-Pizza_Reale-Ho_Chi_Minh_City.html"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Pizza%20Reale%20%C2%B7%20Th%E1%BA%A3o%20%C4%90i%E1%BB%81n%2027%E2%80%9329%20Nguy%E1%BB%85n%20%C4%90%C4%83ng%20Giai%2C%20Th%E1%BA%A3o%20%C4%90i%E1%BB%81n%2C%20TP.%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "soul-burger-thao-dien",
-    "name": "Soul Burger · Thảo Điền",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "35 Võ Trường Toản, Thảo Điền, TP. Thủ Đức, TP.HCM",
-    "addressSource": "Tripadvisor · Soul Burger · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa burger thoải mái cho hai bạn muốn đổi khỏi cơm và bún. Kiểm tra combo, món ăn kèm và nước uống để chọn phần vừa đủ cho mỗi người.",
-    "budgetMin": 150000,
-    "budgetMax": 350000,
-    "dishes": [
-      "Burger",
-      "Cheeseburger"
-    ],
-    "tags": [
-      "Burger",
-      "Thảo Điền",
-      "Bữa hẹn thoải mái"
-    ],
-    "cuisineTags": [
-      "burger"
-    ],
-    "sources": [
-      {
-        "label": "Tripadvisor · Soul Burger",
-        "url": "https://www.tripadvisor.com/Restaurant_Review-g293925-d7783233-Reviews-Soul_Burger-Ho_Chi_Minh_City.html"
-      },
-      {
-        "label": "Vietnam Airlines · gợi ý burger Sài Gòn",
-        "url": "https://www.vietnamairlines.com/la/en/plan-book/travel/travel-guide/best-burger-in-saigon"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Soul%20Burger%20%C2%B7%20Th%E1%BA%A3o%20%C4%90i%E1%BB%81n%2035%20V%C3%B5%20Tr%C6%B0%E1%BB%9Dng%20To%E1%BA%A3n%2C%20Th%E1%BA%A3o%20%C4%90i%E1%BB%81n%2C%20TP.%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "bo-to-nhan-phat-truong-vinh-ky",
-    "name": "Bò Tơ Nhân Phát · Trương Vĩnh Ký",
-    "kind": "food",
-    "area": "Tân Phú",
-    "address": "257 Trương Vĩnh Ký, Phường Tân Thành, Tân Phú, TP.HCM",
-    "addressSource": "Riviu · Bò Tơ Nhân Phát · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Bữa bò tơ ở Tân Phú để hai bạn chia món nướng hoặc một nồi lẩu. Nên hỏi phần cho hai người và chốt số món, vì gọi nhiều đĩa dễ vượt dự trù.",
-    "budgetMin": 170000,
-    "budgetMax": 350000,
-    "dishes": [
-      "Bò tơ",
-      "Lẩu bò"
-    ],
-    "tags": [
-      "Chia món",
-      "Tân Phú",
-      "Bữa tối"
-    ],
-    "cuisineTags": [
-      "lau",
-      "nuong"
-    ],
-    "sources": [
-      {
-        "label": "Riviu · Bò Tơ Nhân Phát",
-        "url": "https://riviu.vn/say-me-quen-duong-ve-cung-cac-mon-bo-to-cuc-chat-luong-tai-bo-to-nhan-phat"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%B2%20T%C6%A1%20Nh%C3%A2n%20Ph%C3%A1t%20%C2%B7%20Tr%C6%B0%C6%A1ng%20V%C4%A9nh%20K%C3%BD%20257%20Tr%C6%B0%C6%A1ng%20V%C4%A9nh%20K%C3%BD%2C%20Ph%C6%B0%E1%BB%9Dng%20T%C3%A2n%20Th%C3%A0nh%2C%20T%C3%A2n%20Ph%C3%BA%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "bep-xanh-an-duyen",
     "name": "Bếp Xanh An Duyên · Nguyễn Tri Phương",
     "kind": "food",
@@ -3590,49 +1892,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%E1%BA%BFp%20Xanh%20An%20Duy%C3%AAn%20%C2%B7%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2010%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Ph%C6%B0%E1%BB%9Dng%206%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "san-fu-lou-crescent-mall",
-    "name": "San Fu Lou · Crescent Mall",
-    "kind": "food",
-    "area": "Quận 7",
-    "address": "Lô GF-29A, tầng trệt, Crescent Mall, 101 Tôn Dật Tiên, phường Tân Mỹ, TP.HCM",
-    "addressSource": "D1 Concepts · San Fu Lou chính thức · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa món Hoa để ghép với đi dạo khu Hồ Bán Nguyệt. Chọn món chia vừa sức hai người; các món vịt quay hoặc phần lớn cần hỏi giá và khẩu phần trước.",
-    "budgetMin": 250000,
-    "budgetMax": 400000,
-    "dishes": [
-      "Món Quảng Đông",
-      "Vịt quay",
-      "Cơm chiên"
-    ],
-    "tags": [
-      "Món Hoa",
-      "Chia món",
-      "Quận 7"
-    ],
-    "cuisineTags": [
-      "com",
-      "hoa"
-    ],
-    "sources": [
-      {
-        "label": "D1 Concepts · San Fu Lou chính thức",
-        "url": "https://www.d1-concepts.com/thuong-hieu-cua-chung-toi/sanfulou"
-      },
-      {
-        "label": "Crescent Mall · San Fu Lou",
-        "url": "https://www.crescentmall.com.vn/tenants/san-fu-lou"
-      },
-      {
-        "label": "Nhịp Cầu Đầu Tư · mở lại sau cải tạo",
-        "url": "https://nhipcaudautu.vn/quang-ba-san-pham-dich-vu/san-fu-lou-crescent-mall-don-khach-tro-lai-voi-dien-mao-moi-3365872/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=San%20Fu%20Lou%20%C2%B7%20Crescent%20Mall%20L%C3%B4%20GF-29A%2C%20t%E1%BA%A7ng%20tr%E1%BB%87t%2C%20Crescent%20Mall%2C%20101%20T%C3%B4n%20D%E1%BA%ADt%20Ti%C3%AAn%2C%20ph%C6%B0%E1%BB%9Dng%20T%C3%A2n%20M%E1%BB%B9%2C%20TP.HCM",
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
@@ -3716,45 +1975,6 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "id": "ciel-dining",
-    "name": "CieL",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "50 đường 6/3, phường An Khánh, TP.HCM",
-    "addressSource": "MICHELIN Guide · CieL · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Trải nghiệm nếm thử trong biệt thự ở Thảo Điền, hợp buổi hẹn hai bạn muốn dành trọn thời gian cho món ăn. Hỏi chỗ ngồi tại quầy hay bàn khi đặt trước.",
-    "budgetMin": 4400000,
-    "budgetMax": 6500000,
-    "dishes": [
-      "Thực đơn nếm thử",
-      "Món bóng cá và custard"
-    ],
-    "tags": [
-      "Dịp đặc biệt",
-      "Thảo Điền",
-      "Nên đặt trước"
-    ],
-    "cuisineTags": [
-      "au",
-      "khac"
-    ],
-    "sources": [
-      {
-        "label": "MICHELIN Guide · CieL",
-        "url": "https://guide.michelin.com/vn/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/ciel%C2%A0"
-      },
-      {
-        "label": "CieL · giá và điều kiện đặt bàn",
-        "url": "https://cieldining.com/reservations/"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "booking": "https://cieldining.com/reservations/",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=CieL%2050%20%C4%91%C6%B0%E1%BB%9Dng%206/3%2C%20ph%C6%B0%E1%BB%9Dng%20An%20Kh%C3%A1nh%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
     "id": "long-trieu-reverie",
     "name": "Long Triều",
     "kind": "food",
@@ -3787,40 +2007,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Long%20Tri%E1%BB%81u%20T%E1%BA%A7ng%204%2C%20The%20Reverie%20Saigon%2C%20Times%20Square%2C%2022%E2%80%9336%20Nguy%E1%BB%85n%20Hu%E1%BB%87%2C%20ph%C6%B0%E1%BB%9Dng%20S%C3%A0i%20G%C3%B2n%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "la-villa-french",
-    "name": "La Villa French Restaurant",
-    "kind": "food",
-    "area": "Thủ Đức",
-    "address": "14 Ngô Quang Huy, phường An Khánh, TP.HCM",
-    "addressSource": "MICHELIN Guide · La Villa · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Một bữa Pháp cho dịp hai bạn muốn ăn chậm và trò chuyện lâu hơn. Thống nhất ngân sách, lựa chọn thực đơn và đồ uống trước để buổi hẹn thoải mái.",
-    "budgetMin": 1500000,
-    "budgetMax": 3000000,
-    "dishes": [
-      "Món Pháp",
-      "Gan ngỗng",
-      "Crème brûlée"
-    ],
-    "tags": [
-      "Dịp đặc biệt",
-      "Món Pháp",
-      "Nên đặt trước"
-    ],
-    "cuisineTags": [
-      "au"
-    ],
-    "sources": [
-      {
-        "label": "MICHELIN Guide · La Villa",
-        "url": "https://guide.michelin.com/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/la-villa-1201811"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=La%20Villa%20French%20Restaurant%2014%20Ng%C3%B4%20Quang%20Huy%2C%20ph%C6%B0%E1%BB%9Dng%20An%20Kh%C3%A1nh%2C%20TP.HCM",
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
@@ -3890,39 +2076,6 @@ export const EXTRA_PLACES: Place[] = [
     "checkedAt": "2026-11-27",
     "curated": true,
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Quince%20Eatery%2037Bis%20K%C3%BD%20Con%2C%20ph%C6%B0%E1%BB%9Dng%20B%E1%BA%BFn%20Th%C3%A0nh%2C%20TP.HCM",
-    "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
-  },
-  {
-    "id": "nephele-nguyen-cuu-van",
-    "name": "Nephele",
-    "kind": "food",
-    "area": "Bình Thạnh",
-    "address": "125/12 Nguyễn Cửu Vân, phường Gia Định, TP.HCM",
-    "addressSource": "MICHELIN Guide · Nephele · chưa xác minh trực tiếp bằng Google Places",
-    "description": "Thực đơn nếm thử theo hướng châu Á đương đại cho dịp hai bạn muốn khám phá món mới. Dành đủ thời gian, báo yêu cầu ăn uống và hỏi giá toàn bộ trải nghiệm trước.",
-    "budgetMin": 2000000,
-    "budgetMax": 3500000,
-    "dishes": [
-      "Thực đơn nếm thử",
-      "Bánh sourdough"
-    ],
-    "tags": [
-      "Dịp đặc biệt",
-      "Trong hẻm",
-      "Nên đặt trước"
-    ],
-    "cuisineTags": [
-      "khac"
-    ],
-    "sources": [
-      {
-        "label": "MICHELIN Guide · Nephele",
-        "url": "https://guide.michelin.com/gb/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/nephele"
-      }
-    ],
-    "checkedAt": "2026-11-27",
-    "curated": true,
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nephele%20125/12%20Nguy%E1%BB%85n%20C%E1%BB%ADu%20V%C3%A2n%2C%20ph%C6%B0%E1%BB%9Dng%20Gia%20%C4%90%E1%BB%8Bnh%2C%20TP.HCM",
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
@@ -4176,233 +2329,2153 @@ export const EXTRA_PLACES: Place[] = [
     "budgetNote": "Dự trù cho một người. Mức thực chi phụ thuộc phần gọi, đồ uống và phụ phí của quán."
   },
   {
-    "name": "Xôi Bình Tiên — Trần Đại Nghĩa",
-    "area": "Bình Chánh",
-    "address": "11 Trần Đại Nghĩa, Tân Kiên, Bình Chánh, TP.HCM",
-    "budgetMin": 17000,
-    "budgetMax": 30000,
+    "id": "v4-com-tam-sa-bi-chuong-tran-binh-trong",
+    "name": "Cơm Tấm Sà Bì Chưởng — Trần Bình Trọng",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "179 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20S%C3%A0%20B%C3%AC%20Ch%C6%B0%E1%BB%9Fng%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20179%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
     "dishes": [
-      "Xôi cadé",
-      "Xôi lá cẩm",
-      "Xôi mặn thập cẩm",
-      "Xôi gà xé"
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 120000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20S%C3%A0%20B%C3%AC%20Ch%C6%B0%E1%BB%9Fng%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20179%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-tam-phuc-loc-tho-an-duong-vuong",
+    "name": "Cơm Tấm Phúc Lộc Thọ — An Dương Vương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "301B An Dương Vương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Ph%C3%BAc%20L%E1%BB%99c%20Th%E1%BB%8D%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20301B%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 80000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Ph%C3%BAc%20L%E1%BB%99c%20Th%E1%BB%8D%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20301B%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-atispho-pho-atiso-quan-5",
+    "name": "Atispho — Phở Atiso Quận 5",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "245 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Ph%E1%BB%9F%20Atiso%20Qu%E1%BA%ADn%205%20245%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 100000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Ph%E1%BB%9F%20Atiso%20Qu%E1%BA%ADn%205%20245%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-bo-thanh-canh",
+    "name": "Phở Bò Thanh Cảnh",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "1 Phan Phú Tiên, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20B%C3%B2%20Thanh%20C%E1%BA%A3nh%201%20Phan%20Ph%C3%BA%20Ti%C3%AAn%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 90000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20B%C3%B2%20Thanh%20C%E1%BA%A3nh%201%20Phan%20Ph%C3%BA%20Ti%C3%AAn%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-hanh-huynh-man-dat",
+    "name": "Phở Hạnh — Huỳnh Mẫn Đạt",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "93 Huỳnh Mẫn Đạt, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%E1%BA%A1nh%20%E2%80%94%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2093%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 90000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%E1%BA%A1nh%20%E2%80%94%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2093%20Hu%E1%BB%B3nh%20M%E1%BA%ABn%20%C4%90%E1%BA%A1t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-tien-phat-diem-tam-hong-kong",
+    "name": "Tiến Phát — Điểm Tâm Hồng Kông",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "18 Ký Hòa, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BA%BFn%20Ph%C3%A1t%20%E2%80%94%20%C4%90i%E1%BB%83m%20T%C3%A2m%20H%E1%BB%93ng%20K%C3%B4ng%2018%20K%C3%BD%20H%C3%B2a%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 65000,
+    "budgetMax": 160000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ti%E1%BA%BFn%20Ph%C3%A1t%20%E2%80%94%20%C4%90i%E1%BB%83m%20T%C3%A2m%20H%E1%BB%93ng%20K%C3%B4ng%2018%20K%C3%BD%20H%C3%B2a%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-baoz-dimsum-nguyen-tri-phuong",
+    "name": "Baoz Dimsum — Nguyễn Tri Phương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "82–88 Nguyễn Tri Phương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Baoz%20Dimsum%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2082%E2%80%9388%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 95000,
+    "budgetMax": 230000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Baoz%20Dimsum%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2082%E2%80%9388%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-shan-dimsum-phu-dong-thien-vuong",
+    "name": "Shan Dimsum — Phù Đổng Thiên Vương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "57–59 Phù Đổng Thiên Vương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shan%20Dimsum%20%E2%80%94%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2057%E2%80%9359%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 75000,
+    "budgetMax": 180000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Shan%20Dimsum%20%E2%80%94%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2057%E2%80%9359%20Ph%C3%B9%20%C4%90%E1%BB%95ng%20Thi%C3%AAn%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-dim-tu-tac-hung-vuong-plaza",
+    "name": "Dim Tu Tac — Hùng Vương Plaza",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "Tầng 3, Hùng Vương Plaza, 126 Hồng Bàng, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dim%20Tu%20Tac%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%20T%E1%BA%A7ng%203%2C%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%2C%20126%20H%E1%BB%93ng%20B%C3%A0ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 170000,
+    "budgetMax": 400000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dim%20Tu%20Tac%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%20T%E1%BA%A7ng%203%2C%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20Plaza%2C%20126%20H%E1%BB%93ng%20B%C3%A0ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-dimsum-mr-hao",
+    "name": "Dimsum Mr. Hào",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "175 Trần Tuấn Khải, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dimsum%20Mr.%20H%C3%A0o%20175%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 110000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20Mr.%20H%C3%A0o%20175%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-bep-nha-bbq-vo-van-kiet",
+    "name": "Bếp Nhà BBQ — Võ Văn Kiệt",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "844 Võ Văn Kiệt, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%E1%BA%BFp%20Nh%C3%A0%20BBQ%20%E2%80%94%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%20844%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Thịt nướng"
+    ],
+    "budgetMin": 75000,
+    "budgetMax": 180000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "nuong"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%E1%BA%BFp%20Nh%C3%A0%20BBQ%20%E2%80%94%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%20844%20V%C3%B5%20V%C4%83n%20Ki%E1%BB%87t%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-hanoi-ngon-an-binh",
+    "name": "Hanoi Ngon — An Bình",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "143/8 An Bình, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Ngon%20%E2%80%94%20An%20B%C3%ACnh%20143%2F8%20An%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Ăn vặt",
+      "Món ăn nhẹ"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 85000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "an-vat"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Ngon%20%E2%80%94%20An%20B%C3%ACnh%20143%2F8%20An%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-mi-tang-nguyen-trai",
+    "name": "Bánh Mì Tăng — Nguyễn Trãi",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "822 Nguyễn Trãi, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20T%C4%83ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20822%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bánh mì thịt"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 55000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "banh-mi"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20T%C4%83ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20822%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-trang-ma-hoc-lac",
+    "name": "Bánh Tráng Ma — Học Lạc",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "25 Học Lạc, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Tr%C3%A1ng%20Ma%20%E2%80%94%20H%E1%BB%8Dc%20L%E1%BA%A1c%2025%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bánh tráng trộn"
+    ],
+    "budgetMin": 15000,
+    "budgetMax": 40000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "banh-trang"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Tr%C3%A1ng%20Ma%20%E2%80%94%20H%E1%BB%8Dc%20L%E1%BA%A1c%2025%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-cuon-nam-viet",
+    "name": "Bánh Cuốn Nam Việt",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "152 Nguyễn Biểu, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Cu%E1%BB%91n%20Nam%20Vi%E1%BB%87t%20152%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bánh cuốn"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 70000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "banh-cuon"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Cu%E1%BB%91n%20Nam%20Vi%E1%BB%87t%20152%20Nguy%E1%BB%85n%20Bi%E1%BB%83u%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-gia-truyen-an-duong-vuong",
+    "name": "Phở Gia Truyền — An Dương Vương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "499 An Dương Vương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Gia%20Truy%E1%BB%81n%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20499%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 100000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Gia%20Truy%E1%BB%81n%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20499%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-tom-chien-tran-tuan-khai",
+    "name": "Bánh Tôm Chiên — Trần Tuấn Khải",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "131–133 Trần Tuấn Khải, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20T%C3%B4m%20Chi%C3%AAn%20%E2%80%94%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%20131%E2%80%93133%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Ăn vặt",
+      "Món ăn nhẹ"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 65000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "an-vat"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20T%C3%B4m%20Chi%C3%AAn%20%E2%80%94%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%20131%E2%80%93133%20Tr%E1%BA%A7n%20Tu%E1%BA%A5n%20Kh%E1%BA%A3i%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-kem-trang-tien-sai-thanh-nguyen-tri-phuong",
+    "name": "Kem Tràng Tiền Sài Thành — Nguyễn Tri Phương",
+    "kind": "dessert",
+    "area": "Quận 5",
+    "address": "205 Nguyễn Tri Phương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kem%20Tr%C3%A0ng%20Ti%E1%BB%81n%20S%C3%A0i%20Th%C3%A0nh%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%20205%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Kem",
+      "Bingsu"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 60000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "kem"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kem%20Tr%C3%A0ng%20Ti%E1%BB%81n%20S%C3%A0i%20Th%C3%A0nh%20%E2%80%94%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%20205%20Nguy%E1%BB%85n%20Tri%20Ph%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-canh-tom-bot-gao-le-hong-phong",
+    "name": "Bánh Canh Tôm Bột Gạo — Lê Hồng Phong",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "131 Lê Hồng Phong, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Canh%20T%C3%B4m%20B%E1%BB%99t%20G%E1%BA%A1o%20%E2%80%94%20L%C3%AA%20H%E1%BB%93ng%20Phong%20131%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bánh canh"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 105000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "banh-canh"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Canh%20T%C3%B4m%20B%E1%BB%99t%20G%E1%BA%A1o%20%E2%80%94%20L%C3%AA%20H%E1%BB%93ng%20Phong%20131%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-xoi-bat-buu-xoi-sau-rieng-an-duong-vuong",
+    "name": "Xôi Bát Bửu & Xôi Sầu Riêng — An Dương Vương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "447 An Dương Vương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20B%C3%A1t%20B%E1%BB%ADu%20%26%20X%C3%B4i%20S%E1%BA%A7u%20Ri%C3%AAng%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20447%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Xôi"
+    ],
+    "budgetMin": 25000,
+    "budgetMax": 65000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
     ],
     "cuisineTags": [
       "xoi"
     ],
-    "description": "Một gói xôi cho buổi hẹn ăn nhanh ở Bình Chánh. Menu chính thức ghi xôi ngọt 17–22k, xôi mặn hoặc gà xé 25–30k; dự trù một gói/người, chưa gồm thức uống và topping thêm.",
-    "addressSource": "Website Xôi Bình Tiên — danh sách chi nhánh; chưa xác minh qua Google Places",
     "sources": [
       {
-        "label": "Website chính thức: địa chỉ chi nhánh",
-        "url": "https://xoibinhtien.com/lien-he"
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20B%C3%A1t%20B%E1%BB%ADu%20%26%20X%C3%B4i%20S%E1%BA%A7u%20Ri%C3%AAng%20%E2%80%94%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%20447%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
       },
       {
-        "label": "Menu chính thức: tên món, cỡ nhỏ/lớn và giá",
-        "url": "https://xoibinhtien.com/san-pham"
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
       }
-    ],
-    "id": "xoi-binh-tien-tran-dai-nghia",
-    "kind": "food",
-    "tags": [
-      "Món cơ bản ≤30k",
-      "Hợp túi tiền sinh viên",
-      "Hẹn giản dị"
     ],
     "curated": true,
     "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20B%C3%ACnh%20Ti%C3%AAn%20%E2%80%94%20Tr%E1%BA%A7n%20%C4%90%E1%BA%A1i%20Ngh%C4%A9a%2011%20Tr%E1%BA%A7n%20%C4%90%E1%BA%A1i%20Ngh%C4%A9a%2C%20T%C3%A2n%20Ki%C3%AAn%2C%20B%C3%ACnh%20Ch%C3%A1nh%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
   },
   {
-    "name": "Bánh Mì Má Hải — Thành Thái",
-    "area": "Quận 10",
-    "address": "7A/17 Thành Thái, Quận 10, TP.HCM",
-    "budgetMin": 24000,
-    "budgetMax": 30000,
+    "id": "v4-lu-s-corner-hung-vuong",
+    "name": "Lu’s Corner — Hùng Vương",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "319 Hùng Vương, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lu%E2%80%99s%20Corner%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20319%20H%C3%B9ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
     "dishes": [
-      "Bánh mì ốp la 1 trứng"
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 115000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
     ],
     "cuisineTags": [
-      "banh-mi",
-      "an-vat"
+      "hoa"
     ],
-    "description": "Gợi ý tiết kiệm là một ổ bánh mì ốp la 1 trứng: menu chi nhánh trên beFood ghi 24k. Khung tiền trong thẻ chỉ dành cho món này; bánh mì chả cá hiện hiển thị từ 31k. Chưa gồm nước và phí giao hàng.",
-    "addressSource": "beFood — đúng chi nhánh Thành Thái; chưa xác minh qua Google Places",
     "sources": [
       {
-        "label": "beFood: địa chỉ và menu của chi nhánh",
-        "url": "https://food.be.com.vn/ho-chi-minh/banh-mi-ma-hai-thanh-thai-16718"
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Lu%E2%80%99s%20Corner%20%E2%80%94%20H%C3%B9ng%20V%C6%B0%C6%A1ng%20319%20H%C3%B9ng%20V%C6%B0%C6%A1ng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
       }
-    ],
-    "id": "banh-mi-ma-hai-thanh-thai",
-    "kind": "food",
-    "tags": [
-      "Món cơ bản ≤30k",
-      "Hợp túi tiền sinh viên",
-      "Hẹn giản dị"
     ],
     "curated": true,
     "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20M%C3%A1%20H%E1%BA%A3i%20%E2%80%94%20Th%C3%A0nh%20Th%C3%A1i%207A/17%20Th%C3%A0nh%20Th%C3%A1i%2C%20Qu%E1%BA%ADn%2010%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
   },
   {
-    "name": "Cơm Chay Hương Sen — Phan Văn Đối",
-    "area": "Hóc Môn",
-    "address": "42/2F Phan Văn Đối, Bà Điểm, Hóc Môn, TP.HCM",
+    "id": "v4-com-tam-44-tran-binh-trong",
+    "name": "Cơm Tấm 44 — Trần Bình Trọng",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "185 Trần Bình Trọng, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%2044%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20185%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 90000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%2044%20%E2%80%94%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%20185%20Tr%E1%BA%A7n%20B%C3%ACnh%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-tam-cali-nguyen-chi-thanh",
+    "name": "Cơm Tấm Cali — Nguyễn Chí Thanh",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "125 Nguyễn Chí Thanh, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Cali%20%E2%80%94%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%20125%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 65000,
+    "budgetMax": 150000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Cali%20%E2%80%94%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%20125%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-dimsum-hoc-lac",
+    "name": "Dimsum Học Lạc",
+    "kind": "food",
+    "area": "Quận 5",
+    "address": "38B Học Lạc, Quận 5, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dimsum%20H%E1%BB%8Dc%20L%E1%BA%A1c%2038B%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 5, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 120000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20H%E1%BB%8Dc%20L%E1%BA%A1c%2038B%20H%E1%BB%8Dc%20L%E1%BA%A1c%2C%20Qu%E1%BA%ADn%205%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.foody.vn/ho-chi-minh/an-vat-via-he-tai-quan-5"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-tam-tai-nguyen-van-nghi",
+    "name": "Cơm Tấm Tài — Nguyễn Văn Nghi",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "100 Nguyễn Văn Nghi, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20T%C3%A0i%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%20100%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 85000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20T%C3%A0i%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%20100%20Nguy%E1%BB%85n%20V%C4%83n%20Nghi%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-kiem-2-nguyen-van-khoi",
+    "name": "Phở Kiêm 2 — Nguyễn Văn Khối",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "142 Nguyễn Văn Khối, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Ki%C3%AAm%202%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%20142%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 105000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Ki%C3%AAm%202%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%20142%20Nguy%E1%BB%85n%20V%C4%83n%20Kh%E1%BB%91i%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-viet-nam-le-duc-tho",
+    "name": "Phở Việt Nam — Lê Đức Thọ",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "125 Lê Đức Thọ, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%20125%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 125000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%20125%20L%C3%AA%20%C4%90%E1%BB%A9c%20Th%E1%BB%8D%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-bun-bo-tho-da-bep-ong-lap-nguyen-van-luong",
+    "name": "Bún Bò Thố Đá Bếp Ông Lập — Nguyễn Văn Lượng",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "301 Nguyễn Văn Lượng, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20B%C3%B2%20Th%E1%BB%91%20%C4%90%C3%A1%20B%E1%BA%BFp%20%C3%94ng%20L%E1%BA%ADp%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%20301%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bún bò",
+      "Bún bò thố đá"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 125000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "bun-bo"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%BAn%20B%C3%B2%20Th%E1%BB%91%20%C4%90%C3%A1%20B%E1%BA%BFp%20%C3%94ng%20L%E1%BA%ADp%20%E2%80%94%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%20301%20Nguy%E1%BB%85n%20V%C4%83n%20L%C6%B0%E1%BB%A3ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-tam-hai-lam-le-thi-hong",
+    "name": "Cơm Tấm Hai Lâm — Lê Thị Hồng",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "32/18 Lê Thị Hồng, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Hai%20L%C3%A2m%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2032%2F18%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 85000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20Hai%20L%C3%A2m%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2032%2F18%20L%C3%AA%20Th%E1%BB%8B%20H%E1%BB%93ng%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-katinat-phan-van-tri",
+    "name": "KATINAT — Phan Văn Trị",
+    "kind": "coffee",
+    "area": "Gò Vấp",
+    "address": "18A Phan Văn Trị, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=KATINAT%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2018A%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cà phê",
+      "Nước ép"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 85000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=KATINAT%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2018A%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-family-gardens-cafe-phan-van-tri",
+    "name": "Family Gardens Cafe — Phan Văn Trị",
+    "kind": "coffee",
+    "area": "Gò Vấp",
+    "address": "438 Phan Văn Trị, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Family%20Gardens%20Cafe%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20438%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cà phê",
+      "Nước ép"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 110000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "ca-phe"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Family%20Gardens%20Cafe%20%E2%80%94%20Phan%20V%C4%83n%20Tr%E1%BB%8B%20438%20Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-ly-quoc-su-nguyen-kiem",
+    "name": "Phở Lý Quốc Sư — Nguyễn Kiệm",
+    "kind": "food",
+    "area": "Gò Vấp",
+    "address": "729/9A Nguyễn Kiệm, Gò Vấp, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20L%C3%BD%20Qu%E1%BB%91c%20S%C6%B0%20%E2%80%94%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%20729%2F9A%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Gò Vấp, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 100000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20L%C3%BD%20Qu%E1%BB%91c%20S%C6%B0%20%E2%80%94%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%20729%2F9A%20Nguy%E1%BB%85n%20Ki%E1%BB%87m%2C%20G%C3%B2%20V%E1%BA%A5p%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-nieu-thien-ly-au-co",
+    "name": "Cơm Niêu Thiên Lý — Âu Cơ",
+    "kind": "food",
+    "area": "Tân Bình",
+    "address": "786 Âu Cơ, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20Thi%C3%AAn%20L%C3%BD%20%E2%80%94%20%C3%82u%20C%C6%A1%20786%20%C3%82u%20C%C6%A1%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm nhà",
+      "Cơm niêu"
+    ],
+    "budgetMin": 90000,
+    "budgetMax": 220000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20Thi%C3%AAn%20L%C3%BD%20%E2%80%94%20%C3%82u%20C%C6%A1%20786%20%C3%82u%20C%C6%A1%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-izzibing-pho-quang",
+    "name": "Izzibing — Phổ Quang",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "49 Phổ Quang, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Izzibing%20%E2%80%94%20Ph%E1%BB%95%20Quang%2049%20Ph%E1%BB%95%20Quang%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Kem",
+      "Bingsu"
+    ],
+    "budgetMin": 60000,
+    "budgetMax": 140000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "kem"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Izzibing%20%E2%80%94%20Ph%E1%BB%95%20Quang%2049%20Ph%E1%BB%95%20Quang%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-nieu-bep-xua-binh-gia",
+    "name": "Cơm Niêu Bếp Xưa — Bình Giã",
+    "kind": "food",
+    "area": "Tân Bình",
+    "address": "61A Bình Giã, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20B%E1%BA%BFp%20X%C6%B0a%20%E2%80%94%20B%C3%ACnh%20Gi%C3%A3%2061A%20B%C3%ACnh%20Gi%C3%A3%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm nhà",
+      "Cơm niêu"
+    ],
+    "budgetMin": 70000,
+    "budgetMax": 170000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Ni%C3%AAu%20B%E1%BA%BFp%20X%C6%B0a%20%E2%80%94%20B%C3%ACnh%20Gi%C3%A3%2061A%20B%C3%ACnh%20Gi%C3%A3%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-seor-bingsu-hoang-hoa-tham",
+    "name": "Seor Bingsu — Hoàng Hoa Thám",
+    "kind": "dessert",
+    "area": "Tân Bình",
+    "address": "107 Hoàng Hoa Thám, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Seor%20Bingsu%20%E2%80%94%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%20107%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Kem",
+      "Bingsu"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 130000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "kem"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Seor%20Bingsu%20%E2%80%94%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%20107%20Ho%C3%A0ng%20Hoa%20Th%C3%A1m%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-hai-san-giang-ghe-cong-hoa",
+    "name": "Hải Sản Giang Ghẹ — Cộng Hòa",
+    "kind": "food",
+    "area": "Tân Bình",
+    "address": "495 Cộng Hòa, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%E1%BA%A3i%20S%E1%BA%A3n%20Giang%20Gh%E1%BA%B9%20%E2%80%94%20C%E1%BB%99ng%20H%C3%B2a%20495%20C%E1%BB%99ng%20H%C3%B2a%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Hải sản"
+    ],
+    "budgetMin": 230000,
+    "budgetMax": 550000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hai-san"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=H%E1%BA%A3i%20S%E1%BA%A3n%20Giang%20Gh%E1%BA%B9%20%E2%80%94%20C%E1%BB%99ng%20H%C3%B2a%20495%20C%E1%BB%99ng%20H%C3%B2a%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-izakaya-unatoto-nguyen-hong-dao",
+    "name": "Izakaya Unatoto — Nguyễn Hồng Đào",
+    "kind": "food",
+    "area": "Tân Bình",
+    "address": "248 Nguyễn Hồng Đào, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Izakaya%20Unatoto%20%E2%80%94%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%20248%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Món Nhật"
+    ],
+    "budgetMin": 100000,
+    "budgetMax": 240000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "nhat"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Izakaya%20Unatoto%20%E2%80%94%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%20248%20Nguy%E1%BB%85n%20H%E1%BB%93ng%20%C4%90%C3%A0o%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-non-que-quan-dong-den",
+    "name": "Nón Quê Quán — Đồng Đen",
+    "kind": "food",
+    "area": "Tân Bình",
+    "address": "30 Đồng Đen, Tân Bình, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=N%C3%B3n%20Qu%C3%AA%20Qu%C3%A1n%20%E2%80%94%20%C4%90%E1%BB%93ng%20%C4%90en%2030%20%C4%90%E1%BB%93ng%20%C4%90en%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Tân Bình, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bún chả",
+      "Bún đậu"
+    ],
+    "budgetMin": 65000,
+    "budgetMax": 150000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "bun"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=N%C3%B3n%20Qu%C3%AA%20Qu%C3%A1n%20%E2%80%94%20%C4%90%E1%BB%93ng%20%C4%90en%2030%20%C4%90%E1%BB%93ng%20%C4%90en%2C%20T%C3%A2n%20B%C3%ACnh%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.google.com/maps/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-hoa-pasteur-260c",
+    "name": "Phở Hòa Pasteur — 260C",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "260C Pasteur, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B2a%20Pasteur%20%E2%80%94%20260C%20260C%20Pasteur%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 130000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B2a%20Pasteur%20%E2%80%94%20260C%20260C%20Pasteur%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-huong-binh-vo-thi-sau",
+    "name": "Phở Hương Bình — Võ Thị Sáu",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "148 Võ Thị Sáu, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C6%B0%C6%A1ng%20B%C3%ACnh%20%E2%80%94%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%20148%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 95000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C6%B0%C6%A1ng%20B%C3%ACnh%20%E2%80%94%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%20148%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-viet-nam-tran-quoc-toan",
+    "name": "Phở Việt Nam — Trần Quốc Toản",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "66 Trần Quốc Toản, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2066%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 130000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Vi%E1%BB%87t%20Nam%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2066%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-nhon-nguyen-thong",
+    "name": "Phở NHON — Nguyễn Thông",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "52 Nguyễn Thông, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20NHON%20%E2%80%94%20Nguy%E1%BB%85n%20Th%C3%B4ng%2052%20Nguy%E1%BB%85n%20Th%C3%B4ng%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 120000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20NHON%20%E2%80%94%20Nguy%E1%BB%85n%20Th%C3%B4ng%2052%20Nguy%E1%BB%85n%20Th%C3%B4ng%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-ha-noi-pho-phu-lai-vo-van-tan",
+    "name": "Hà Nội Phở Phú Lai — Võ Văn Tần",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "116 Võ Văn Tần, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%C3%A0%20N%E1%BB%99i%20Ph%E1%BB%9F%20Ph%C3%BA%20Lai%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20116%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 110000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=H%C3%A0%20N%E1%BB%99i%20Ph%E1%BB%9F%20Ph%C3%BA%20Lai%20%E2%80%94%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20116%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-bot-s-food-hoang-sa",
+    "name": "Bột’s Food — Hoàng Sa",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "825 Hoàng Sa, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%E1%BB%99t%E2%80%99s%20Food%20%E2%80%94%20Ho%C3%A0ng%20Sa%20825%20Ho%C3%A0ng%20Sa%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Ăn vặt",
+      "Món ăn nhẹ"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 90000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "an-vat"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%E1%BB%99t%E2%80%99s%20Food%20%E2%80%94%20Ho%C3%A0ng%20Sa%20825%20Ho%C3%A0ng%20Sa%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-atispho-tran-quoc-toan",
+    "name": "Atispho — Trần Quốc Toản",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "72C Trần Quốc Toản, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2072C%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 105000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Atispho%20%E2%80%94%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2072C%20Tr%E1%BA%A7n%20Qu%E1%BB%91c%20To%E1%BA%A3n%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-chao-long-doi-chien-co-chinh-tran-quang-dieu",
+    "name": "Cháo Lòng Dồi Chiên Cô Chính — Trần Quang Diệu",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "108/22 Trần Quang Diệu, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A1o%20L%C3%B2ng%20D%E1%BB%93i%20Chi%C3%AAn%20C%C3%B4%20Ch%C3%ADnh%20%E2%80%94%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%20108%2F22%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cháo",
+      "Súp"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 90000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "chao-sup"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%A1o%20L%C3%B2ng%20D%E1%BB%93i%20Chi%C3%AAn%20C%C3%B4%20Ch%C3%ADnh%20%E2%80%94%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%20108%2F22%20Tr%E1%BA%A7n%20Quang%20Di%E1%BB%87u%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-dimsum-tan-sanh-hoat-nguyen-thi-minh-khai",
+    "name": "Dimsum Tân Sanh Hoạt — Nguyễn Thị Minh Khai",
+    "kind": "food",
+    "area": "Quận 3",
+    "address": "322 Nguyễn Thị Minh Khai, Quận 3, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dimsum%20T%C3%A2n%20Sanh%20Ho%E1%BA%A1t%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%20322%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 3, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Dimsum",
+      "Món Hoa"
+    ],
+    "budgetMin": 60000,
+    "budgetMax": 140000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "hoa"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dimsum%20T%C3%A2n%20Sanh%20Ho%E1%BA%A1t%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%20322%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%203%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://www.vietnambyregion.com/food/where-to-eat-saigon/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-hanoi-corner-nguyen-thi-minh-khai",
+    "name": "Hanoi Corner — Nguyễn Thị Minh Khai",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "18B/17 Nguyễn Thị Minh Khai, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Corner%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2018B%2F17%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bún chả",
+      "Bún đậu"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 125000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "bun"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hanoi%20Corner%20%E2%80%94%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2018B%2F17%20Nguy%E1%BB%85n%20Th%E1%BB%8B%20Minh%20Khai%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-shancha-le-loi",
+    "name": "Shancha — Lê Lợi",
+    "kind": "drinks",
+    "area": "Quận 1",
+    "address": "38 Lê Lợi, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shancha%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2038%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Trà sữa",
+      "Trà trái cây"
+    ],
+    "budgetMin": 35000,
+    "budgetMax": 85000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "tra-sua"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Shancha%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2038%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pho-hung-nguyen-trai",
+    "name": "Phở Hùng — Nguyễn Trãi",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "241–243 Nguyễn Trãi, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B9ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20241%E2%80%93243%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 115000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "pho"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20H%C3%B9ng%20%E2%80%94%20Nguy%E1%BB%85n%20Tr%C3%A3i%20241%E2%80%93243%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-ngoc-thach-quan-quan-1",
+    "name": "Ngọc Thạch Quán — Quận 1",
+    "kind": "dessert",
+    "area": "Quận 1",
+    "address": "57 Nguyễn Thái Bình, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%20Qu%C3%A1n%20%E2%80%94%20Qu%E1%BA%ADn%201%2057%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Chè",
+      "Khúc bạch"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 70000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "che"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ng%E1%BB%8Dc%20Th%E1%BA%A1ch%20Qu%C3%A1n%20%E2%80%94%20Qu%E1%BA%ADn%201%2057%20Nguy%E1%BB%85n%20Th%C3%A1i%20B%C3%ACnh%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-quan-bac-le-loi",
+    "name": "Quán Bấc — Lê Lợi",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "36/3 Lê Lợi, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Qu%C3%A1n%20B%E1%BA%A5c%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2036%2F3%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm nhà",
+      "Cơm niêu"
+    ],
+    "budgetMin": 55000,
+    "budgetMax": 130000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Qu%C3%A1n%20B%E1%BA%A5c%20%E2%80%94%20L%C3%AA%20L%E1%BB%A3i%2036%2F3%20L%C3%AA%20L%E1%BB%A3i%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-futea-dinh-tien-hoang",
+    "name": "FUTEA — Đinh Tiên Hoàng",
+    "kind": "drinks",
+    "area": "Quận 1",
+    "address": "56 Đinh Tiên Hoàng, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=FUTEA%20%E2%80%94%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2056%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Trà sữa",
+      "Trà trái cây"
+    ],
+    "budgetMin": 30000,
+    "budgetMax": 70000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "tra-sua"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=FUTEA%20%E2%80%94%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2056%20%C4%90inh%20Ti%C3%AAn%20Ho%C3%A0ng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-com-tam-2-sai-gon-trinh-van-can",
+    "name": "Cơm Tấm @2 Sài Gòn — Trịnh Văn Cấn",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "48 Trịnh Văn Cấn, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20%402%20S%C3%A0i%20G%C3%B2n%20%E2%80%94%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2048%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm tấm sườn",
+      "Cơm tấm bì chả"
+    ],
+    "budgetMin": 45000,
+    "budgetMax": 110000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com-tam"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20T%E1%BA%A5m%20%402%20S%C3%A0i%20G%C3%B2n%20%E2%80%94%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2048%20Tr%E1%BB%8Bnh%20V%C4%83n%20C%E1%BA%A5n%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-pearl-ly-tu-trong",
+    "name": "Pearl — Lý Tự Trọng",
+    "kind": "drinks",
+    "area": "Quận 1",
+    "address": "315 Lý Tự Trọng, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Pearl%20%E2%80%94%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%20315%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Trà sữa",
+      "Trà trái cây"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 100000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "tra-sua"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Pearl%20%E2%80%94%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%20315%20L%C3%BD%20T%E1%BB%B1%20Tr%E1%BB%8Dng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-banh-mi-huynh-hoa-le-thi-rieng",
+    "name": "Bánh Mì Huỳnh Hoa — Lê Thị Riêng",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "26 Lê Thị Riêng, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20Hu%E1%BB%B3nh%20Hoa%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2026%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Bánh mì thịt"
+    ],
+    "budgetMin": 40000,
+    "budgetMax": 100000,
+    "tags": [
+      "Hợp túi tiền sinh viên",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "banh-mi"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20Hu%E1%BB%B3nh%20Hoa%20%E2%80%94%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2026%20L%C3%AA%20Th%E1%BB%8B%20Ri%C3%AAng%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-nha-hang-ngon-pasteur",
+    "name": "Nhà Hàng Ngon — Pasteur",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "160 Pasteur, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nh%C3%A0%20H%C3%A0ng%20Ngon%20%E2%80%94%20Pasteur%20160%20Pasteur%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Cơm nhà",
+      "Cơm niêu"
+    ],
+    "budgetMin": 120000,
+    "budgetMax": 280000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
+    ],
+    "cuisineTags": [
+      "com"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Nh%C3%A0%20H%C3%A0ng%20Ngon%20%E2%80%94%20Pasteur%20160%20Pasteur%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
+    "curated": true,
+    "checkedAt": "2026-11-27",
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
+  },
+  {
+    "id": "v4-xoi-ga-number-one-nguyen-trung-truc",
+    "name": "Xôi Gà Number One — Nguyễn Trung Trực",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "15 Nguyễn Trung Trực, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20G%C3%A0%20Number%20One%20%E2%80%94%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2015%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
+    "dishes": [
+      "Xôi"
+    ],
     "budgetMin": 25000,
-    "budgetMax": 30000,
-    "dishes": [
-      "Cơm sườn dừa chay"
-    ],
-    "cuisineTags": [
-      "com",
-      "chay"
-    ],
-    "description": "Một lựa chọn cơm chay ở Bà Điểm cho buổi hẹn tiết kiệm. Riêng cơm sườn dừa chay được menu beFood ghi 25k/phần; nhiều món khác khoảng 45k. Dự trù một phần cơm/người, chưa gồm nước hoặc phí giao hàng.",
-    "addressSource": "beFood — địa chỉ công khai của quán; chưa xác minh qua Google Places",
-    "sources": [
-      {
-        "label": "beFood: cơm sườn dừa chay 25k và địa chỉ",
-        "url": "https://food.be.com.vn/ho-chi-minh/quan-com-chay-huong-sen-phan-van-doi-90907"
-      }
-    ],
-    "community": {
-      "provider": "beFood",
-      "score": 4.8,
-      "count": 17,
-      "url": "https://food.be.com.vn/ho-chi-minh/quan-com-chay-huong-sen-phan-van-doi-90907",
-      "checkedAt": "2026-11-27"
-    },
-    "id": "com-chay-huong-sen-phan-van-doi",
-    "kind": "food",
+    "budgetMax": 60000,
     "tags": [
-      "Món cơ bản ≤30k",
       "Hợp túi tiền sinh viên",
       "Hẹn giản dị"
     ],
+    "cuisineTags": [
+      "xoi"
+    ],
+    "sources": [
+      {
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20G%C3%A0%20Number%20One%20%E2%80%94%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2015%20Nguy%E1%BB%85n%20Trung%20Tr%E1%BB%B1c%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
+      }
+    ],
     "curated": true,
     "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=C%C6%A1m%20Chay%20H%C6%B0%C6%A1ng%20Sen%20%E2%80%94%20Phan%20V%C4%83n%20%C4%90%E1%BB%91i%2042/2F%20Phan%20V%C4%83n%20%C4%90%E1%BB%91i%2C%20B%C3%A0%20%C4%90i%E1%BB%83m%2C%20H%C3%B3c%20M%C3%B4n%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
   },
   {
-    "name": "Xôi Hường — Huỳnh Tấn Phát",
-    "area": "Nhà Bè",
-    "address": "3/4 Huỳnh Tấn Phát, xã Nhà Bè, TP.HCM",
-    "budgetMin": 21000,
-    "budgetMax": 30000,
+    "id": "v4-pho-quynh-pham-ngu-lao",
+    "name": "Phở Quỳnh — Phạm Ngũ Lão",
+    "kind": "food",
+    "area": "Quận 1",
+    "address": "323 Phạm Ngũ Lão, Quận 1, TP.HCM",
+    "addressSource": "Kết quả tra cứu danh bạ địa điểm công khai; chưa đối chiếu bằng Google Places API",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Qu%E1%BB%B3nh%20%E2%80%94%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%20323%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM",
+    "description": "Địa điểm thuộc Quận 1, phù hợp tham khảo trước buổi đi ăn hoặc hẹn hò. Vui lòng đối chiếu tên chi nhánh, thực đơn, giá và giờ mở cửa trước khi đi.",
     "dishes": [
-      "Bánh giò chay",
-      "Bánh bao 3 trứng"
+      "Phở bò",
+      "Phở đặc biệt"
+    ],
+    "budgetMin": 50000,
+    "budgetMax": 115000,
+    "tags": [
+      "Dịp đặc biệt",
+      "Hẹn giản dị"
     ],
     "cuisineTags": [
-      "banh-bao",
-      "chay"
+      "pho"
     ],
-    "description": "Món tiết kiệm ở tiệm là bánh giò chay 21k hoặc bánh bao 3 trứng 28k theo menu beFood. Dự trù một chiếc/người cho bữa nhẹ; xôi mặn nhỏ từ 35k nằm ngoài khung này. Chưa gồm nước và phí giao hàng.",
-    "addressSource": "beFood — địa chỉ công khai của tiệm; chưa xác minh qua Google Places",
     "sources": [
       {
-        "label": "beFood: địa chỉ, bánh giò/bánh bao và giá",
-        "url": "https://food.be.com.vn/ho-chi-minh/xoi-huong-huynh-tan-phat-118808"
+        "label": "Tìm vị trí và kiểm tra thực tế trên Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ph%E1%BB%9F%20Qu%E1%BB%B3nh%20%E2%80%94%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%20323%20Ph%E1%BA%A1m%20Ng%C5%A9%20L%C3%A3o%2C%20Qu%E1%BA%ADn%201%2C%20TP.HCM"
+      },
+      {
+        "label": "Nguồn nghiên cứu khu vực (tham khảo)",
+        "url": "https://misssaigontours.com/saigon-street-food/"
       }
-    ],
-    "community": {
-      "provider": "beFood",
-      "score": 4.9,
-      "count": 114,
-      "url": "https://food.be.com.vn/ho-chi-minh/xoi-huong-huynh-tan-phat-118808",
-      "checkedAt": "2026-11-27"
-    },
-    "id": "xoi-huong-huynh-tan-phat",
-    "kind": "food",
-    "tags": [
-      "Món cơ bản ≤30k",
-      "Hợp túi tiền sinh viên",
-      "Hẹn giản dị"
     ],
     "curated": true,
     "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=X%C3%B4i%20H%C6%B0%E1%BB%9Dng%20%E2%80%94%20Hu%E1%BB%B3nh%20T%E1%BA%A5n%20Ph%C3%A1t%203/4%20Hu%E1%BB%B3nh%20T%E1%BA%A5n%20Ph%C3%A1t%2C%20x%C3%A3%20Nh%C3%A0%20B%C3%A8%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
-  },
-  {
-    "name": "Thọ Phát MiniBao — Phạm Hùng",
-    "area": "Quận 8",
-    "address": "7/1A Phạm Hùng, Quận 8, TP.HCM",
-    "budgetMin": 18000,
-    "budgetMax": 30000,
-    "dishes": [
-      "Bánh mì que pâté",
-      "Bánh bao thịt 1 trứng cút",
-      "Bánh giò thịt"
-    ],
-    "cuisineTags": [
-      "banh-bao",
-      "banh-mi",
-      "an-vat"
-    ],
-    "description": "Lựa chọn một món mang đi cho buổi gặp ngắn: bánh mì que 18k, bánh bao thịt một trứng cút 25k, hoặc bánh giò 23–28k theo menu beFood. Khung tiền dành cho một món/người; bánh lớn, combo và nước tính thêm.",
-    "addressSource": "beFood — đúng chi nhánh Phạm Hùng; chưa xác minh qua Google Places",
-    "sources": [
-      {
-        "label": "beFood: menu chi tiết và địa chỉ MiniBao Phạm Hùng",
-        "url": "https://food.be.com.vn/ho-chi-minh/banh-bao-tho-phat-minibao-pham-hung-106389"
-      }
-    ],
-    "community": {
-      "provider": "beFood",
-      "score": 4.5,
-      "count": 16,
-      "url": "https://food.be.com.vn/ho-chi-minh/banh-bao-tho-phat-minibao-pham-hung-106389",
-      "checkedAt": "2026-11-27"
-    },
-    "id": "tho-phat-minibao-pham-hung",
-    "kind": "food",
-    "tags": [
-      "Món cơ bản ≤30k",
-      "Hợp túi tiền sinh viên",
-      "Hẹn giản dị"
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Th%E1%BB%8D%20Ph%C3%A1t%20MiniBao%20%E2%80%94%20Ph%E1%BA%A1m%20H%C3%B9ng%207/1A%20Ph%E1%BA%A1m%20H%C3%B9ng%2C%20Qu%E1%BA%ADn%208%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
-  },
-  {
-    "name": "Bánh Mì Thịt Nướng — Trưng Nữ Vương",
-    "area": "Hóc Môn",
-    "address": "80 Trưng Nữ Vương, xã Hóc Môn, TP.HCM",
-    "budgetMin": 25000,
-    "budgetMax": 30000,
-    "dishes": [
-      "Bánh mì thịt nướng",
-      "Há cảo"
-    ],
-    "cuisineTags": [
-      "banh-mi",
-      "an-vat"
-    ],
-    "description": "Menu beFood ghi bánh mì thịt nướng 27k hoặc một phần há cảo 25k. Dự trù chọn một món/người cho bữa nhẹ; bún thịt nướng 37k nằm ngoài khung này. Phù hợp thêm vào danh sách ăn gần Hóc Môn.",
-    "addressSource": "beFood — địa chỉ công khai của quán; chưa xác minh qua Google Places",
-    "sources": [
-      {
-        "label": "beFood: bánh mì 27k, há cảo 25k và địa chỉ",
-        "url": "https://food.be.com.vn/ho-chi-minh/banh-mi-thit-nuong-bun-thit-nuong-ha-cao-trung-nu-vuong-153899"
-      }
-    ],
-    "id": "banh-mi-thit-nuong-trung-nu-vuong",
-    "kind": "food",
-    "tags": [
-      "Món cơ bản ≤30k",
-      "Hợp túi tiền sinh viên",
-      "Hẹn giản dị"
-    ],
-    "curated": true,
-    "checkedAt": "2026-11-27",
-    "mapUrl": "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20M%C3%AC%20Th%E1%BB%8Bt%20N%C6%B0%E1%BB%9Bng%20%E2%80%94%20Tr%C6%B0ng%20N%E1%BB%AF%20V%C6%B0%C6%A1ng%2080%20Tr%C6%B0ng%20N%E1%BB%AF%20V%C6%B0%C6%A1ng%2C%20x%C3%A3%20H%C3%B3c%20M%C3%B4n%2C%20TP.HCM",
-    "budgetNote": "Khung tiền chỉ áp dụng một phần cơ bản trong mô tả. Món khác, phần thêm, nước và phí giao hàng có thể cao hơn."
+    "budgetNote": "Ước tính biên tập theo một người, không phải giá niêm yết. Kiểm tra menu, phụ phí và giờ mở cửa trước khi ghé."
   }
 ];
