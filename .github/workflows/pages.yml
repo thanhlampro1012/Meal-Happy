@@ -44,7 +44,7 @@ jobs:
           new Function(script);
           const data=JSON.parse(readFileSync('docs/catalog.json','utf8'));
           const expected=['Quận 1','Quận 3','Quận 5','Gò Vấp','Tân Bình'];
-          if(data.places.length!==139)throw Error('Unexpected place count: '+data.places.length);
+          if(data.places.length!==184)throw Error('Unexpected place count: '+data.places.length);
           if(data.places.some(p=>!expected.includes(p.area)))throw Error('Location outside five selected areas');
           let photos=0;
           for(const p of data.places){
@@ -62,6 +62,7 @@ jobs:
         run: |
           set -euo pipefail
           node --check docs/firebase-sync.js
+          node --test tests/catalog-five-districts.test.mjs
           node --test tests/firebase-sync.test.mjs
           node --input-type=module <<'NODE'
           import {readFileSync,statSync} from 'node:fs';
@@ -114,11 +115,11 @@ jobs:
           node --input-type=module <<'NODE'
           import {readFileSync, statSync} from 'node:fs';
           const data=JSON.parse(readFileSync('/tmp/meal-happy-catalog.json','utf8'));
-          if(data.places.length!==139)throw Error('Live site has wrong catalog size: '+data.places.length);
+          if(data.places.length!==184)throw Error('Live site has wrong catalog size: '+data.places.length);
           if(statSync('/tmp/meal-happy-photo.jpg').size<1024)throw Error('Live image missing');
           const icon=readFileSync('/tmp/happy-meal-apple.png');
           if(icon.readUInt32BE(16)!==180)throw Error('Live apple icon wrong size');
           if(!readFileSync('/tmp/happy-meal-sync.js','utf8').includes('HappyMealCloud'))throw Error('Cloud module unavailable');
           if(JSON.parse(readFileSync('/tmp/happy-meal-manifest.json','utf8')).short_name!=='Happy Meal')throw Error('Live PWA manifest wrong');
-          console.log('Live GitHub Pages smoke test passed: Happy Meal, 139 venues, PWA icon, manifest and Firebase module.');
+          console.log('Live GitHub Pages smoke test passed: Happy Meal, 184 venues, PWA icon, manifest and Firebase module.');
           NODE
