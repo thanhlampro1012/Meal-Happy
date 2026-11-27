@@ -1,4 +1,4 @@
-name: Publish Meal Happy to GitHub Pages
+name: Publish Happy Meal to GitHub Pages
 on:
   push:
     branches: [main]
@@ -63,6 +63,7 @@ jobs:
           set -euo pipefail
           node --check docs/firebase-sync.js
           node --test tests/catalog-five-districts.test.mjs
+          node --test tests/pages-interactions.test.mjs
           node --test tests/firebase-sync.test.mjs
           node --input-type=module <<'NODE'
           import {readFileSync,statSync} from 'node:fs';
