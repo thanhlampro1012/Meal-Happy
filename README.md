@@ -1,17 +1,22 @@
 # Happy Meal — Ăn ngon và hẹn vui
 
+**Website đang chạy:** https://thanhlampro1012.github.io/Meal-Happy/ · **Source:** https://github.com/thanhlampro1012/Meal-Happy · **Dữ liệu:** 184 địa điểm thuộc đúng 5 khu vực. Mã tĩnh trong `docs/` là bản website chính trên GitHub Pages; mã `app/` là nhánh ứng dụng Sites khác backend, không tự chạy trên GitHub Pages.
+
+**Trạng thái thực tế:** khám phá, phân loại món, bộ lọc sinh viên, lưu quán, ghi chú, món yêu thích, vòng quay, so sánh 2–3 quán, lịch hẹn, chế độ tối, PWA, icon và xuất/nhập JSON có ảnh cá nhân đều triển khai. Có 6 ảnh quán được phép sử dụng với nguồn rõ ràng; quán khác mở Google Maps hoặc người dùng tự thêm ảnh. **Đồng bộ Google còn chờ dự án Firebase/Firestore của chủ app**; không thể xác nhận đồng bộ thật khi chưa kết nối. Xem [hướng dẫn thiết lập Firebase](firebase/SETUP.md).
+
+
 Có **PWA** (Thêm vào Màn hình chính), icon Happy Meal và tab **Đồng bộ** (Google Auth + Firestore, cần cấu hình Firebase thuộc tài khoản của chủ ứng dụng). Xem [firebase/SETUP.md](firebase/SETUP.md) để kết nối. Mã nguồn giữ tên repo Meal-Happy để URL web cũ vẫn hoạt động; dữ liệu cục bộ dùng khóa cũ để không mất lịch sử.
 
 Sổ địa điểm, món muốn thử, món yêu thích và lịch hẹn riêng tư cho hai người tại TP.HCM. Giao diện tiếng Việt, dùng trên điện thoại và máy tính, có chế độ sáng và tối.
 
-Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản v3 có **184 địa điểm trong 5 khu vực và 35 nhóm món**. Xem [ghi chú v3](docs/release-v3.md) để biết các cải tiến, nguồn đối chiếu và phạm vi đã kiểm tra.
+Đây là bản mã nguồn cho repository **`Meal-Happy`**. Repository chứa ứng dụng, danh mục địa điểm công khai, migration và kiểm thử; dữ liệu D1 của người dùng được lưu riêng trong môi trường chạy. Bản GitHub Pages hiện có **184 địa điểm trong 5 khu vực và 46 nhóm món**, trong đó có nhiều quán tráng miệng và đồ uống phù hợp sinh viên. [Ghi chú cập nhật mới](docs/release-v6.md).
 
 Địa chỉ đích khi triển khai qua **Sites**: https://hen-saigon-cua-hai-dua.workspace-qu-1719.chatgpt.site. URL này là cấu hình đích; trạng thái phát hành cần được xác nhận bằng kết quả triển khai của Sites.
 
 ## Tính năng đã triển khai
 
 - Khám phá **184 địa điểm** trong đúng năm khu vực (Quận 1, 3, 5, Gò Vấp, Tân Bình), từ bình dân đến sang trọng.
-- Lọc theo **35 nhóm món**, khu vực, loại quán, không khí, trạng thái đã ghé và ngân sách cho **1 hoặc 2 người**; có các mức 30.000đ, 50.000đ, 70.000đ và 100.000đ.
+- Lọc theo **46 nhóm món**, khu vực, loại quán, không khí, trạng thái đã ghé và ngân sách cho **1 hoặc 2 người**; có các mức 30.000đ, 50.000đ, 70.000đ và 100.000đ.
 - Tìm không dấu, hỗ trợ đổi thứ tự từ khóa, hiểu cách viết `q3`/`q.3`; chọn nhiều món để tìm quán bán một trong các món đó.
 - Sắp xếp theo tên, điểm cộng đồng hoặc ngân sách; chuyển lưới/danh sách; chọn ngẫu nhiên trong kết quả đang lọc và xem thêm 24 địa điểm mỗi lượt.
 - Chọn **2–3 quán để so sánh** ngân sách, món, địa chỉ tham khảo, không khí và nguồn điểm; lưu quán hoặc lên lịch ngay từ bảng so sánh.
@@ -202,8 +207,8 @@ Không sửa hoặc chạy lại migration đã áp dụng. Các migration tiế
 | `app/lib/types.ts` | Kiểu dữ liệu, formatter và liên kết bản đồ |
 | `app/lib/notebook.ts` | Chuẩn hóa notebook cũ và tên món yêu thích |
 | `app/lib/wheel.ts` | Chọn ngẫu nhiên đều xác suất, góc dừng và nhãn vòng quay |
-| `app/lib/places.ts`, `app/lib/places-extra.ts` | Danh mục 142 quán, nguồn cộng đồng và nguồn địa chỉ độc lập |
-| `app/lib/cuisines.ts`, `app/lib/discovery.ts` | 35 nhóm món, tương thích quán cũ, tìm kiếm và bộ lọc |
+| `app/lib/places.ts`, `app/lib/places-extra.ts` | Danh mục 184 quán, nguồn cộng đồng và nguồn địa chỉ độc lập |
+| `app/lib/cuisines.ts`, `app/lib/discovery.ts` | 46 nhóm món, tương thích quán cũ, tìm kiếm và bộ lọc |
 | `app/lib/calendar.ts` | Ngày giờ Việt Nam, lịch trình, tuyến đường và tệp ICS |
 | `app/lib/planning.ts` | Đổi thứ tự, giờ dừng kế tiếp và cuộc hẹn sắp tới |
 | `app/lib/validation.ts` | Schema Zod, kiểm tra liên kết và tính toàn vẹn notebook |
@@ -226,7 +231,7 @@ Không có đặt bàn/thanh toán trong app, push notification, lịch hẹn qu
 
 ## Bản GitHub Pages độc lập
 
-Thư mục `docs/` là bản web tĩnh, lưu quán và món yêu thích bằng bộ nhớ trình duyệt; không dùng D1 hoặc Sites authentication, không đồng bộ khác thiết bị. Cần xuất JSON để sao lưu và nhập lại nếu đổi trình duyệt. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.
+Thư mục `docs/` là bản web GitHub Pages độc lập với Sites. Dữ liệu luôn lưu trên trình duyệt và có thể đồng bộ Firestore theo Google UID sau khi **người chủ tự cấu hình Firebase** (hiện `docs/firebase-config.json` trống). Có sao lưu/khôi phục JSON kể cả ảnh cá nhân; ảnh cá nhân lưu riêng trong IndexedDB và **không đồng bộ qua Firestore**. `docs/catalog.json` chỉ gồm các địa điểm trong năm khu vực.
 
 
 ## V5 — Chỉ năm quận và nhóm món riêng

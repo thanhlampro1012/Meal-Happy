@@ -97,3 +97,13 @@ test('older backups without photos continue to load',async()=>{
  await new Promise(resolve=>setImmediate(resolve));
  assert.equal(a.run('data.saved[0]'),'saved-1');
 });
+
+test('unsafe imported venue links cannot be used as script URLs',()=>{
+ const a=app();
+ a.run('data.customPlaces=[{id:"unsafe",name:"Tự thêm",address:"1 Đường Test",area:"Quận 1",kind:"food",dishes:[],tags:[],cuisineTags:["com"],mapUrl:"javascript:alert(1)",sources:[{url:"javascript:alert(2)",label:"bad"}],budgetMin:1,budgetMax:2}]');
+ const safe=a.run('mapUrl(data.customPlaces[0])');
+ assert.ok(safe.startsWith('https://www.google.com/maps/search/'));
+ assert.ok(!a.run('placeCard(data.customPlaces[0])').includes('href="javascript:'));
+ a.run('detail("unsafe")');
+ assert.ok(!a.element('#modalHost').innerHTML.includes('href="javascript:'));
+});

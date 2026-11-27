@@ -10,3 +10,5 @@ Bản GitHub Pages sử dụng 6 ảnh thực đã có trong nguồn dự án, �
 - **Maison Marou · Calmette** — [nguồn ảnh](https://maisonmarou.com/vi/pages/stores), tệp `/venues/maison-marou-calmette.jpg`
 
 Quán chưa có ảnh hiện một khung thông báo và nút mở Google Maps để kiểm tra ảnh thực tế. Không lấy ảnh từ quán khác làm ảnh đại diện. Google Place Photos cần API key và attribution theo [tài liệu chính thức](https://developers.google.com/maps/documentation/places/web-service/place-photos), nên chưa sử dụng trực tiếp.
+
+Người dùng cũng có thể tự chụp ảnh quán và chọn **Chi tiết → Thêm hoặc đổi ảnh quán**. Ảnh được nén, lưu riêng trên thiết bị trong IndexedDB và xuất kèm JSON; ảnh cá nhân không tải lên GitHub hoặc tự đồng bộ Firebase. Không được tự tải ảnh của Google Maps hoặc trang bên thứ ba để sử dụng nếu chưa có quyền phù hợp.
