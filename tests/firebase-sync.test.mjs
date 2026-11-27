@@ -123,3 +123,23 @@ test('server update arriving during a transaction is applied after its acknowled
  assert.deepEqual(f.get().saved,['this-device','other-device']);
  assert.equal(f.state().revision,3);
 });
+
+test('closing Google sign-in leaves the device notebook available for another attempt',async()=>{
+ const local=empty();local.saved=['pho'];
+ const f=fixture(local);
+ const fa=f.context.testModules.fa;
+ fa.GoogleAuthProvider=class {setCustomParameters(){}};
+ let attempts=0;
+ fa.signInWithPopup=async()=>{
+  attempts++;
+  if(attempts===1)throw Object.assign(new Error(),{code:'auth/popup-closed-by-user'});
+  await f.login();
+ };
+ const client=f.context.window.HappyMealCloud;
+ await client.signIn();
+ assert.equal(f.state().phase,'signed-out');
+ assert.deepEqual(f.get().saved,['pho']);
+ await client.signIn();await f.flush();
+ assert.equal(f.state().phase,'synced');
+ assert.equal(attempts,2);
+});

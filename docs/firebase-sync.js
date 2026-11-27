@@ -76,7 +76,7 @@ function friendlyError(e){
   if(code.includes('unauthorized-domain')) return 'Tên miền GitHub Pages chưa được thêm vào Authentication → Authorized domains trên Firebase.';
   if(code.includes('operation-not-allowed')) return 'Cần bật phương thức đăng nhập Google trong Firebase Authentication.';
   if(code.includes('permission-denied')) return 'Firestore từ chối truy cập. Hãy bật đúng quy tắc firestore.rules theo UID.';
-  if(code.includes('popup-closed-by-user')||code.includes('cancelled-popup-request')) return 'Đăng nhập chưa hoàn tất.';
+  if(code.includes('popup-closed-by-user')||code.includes('cancelled-popup-request')) return 'Bạn đã đóng cửa sổ Google. Chọn đăng nhập lại khi sẵn sàng.';
   if(code.includes('network')||code.includes('unavailable')) return 'Mất kết nối. Dữ liệu vẫn được giữ trên thiết bị này.';
   if(code.includes('quota-exceeded')||code.includes('resource-exhausted')) return 'Dữ liệu hoặc lượt sử dụng vượt giới hạn Firebase. Hãy xuất sao lưu; bản cục bộ vẫn được giữ.';
   if(code.includes('invalid-api-key')||code.includes('invalid-app-credential')) return 'Cấu hình API key Firebase chưa đúng. Kiểm tra Project settings → Your apps.';
@@ -284,14 +284,16 @@ async function resolveConflict(choice){
 }
 async function googleSignIn(){
   if(!auth || !modules)return show('no-config','Hãy nhập cấu hình Firebase trước.');
+  if(user||phase==='signing-in')return;
   const provider=new modules.fa.GoogleAuthProvider();
   provider.setCustomParameters({prompt:'select_account'});
+  show('signing-in','Hoàn tất đăng nhập trong cửa sổ Google.');
   try{
     await modules.fa.signInWithPopup(auth,provider);
   }catch(e){
     if(['auth/popup-blocked','auth/operation-not-supported-in-this-environment'].includes(e?.code)){
-      try{await modules.fa.signInWithRedirect(auth,provider);}catch(err){show('error',friendlyError(err));}
-    }else show('error',friendlyError(e));
+      try{await modules.fa.signInWithRedirect(auth,provider);}catch(err){if(!user)show('signed-out',friendlyError(err));}
+    }else if(!user)show('signed-out',friendlyError(e));
   }
 }
 async function googleSignOut(){
