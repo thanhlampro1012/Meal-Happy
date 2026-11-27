@@ -31,6 +31,14 @@ h2{letter-spacing:-.5px;line-height:1.35;margin:0 0 16px}h3{margin:0 0 6px;line-
 .comparisonCard{border:1px solid var(--border);border-radius:13px;padding:13px;display:flex;flex-direction:column;gap:5px}
 .comparisonCard>b{font-size:14px}.comparisonCard p{margin:3px 0}
 @media(max-width:540px){.comparisonGrid{grid-template-columns:1fr}}
+
+.wheelArea{position:relative;display:flex;justify-content:center;padding-top:12px}
+.wheelPointer{position:absolute;top:0;left:50%;transform:translateX(-50%);color:var(--accent);font-size:24px;font-weight:900;z-index:2;text-shadow:0 2px 0 var(--surface)}
+.wheelLegend{display:flex;flex-direction:column;gap:4px}
+.wheelLegendItem{display:flex;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);text-align:left}
+.wheelLegendItem>span:nth-child(2){flex:1;min-width:0;overflow-wrap:anywhere}
+.wheelLegendDot{display:inline-block;flex-shrink:0;width:14px;height:14px;border-radius:50%;border:1px solid var(--border)}
+@media(max-width:540px){.wheelLegendItem>span:nth-child(2){font-size:12px}}
 </style></head><body>
 <header class="top"><div class="wrap"><div class="topin"><div class="logo"><span>♥</span>Happy Meal</div><div class="topRight"><button class="btn small sync-top-button" id="syncTopButton">☁ Đồng bộ</button><button class="btn small" id="themeToggle" title="Chế độ tối">🌙 Tối</button><button class="btn small" id="backupBtn">⬇ Sao lưu</button></div></div><nav class="nav" aria-label="Điều hướng ứng dụng" id="tabs"></nav></div></header>
 <main class="wrap"><div class="hero"><div><div class="eyebrow">Ăn vui mỗi ngày · Chỉ 5 khu vực</div><h1>Hôm nay mình ăn gì,<br>đi đâu cùng nhau? 💚</h1><p>Tìm món hợp túi tiền, để dành quán ngon và lên lịch hẹn của hai đứa.</p></div><div class="heroDeco">🍜🍵</div></div><div id="stats" class="stats"></div><div id="app"></div><footer class="foot">Happy Meal · Tập trung Quận 1, Quận 3, Quận 5, Gò Vấp và Tân Bình theo địa giới cũ. Dữ liệu địa chỉ và giá là tham khảo, hãy kiểm tra Google Maps trước khi đi. Dữ liệu riêng tư chỉ lưu trên trình duyệt này; xuất JSON để sao lưu. Không đồng bộ với bản Sites.</footer></main>
@@ -50,7 +58,7 @@ const KIND_CUISINES={
 const ALL_POPULAR=['com-tam','bun','pho','com','banh-mi','che','banh-flan','kem','trai-cay-to','xoi-xoai','ca-phe','tra-sua','nuoc-ep'];
 
 const empty=()=>({customPlaces:[],saved:[],favorites:[],plans:[],notes:{},theme:"system"});
-let data=empty(),catalog=[],tab="explore",filters={q:"",area:"",kind:"",cuisine:"",budget:"",people:1},pageSize=24,selectedPlace="",isSpinning=false,spins=0;
+let data=empty(),catalog=[],tab="explore",filters={q:"",area:"",kind:"",cuisine:"",budget:"",people:1},pageSize=24,selectedPlace="",isSpinning=false,spins=0,spinTimeout=null;
 const compareIds=new Set();
 const $=s=>document.querySelector(s);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -81,6 +89,12 @@ function comparison(){
  '<p class="center"><button class="btn primary" data-action="compareToPlan">＋ Tạo lịch hẹn từ các quán này</button></p>');
 }
 
+function randomIndex(length){
+ if(!Number.isSafeInteger(length)||length<1||length>100000)throw Error("Invalid number of choices");
+ const bound=Math.floor(4294967296/length)*length,buffer=new Uint32Array(1);
+ do{crypto.getRandomValues(buffer)}while(buffer[0]>=bound);
+ return buffer[0]%length;
+}
 const kinds={food:"Ăn uống",coffee:"Cà phê",dessert:"Tráng miệng",drinks:"Đồ uống"};
 const kindEmoji={food:"🍜",coffee:"☕",dessert:"🍧",drinks:"🧋"};
 
@@ -120,8 +134,19 @@ function explore(saved=false){let list=all().filter(p=>(saved||AREAS.includes(p.
 }
 function placeCard(p){const isSaved=data.saved.includes(p.id);return '<article class="place">'+venueImage(p)+'<div class="placeBody"><div class="placeName">'+esc(p.name)+'</div><div class="sub">📍 '+esc(p.address)+'</div><div class="tags">'+(p.cuisineTags||[]).slice(0,3).map(x=>'<span class="tag">'+esc(CUISINES[x]||x)+'</span>').join("")+'</div><div class="sub">'+esc((p.dishes||[]).slice(0,3).join(" · "))+'</div><div class="price">'+(p.budgetMax?money(p.budgetMin)+" – "+money(p.budgetMax)+" / người":"Chưa có giá")+'</div><div class="placeActions"><button class="btn small tonal" data-action="details" data-id="'+esc(p.id)+'">Chi tiết</button><button class="btn small" data-action="save" data-id="'+esc(p.id)+'">'+(isSaved?'✓ Đã lưu':'♡ Lưu quán')+'</button><button class="btn small" aria-pressed="'+compareIds.has(p.id)+'" data-action="compare" data-id="'+esc(p.id)+'">'+(compareIds.has(p.id)?'✓ So sánh':'⚖ So sánh')+'</button><button class="btn small" data-action="planadd" data-id="'+esc(p.id)+'">＋ Lịch hẹn</button></div></div></article>'}
 function favorites(){return '<div class="sectionHead"><h2>Món mình thích 💗</h2><button class="btn primary" data-action="newfavorite">＋ Thêm món</button></div><p class="muted">Thêm món hay ăn, kể cả món tự nấu. Bật “Tham gia quay” để đưa vào vòng quay.</p><div class="card">'+(data.favorites.length?data.favorites.map(f=>'<div class="itemRow"><div><b>'+esc(f.title)+'</b><small>'+esc(f.category||"Món chính")+' · '+esc(find(f.placeId)?.name||"Không gắn quán")+(f.often?' · Hay ăn':'')+'</small><div class="sub">'+esc(f.note||"")+'</div></div><div class="itemActions"><label class="sub"><input type="checkbox" data-enabled="'+esc(f.id)+'" '+(f.enabled?'checked':'')+'> Quay</label><button class="btn small" data-action="editfavorite" data-id="'+esc(f.id)+'">Sửa</button><button class="btn small" data-action="removefavorite" data-id="'+esc(f.id)+'">Xóa</button></div></div>').join(""):'<p class="muted">Chưa có món yêu thích. Hãy thêm món đầu tiên!</p>')+'</div>'}
-function wheel(){const active=data.favorites.filter(f=>f.enabled),res=data.lastWinner?data.favorites.find(f=>f.id===data.lastWinner):null;
- return '<div class="two"><div class="card center"><h2>Hôm nay ăn món gì? 🎡</h2><p class="muted">'+active.length+' món đang tham gia quay</p><div class="wheel" id="wheelDisk" style="transform:rotate('+spins+'deg)"><div class="wheelCenter">🍴</div></div><button class="btn primary" id="spin" '+(!active.length?'disabled':'')+'>🎲 Quay chọn món</button><div id="wheelResult" class="card" style="margin-top:16px">'+(res?'Kết quả gần nhất: <b>'+esc(res.title)+'</b>':'Bấm quay để chọn ngẫu nhiên mỗi lần. Mỗi món có cơ hội như nhau.')+'</div></div><div class="card"><h3>Danh sách tham gia</h3><p class="muted">Bật hoặc tắt món ở đây. Tránh lặp món bằng cách bỏ chọn sau khi đã ăn.</p>'+active.map(f=>'<div class="itemRow"><span>🍱 '+esc(f.title)+'</span><button class="btn small" data-action="disable" data-id="'+esc(f.id)+'">Bỏ</button></div>').join("")+(active.length?'':'<p>Chưa có món bật tham gia. Vào Món yêu thích để thêm món.</p>')+'<p><button class="btn tonal" data-action="switchtab" data-id="favorites">Quản lý món yêu thích</button></p></div></div>';
+function wheel(){
+ const active=data.favorites.filter(f=>f.enabled),res=data.lastWinner?data.favorites.find(f=>f.id===data.lastWinner):null;
+ const count=active.length,sector=count?360/count:360,colors=['#a2d4b1','#f3d8a4','#91c9ce','#f7ae9c','#b0c2f0','#d6b2d6'];
+ const segments=active.map((item,i)=>colors[i%colors.length]+' '+(i*sector)+'deg '+((i+1)*sector)+'deg').join(',');
+ const fill=count>1?'conic-gradient('+segments+')':count===1?'#a2d4b1':'linear-gradient(135deg,#a2d4b1,#f3d8a4)';
+ return '<div class="two"><div class="card center"><h2>Hôm nay ăn món gì? 🎡</h2><p class="muted">'+count+' món đang tham gia quay</p>'+
+ '<div class="wheelArea"><span class="wheelPointer" aria-hidden="true">▼</span><div class="wheel" id="wheelDisk" style="background:'+fill+';transform:rotate('+spins+'deg)"><div class="wheelCenter">🍴</div></div></div>'+
+ '<button class="btn primary" id="spin" '+(isSpinning||!count?'disabled':'')+'>'+(isSpinning?'Đang quay…':'🎲 Quay chọn món')+'</button>'+
+ '<div id="wheelResult" role="status" aria-live="polite" class="card" style="margin-top:16px">'+(isSpinning?'Đang chọn món…':res?'Kết quả gần nhất: <b>'+esc(res.title)+'</b>'+(res.placeId&&find(res.placeId)?' · '+esc(find(res.placeId).name):''):'Bấm quay để chọn ngẫu nhiên. Mỗi món có cơ hội như nhau.')+'</div></div>'+
+ '<div class="card"><h3>Danh sách tham gia</h3><p class="muted">Mỗi phần màu ứng với một món, kim ▼ chỉ món được chọn. Bỏ món đã ăn để không quay lại món đó.</p>'+
+ '<div class="wheelLegend">'+active.map((item,i)=>'<div class="wheelLegendItem"><span class="wheelLegendDot" style="background:'+colors[i%colors.length]+'"></span><span>'+esc(item.title)+'</span><button class="btn small" data-action="disable" data-id="'+esc(item.id)+'">Bỏ</button></div>').join('')+'</div>'+
+ (!count?'<p>Chưa có món bật tham gia. Vào Món yêu thích để thêm món.</p>':'')+
+ '<p><button class="btn tonal" data-action="switchtab" data-id="favorites">Quản lý món yêu thích</button></p></div></div>';
 }
 function plans(){return '<div class="sectionHead"><h2>Lịch hẹn 🗓️</h2><button class="btn primary" data-action="newplan">＋ Tạo buổi hẹn</button></div><p class="muted">Mỗi kế hoạch gồm tối đa 5 địa điểm. Chi phí dự trù cho hai người dựa trên mức cao của từng quán.</p><div class="two">'+(data.plans.length?data.plans.map(plan=>'<div class="card"><h3>'+esc(plan.title)+'</h3><div class="sub">🗓 '+esc(plan.date||'Chưa chọn ngày')+' · '+esc(plan.time||'')+'</div><div class="stack">'+(plan.stops||[]).map((st,i)=>'<p>📍 '+esc(st.time||'')+' · '+esc(find(st.placeId)?.name||'Quán không còn trong danh mục')+'</p>').join("")+'</div><div class="price">Tổng dự trù: '+money((plan.stops||[]).reduce((s,st)=>s+(find(st.placeId)?.budgetMax||0)*2,0))+'</div><div class="placeActions"><button class="btn small tonal" data-action="route" data-id="'+esc(plan.id)+'">Google Maps</button><button class="btn small" data-action="editplan" data-id="'+esc(plan.id)+'">Sửa</button><button class="btn small" data-action="removeplan" data-id="'+esc(plan.id)+'">Xóa</button></div></div>').join(""):'<div class="empty">Chưa có lịch hẹn. Chọn quán và bấm “＋ Lịch hẹn” nhé!</div>')+'</div>'}
 
@@ -172,7 +197,22 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)r
  if(b.id==="people"){filters.people=filters.people===1?2:1;render();return}
  if(b.id==="resetFilters"){filters={q:"",area:"",kind:"",cuisine:"",budget:"",people:1};pageSize=24;render();return}
  if(b.id==="more"){pageSize+=24;render();return}
- if(b.id==="spin"){if(isSpinning)return;const active=data.favorites.filter(x=>x.enabled);if(!active.length)return;isSpinning=true;b.disabled=true;$("#wheelResult").textContent="Đang chọn món...";const ary=new Uint32Array(1);crypto.getRandomValues(ary);const winner=active[ary[0]%active.length];spins+=720+Math.floor(Math.random()*360);$("#wheelDisk").style.transform="rotate("+spins+"deg)";const finish=()=>{data.lastWinner=winner.id;persist();$("#wheelResult").innerHTML='🍽️ Hôm nay ăn <b>'+esc(winner.title)+'</b>!';b.disabled=false;isSpinning=false};if(matchMedia("(prefers-reduced-motion: reduce)").matches)finish();else setTimeout(finish,1850);return}
+ if(b.id==="spin"){
+ if(isSpinning)return;
+ const active=data.favorites.filter(x=>x.enabled);if(!active.length)return;
+ const index=randomIndex(active.length),winner=active[index],sector=360/active.length;
+ isSpinning=true;b.disabled=true;
+ $("#wheelResult").textContent="Đang chọn món…";
+ spins=Math.ceil(spins/360)*360+1440+(360-(index+.5)*sector)%360;
+ const disk=$("#wheelDisk");if(disk)disk.style.transform="rotate("+spins+"deg)";
+ const finish=()=>{
+  data.lastWinner=winner.id;persist();isSpinning=false;spinTimeout=null;
+  if(tab==="wheel")render();else toast("Vòng quay đã chọn "+winner.title);
+ };
+ if(matchMedia("(prefers-reduced-motion: reduce)").matches)finish();
+ else spinTimeout=setTimeout(finish,1800);
+ return;
+}
  const id=b.dataset.id;switch(b.dataset.action){
  case "cloudSignIn":window.HappyMealCloud?.signIn?.();break;
  case "cloudSignOut":window.HappyMealCloud?.signOut?.();break;
